@@ -62,15 +62,18 @@ public class LoginPage {
 	}
 
 	public Boolean isUsernameFieldDisplayed() {
-		return txt_username != null;
+		return txt_username != null; 
+	//checks if the txt_username field is not null and returns true if it is not null, indicating that the username field is displayed.
 	}
 
 	public Boolean isPasswordFieldDisplayed() {
-		return txt_password != null;
+		return txt_password != null; 
+	//checks whether the txt_password field is not null and returns true if it is not null, indicating that the password field is displayed or initialized.
 	}
 
 	public Boolean isLoginButtonDisplayed() {
-		return login_btn != null;
+		return login_btn != null; 
+	//checks if the login_btn is not null, returning true if it is not null and indicating that the login button is initialized and available. If login_btn is null, it returns false, suggesting that the login button does not exist (or is not initialized).
 	}
 
 	public String getAlertMessage() {
@@ -85,11 +88,13 @@ public class LoginPage {
 			return getValidationError(txt_password);
 
 		}
-
+//getLoginMessage(): This seems to retrieve a general login-related message, like a message displayed after a login attempt, for example, "Incorrect username or password." If this message is not blank, it is returned.
+//getValidationError(txt_username): This checks for a validation error on the txt_username field (e.g., if the username is missing or invalid). If the error message is not blank, it returns that message.
+//getValidationError(txt_password): If neither of the previous checks return a message, the method checks for a validation error on the txt_password field (e.g., if the password is invalid or missing).
 	}
 
 	public String getLoginMessage() {
-		String message = "";
+		String message = ""; //attempt to get text from the alert message
 
 		try {
 			message = alertMessage.getText();
