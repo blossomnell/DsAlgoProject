@@ -6,11 +6,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class DriverFactory {
 	private static WebDriver driver;
-
 	// Private constructor to prevent instantiation
 	private DriverFactory() {
 	}
-
 	public static WebDriver getDriver() {
 		if (driver == null) {
 //			String driverPath = "driver/chromedriver.exe";
