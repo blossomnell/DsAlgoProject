@@ -1,0 +1,1225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="212.968" tests="93" skipped="0" failures="93" errors="0">
+<testcase classname="Array page functionality" name="exploring the Array page" time="4.636">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Homepage...........................................pending
+When the user clicks the Get Started button under Array.....................skipped
+Then the user should be in the Array page...................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="exploring the Arrays in Python page" time="1.308">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Array page.........................................pending
+When the user clicks the Arrays in Python button............................skipped
+Then the user should be in the Arrays in Python page........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="exploring the python editor page" time="1.245">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Arrays in Python page..............................pending
+When the user scrolls down and clicks the Try here button...................skipped
+Then the user should be in the Python editor page...........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating the Run button with empty code" time="1.534">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user leaves the editor empty and clicks Run button.................skipped
+Then no action occurred in the page and no error message is displayed.......skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating Run function with invalid code" time="1.591">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user enters invalid code in the editor and clicks Run button.......skipped
+Then the user should see an error message on top of the page................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating Run function with valid code" time="2.206">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user enters valid code in the editor and clicks Run button.........skipped
+Then the user is able to see the output in the console......................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="exploring the Arrays Using List page" time="1.805">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Arrays in Python page..............................pending
+When the user clicks the Arrays Using List button...........................skipped
+Then the user should be in the Arrays Using List page.......................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="exploring the python editor page" time="2.166">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Arrays Using List page.............................pending
+When the user clicks the Try here button at the bottom of the page..........skipped
+Then the user should be in the Python editor page...........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating Run function with empty code" time="2.042">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user leaves the editor empty and clicks Run button.................skipped
+Then no action occurred in the page and no error message is displayed.......skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating Run function with invalid code" time="2.808">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user enters invalid code in the editor and clicks Run button.......skipped
+Then the user should see an error message on top of the page................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating Run function with valid code" time="4.34">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user enters valid code in the editor and clicks Run button.........skipped
+Then the user is able to see the output in the console......................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="exploring the Basic Operations in Lists page" time="2.88">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Arrays Using List page.............................pending
+When the user clicks the Basic Operations in Lists button...................skipped
+Then the user should be in the Basic Operations in Lists page...............skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="exploring the python editor page" time="3.227">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Basic Operations in Lists page.....................pending
+When the user clicks the Try here button at the bottom of the page..........skipped
+Then the user should be in the Python editor page...........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating Run function with empty code" time="3.474">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user leaves the editor empty and clicks Run button.................skipped
+Then no action occurred in the page and no error message is displayed.......skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating Run function with invalid code" time="2.498">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user enters invalid code in the editor and clicks Run button.......skipped
+Then the user should see an error message on top of the page................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating Run function with valid code" time="3.232">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user enters valid code in the editor and clicks Run button.........skipped
+Then the user is able to see the output in the console......................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="exploring the Applications of Array page" time="3.625">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Basic Operations in Lists page.....................pending
+When the user clicks the Applications of Array button.......................skipped
+Then the user should be in the Applications of Array page...................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="exploring the python editor page" time="14.384">
+<failure type="org.openqa.selenium.remote.UnreachableBrowserException" message="Error communicating with the remote browser. It may have died.
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [702d8a7fbd50090a89c60bf715aa1670, maximizeCurrentWindow []]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.117, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\bloss\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58916}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58916/devtoo..., se:cdpVersion: 130.0.6723.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 702d8a7fbd50090a89c60bf715aa1670">
+<![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [702d8a7fbd50090a89c60bf715aa1670, maximizeCurrentWindow []]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.117, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\bloss\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58916}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58916/devtoo..., se:cdpVersion: 130.0.6723.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 702d8a7fbd50090a89c60bf715aa1670
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1061)
+	at webdriver.BaseClass.init_driver(BaseClass.java:36)
+	at appHooks.Hooks.launchBrowser(Hooks.java:34)
+Caused by: java.io.UncheckedIOException: java.io.IOException: HTTP/1.1 header parser received no bytes
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:458)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:374)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1061)
+	at webdriver.BaseClass.init_driver(BaseClass.java:36)
+	at appHooks.Hooks.launchBrowser(Hooks.java:34)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:47)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:78)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:147)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:162)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:145)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:229)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:757)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: java.io.IOException: HTTP/1.1 header parser received no bytes
+	at java.net.http/jdk.internal.net.http.common.Utils.wrapWithExtraDetail(Utils.java:440)
+	at java.net.http/jdk.internal.net.http.Http1Response$HeadersReader.onReadError(Http1Response.java:590)
+	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver.checkForErrors(Http1AsyncReceiver.java:302)
+	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver.flush(Http1AsyncReceiver.java:268)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$LockingRestartableTask.run(SequentialScheduler.java:182)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$CompleteRestartableTask.run(SequentialScheduler.java:149)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:403)
+	at java.base/sun.nio.ch.SocketChannelImpl.implRead(SocketChannelImpl.java:435)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:493)
+	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1178)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:841)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:280)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:233)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:782)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:965)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:1476)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:1421)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1421)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Applications of Array page.........................skipped
+When the user clicks the Try here button at the bottom of the page..........skipped
+Then the user should be in the Python editor page...........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating Run function with empty code" time="1.401">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user leaves the editor empty and clicks Run button.................skipped
+Then no action occurred in the page and no error message is displayed.......skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating Run function with invalid code" time="2.046">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user enters invalid code in the editor and clicks Run button.......skipped
+Then the user should see an error message...................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating Run function with valid code" time="2.619">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user enters valid code in the editor and clicks Run button.........skipped
+Then the user is able to see the output in the console......................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="exploring the Practice Questions Page" time="1.681">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is back in the Applications of Array page....................pending
+When the user clicks the Practice Questions button..........................skipped
+Then the user should be in the Practice Questions button....................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="exploring the Search the Array page" time="1.725">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Practice Questions button..........................pending
+When the user clicks on Search the Array button.............................skipped
+Then the user is redirected to the python editor page.......................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating Run function with empty code" time="1.525">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user leaves the editor empty and clicks Run button.................skipped
+Then the user should see an error message...................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating Run function with invalid code" time="1.749">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user enters invalid code in the editor and clicks Run button.......skipped
+Then no action occurred in the page and no error message is displayed.......skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating Run function with valid code" time="1.568">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user enters valid code in the editor and clicks Run button.........skipped
+Then the user is able to see the output in the console......................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating Submit function with valid code" time="1.483">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page with the output.................pending
+When the user clicks on the Submit button...................................skipped
+Then the user should see an error message...................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="exploring the Max Consecutive Ones page" time="1.552">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Practice Questions page............................pending
+When the user clicks the Max Consecutive Ones button........................skipped
+Then the user should be in the Python editor page...........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating the Run function with empty code" time="1.821">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user leaves the editor empty and clicks Run button.................skipped
+Then the user should see an error message...................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating the Run function with invalid code" time="1.756">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user enters invalid code in the editor and clicks Run button.......skipped
+Then no action occurred in the page and no error message is displayed.......skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating the Run function with valid code" time="1.57">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user enters valid code in the editor and clicks Run button.........skipped
+Then the user is able to see the output in the console......................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating the Submit function with valid code" time="1.797">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page with the output.................pending
+When the user clicks the Submit button......................................skipped
+Then the user should see an error message...................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="exploring the Find Numbers with Even Number of Digits page" time="2.928">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Practice Questions page............................pending
+When the user clicks on the Find Numbers with Even Number of Digits.........skipped
+Then the user is redirected to the python editor page.......................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating Run function with empty code" time="2.707">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user leaves the editor empty and clicks Run button.................skipped
+Then the user should see an error message...................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating Run function with invalid code" time="3.048">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user enters invalid code in the editor and clicks Run button.......skipped
+Then no action occurred in the page and no error message is displayed.......skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating Run function with valid code" time="3.43">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user enters valid code in the editor and clicks Run button.........skipped
+Then the user is able to see the output in the console......................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating Submit function with valid code" time="5.92">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page with the output.................pending
+When the user clicks Submit button..........................................skipped
+Then the user should see an error message...................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="exploring the Squares of Sorted Array page" time="2.431">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Practice Questions page............................pending
+When the user clicks the Squares of a Sorted Array..........................skipped
+Then the user is redirected to the python editor page.......................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating Run function with empty code" time="1.779">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user leaves the editor empty and clicks Run button.................skipped
+Then the user see an error message..........................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating Run function with invalid code" time="1.786">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user enters invalid code in the editor and clicks Run button.......skipped
+Then no action occurred in the page and no error message is displayed.......skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating Run function with valid code" time="1.678">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page.................................pending
+When the user enters valid code in the editor and clicks Run button.........skipped
+Then the user is able to see the output in the console......................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Array page functionality" name="validating Submit function with valid code" time="1.545">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Python editor page with the output.................pending
+When the user clicks Submit.................................................skipped
+Then the user see an error message..........................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="exploring the Linked List page" time="1.69">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the DsAlgo homepage....................................pending
+When the user clicks the Get Started button under Linked List...............skipped
+Then the user should be in the Linked List page.............................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="exploring the Introduction page" time="2.203">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Linked List page...................................pending
+When the user clicks the Introduction button................................skipped
+Then the user should be in the Introduction page............................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="exploring the python editor page" time="3.152">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Introduction page..................................pending
+When the user clicks the Try here button....................................skipped
+Then the user should be in the python page..................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="validating Run function with empty code" time="1.838">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the python page........................................pending
+When the user leaves the python editor empty and clicks Run.................skipped
+Then no action occurred in the page.........................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="validating Run function with invalid code" time="1.6">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the python page........................................pending
+When the user enters a invalid code in the python editor and clicks Run.....skipped
+Then user should see an error message.......................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="validating Run function with valid code" time="1.56">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the python page........................................pending
+When the user enters a valid code in the python editor and clicks Run.......skipped
+Then the user should see the output in the console..........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="exploring the Creating Linked List page" time="1.724">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is back in the introduction page.............................pending
+When the user clicks on the Creating Linked List button.....................skipped
+Then the user should be in the Creating Linked List page....................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="exploring the python editor page" time="1.396">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Creating Linked List page..........................pending
+When the user clicks Try here button........................................skipped
+Then the user should be in the python editor page...........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="validating Run function with empty code" time="1.348">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the python editor page.................................pending
+When the user leaves the python editor empty and clicks Run.................skipped
+Then no action occurred in the page.........................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="validating Run function with invalid code" time="1.421">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the python editor page.................................pending
+When the user enters an invalid code in the python editor and clicks Run....skipped
+Then an error message is shown..............................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="validating Run function with valid code" time="1.604">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the python editor page.................................pending
+When the user enters a valid code in the python editor and clicks Run.......skipped
+Then the user should see the output in the console..........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="exploring the Types of Linked List page" time="1.53">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Creating Linked List page..........................pending
+When the user clicks on Types of Linked List button.........................skipped
+Then the user should be in the Types of Linked List page....................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="exploring the python editor page" time="1.796">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is on the Types of Linked List page..........................pending
+When the user clicks the Try here button....................................skipped
+Then the user should be in the python editor page...........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="validating Run function with empty code" time="1.592">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the python editor page.................................pending
+When the user leaves the python editor empty and clicks Run.................skipped
+Then no action occurred in the page.........................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="validating Run function with invalid code" time="1.907">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the python editor page.................................pending
+When the user enters an invalid code in the python editor and clicks Run....skipped
+Then an error message is shown..............................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="validating Run function with valid code" time="3.462">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the python editor page.................................pending
+When the user enters an valid code in the python editor and clicks Run......skipped
+Then the user should see the output in the console..........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="exploring the Implement Linked List in Python page" time="3.134">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is on the Types of Linked List page..........................pending
+When the user clicks the Implement Linked List in Python....................skipped
+Then the user should be in the Implement Linked List in Python page.........skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="exploring the python editor page" time="2.935">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Implement Linked List in Python page...............pending
+When the user clicks the Try here button....................................skipped
+Then the user should be in the python editor page...........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="validating Run function with empty code" time="1.983">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the python editor page.................................pending
+When the user leaves the python editor empty and clicks Run.................skipped
+Then no action occurred in the page.........................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="validating Run function with invalid code" time="1.486">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the python editor page.................................pending
+When the user enters an invalid code in the python editor and clicks Run....skipped
+Then an error message is shown..............................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="validating Run function with valid code" time="2.034">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the python editor page.................................pending
+When the user enters a valid code in the python editor and clicks Run.......skipped
+Then the user should see the output in the console..........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="exploring the Traversal page" time="2.586">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Implement Linked List in Python page...............pending
+When the user clicks the Traversal..........................................skipped
+Then the user should be in the traversal page...............................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="exploring the python editor page" time="1.917">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the traversal page.....................................pending
+When the user clicks the Try here button....................................skipped
+Then the user should be in the python editor page...........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="validating Run function with empty code" time="1.676">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the python editor page.................................pending
+When the user leaves the python editor empty and clicks Run.................skipped
+Then no action occurred in the page.........................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="validating Run function with invalid code" time="2.035">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the python editor page.................................pending
+When the user enters an invalid code in the pyton editor and clicks Run.....skipped
+Then an error message is shown..............................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="validating Run function with valid code" time="4.648">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the python editor page.................................pending
+When the user enters an valid code in the python editor and clicks Run......skipped
+Then the user should see the output in the console..........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="exploring the Insertion page" time="4.981">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is back in the Traversal page................................pending
+When the user clicks the Insertion button...................................skipped
+Then the user should be in the Insertion page...............................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="exploring the python editor page" time="1.614">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Insertion page.....................................pending
+When the user clicks Try here button........................................skipped
+Then the user should be in the python editor page...........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="validating Run function with empty code" time="1.549">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the python editor page.................................pending
+When the user leaves the python editor empty and clicks Run.................skipped
+Then no action occurred in the page.........................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="validating Run function with invalid code" time="1.494">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the python editor page.................................pending
+When the user enters an invalid code in the python editor and clicks Run....skipped
+Then an error message is shown..............................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="validating Run function with valid code" time="1.64">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the python editor page.................................pending
+When the user enters a valid code in the python editor and clicks Run.......skipped
+Then the user should see the output in the console..........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="exploring the Deletion page" time="1.745">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Insertion page.....................................pending
+When the user clicks the Deletion button....................................skipped
+Then the user should be in the Deletion page................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="exploring the python editor page" time="1.639">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Deletion page......................................pending
+When the user clicks Try here button........................................skipped
+Then the user should be in the python editor page...........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="validating Run function with empty code" time="1.595">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the python editor page.................................pending
+When the user leaves the python editor empty and clicks Run.................skipped
+Then no action occurred in the page.........................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="validating Run function with invalid code" time="1.852">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the python editor page.................................pending
+When the user enters an invalid code in the python editor and clicks Run....skipped
+Then an error message is shown..............................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="validating Run function with valid code" time="1.658">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the python editor page.................................pending
+When the user enters a valid code in the python editor and clicks Run.......skipped
+Then the user should see the output in the console..........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Linked List functionality" name="exploring the practice questions page" time="1.567">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the Deletion page......................................pending
+When the user clicks the practice question..................................skipped
+Then the user should see the blank Practice Questions page..................skipped
+]]></system-out>
+</testcase>
+<testcase classname="DsAlgo login functionality/validation" name="the user is in the homepage and navigates to the signin page" time="1.758">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the homepage...........................................pending
+When the user clicks the signin button......................................skipped
+Then the user is redirected to the login page...............................skipped
+]]></system-out>
+</testcase>
+<testcase classname="DsAlgo login functionality/validation" name="the user tries to login with different credentials - #1.1" time="1.977">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the login page.........................................pending
+When the user enters empty  and empty  and clicks login button..............skipped
+Then the user gets a message Please fill out this field.....................skipped
+]]></system-out>
+</testcase>
+<testcase classname="DsAlgo login functionality/validation" name="the user tries to login with different credentials - #1.2" time="1.755">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the login page.........................................pending
+When the user enters empty  and empty abss@123 and clicks login button......skipped
+Then the user gets a message Please fill out this field.....................skipped
+]]></system-out>
+</testcase>
+<testcase classname="DsAlgo login functionality/validation" name="the user tries to login with different credentials - #1.3" time="2.269">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the login page.........................................pending
+When the user enters empty Ninjasquad and empty  and clicks login button....skipped
+Then the user gets a message Please fill out this field.....................skipped
+]]></system-out>
+</testcase>
+<testcase classname="DsAlgo login functionality/validation" name="the user tries to login with different credentials - #1.4" time="2.161">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the login page.........................................pending
+When the user enters empty Ninjasquad and empty abss and clicks login button.skipped
+Then the user gets a message Invalid Username and Password..................skipped
+]]></system-out>
+</testcase>
+<testcase classname="DsAlgo login functionality/validation" name="the user tries to login with different credentials - #1.5" time="2.358">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the login page.........................................pending
+When the user enters empty ninja and empty abss@123 and clicks login button.skipped
+Then the user gets a message Invalid Username and Password..................skipped
+]]></system-out>
+</testcase>
+<testcase classname="DsAlgo login functionality/validation" name="the user tries to login with different credentials - #1.6" time="1.736">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the login page.........................................pending
+When the user enters empty ninja and empty abss and clicks login button.....skipped
+Then the user gets a message Invalid Username and Password..................skipped
+]]></system-out>
+</testcase>
+<testcase classname="DsAlgo portal registration functionality" name="the user tries enters various credential combinations - #1.1" time="1.619">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the registration page..................................pending
+When the user enters , ,  and clicks Register button........................skipped
+Then the user gets an output message Please fill out this field.............skipped
+]]></system-out>
+</testcase>
+<testcase classname="DsAlgo portal registration functionality" name="the user tries enters various credential combinations - #1.2" time="1.627">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the registration page..................................pending
+When the user enters ninja!!!, ,  and clicks Register button................skipped
+Then the user gets an output message Please fill out this field.............skipped
+]]></system-out>
+</testcase>
+<testcase classname="DsAlgo portal registration functionality" name="the user tries enters various credential combinations - #1.3" time="1.812">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the registration page..................................pending
+When the user enters ninja!!!, ninja, java and clicks Register button.......skipped
+Then the user gets an output message password_mismatch:The two password fields didn’t match..skipped
+]]></system-out>
+</testcase>
+<testcase classname="DsAlgo portal registration functionality" name="the user tries enters various credential combinations - #1.4" time="1.582">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the registration page..................................pending
+When the user enters Ninjasquad, ninja, java and clicks Register button.....skipped
+Then the user gets an output message password_mismatch:The two password fields didn’t match..skipped
+]]></system-out>
+</testcase>
+<testcase classname="DsAlgo portal registration functionality" name="the user tries enters various credential combinations - #1.5" time="1.62">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the registration page..................................pending
+When the user enters ninja!!!, ninja, abss@123 and clicks Register button...skipped
+Then the user gets an output message password_mismatch:The two password fields didn’t match..skipped
+]]></system-out>
+</testcase>
+<testcase classname="DsAlgo portal registration functionality" name="the user tries enters various credential combinations - #1.6" time="1.558">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the registration page..................................pending
+When the user enters Ninjasquad, abss@123, abss@1234 and clicks Register button.skipped
+Then the user gets an output message password_mismatch:The two password fields didn’t match..skipped
+]]></system-out>
+</testcase>
+<testcase classname="DsAlgo portal registration functionality" name="the user tries enters various credential combinations - #1.7" time="1.857">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+	at appHooks.Hooks.quitBrowser(Hooks.java:39)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is in the registration page..................................pending
+When the user enters Ninjasquad, abss@123, abss@123 and clicks Register button.skipped
+Then the user gets an output message New Account Created....................skipped
+]]></system-out>
+</testcase>
+</testsuite>
