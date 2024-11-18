@@ -25,7 +25,7 @@ public class LoginSteps {
 	@Then("the user is redirected to the login page")
 	public void the_user_is_redirected_to_the_login_page() {
 		loginPage.navigatetologinpage();
-		// assert needs to be used
+	
 		assertTrue("Login page is not displayed", loginPage.isLoginPageDisplayed());
 		assertTrue("Username Field is not displayed", loginPage.isUsernameFieldDisplayed());
 		assertTrue("Password Fiels is not displayed", loginPage.isPasswordFieldDisplayed());
