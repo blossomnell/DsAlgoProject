@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 		glue = { "stepDefinitions", "appHooks" }, //
 		plugin = { "pretty", "html:target/cucumber-reports.html" }, //
 		dryRun = false, //
-		tags = "@wip"//
+		tags = "@tag"//
 
 )
 
