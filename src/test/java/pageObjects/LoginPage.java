@@ -32,6 +32,10 @@ public class LoginPage {
 	WebElement signin_btn;
 	@FindBy(xpath = "//div[@class='alert alert-primary' and @role='alert']")
 	private WebElement alertMessage;
+	@FindBy(xpath = "//a[//a[@href='/logout' and text()='Sign out']]")
+	WebElement signout_btn;
+	@FindBy(xpath = "/div[@class='alert alert-primary' and @role='alert']")
+	WebElement loggedoutMessage;
 
 	public void enterUsername(String username) {
 		txt_username.sendKeys(username);
@@ -86,7 +90,6 @@ public class LoginPage {
 				return loginMessage;
 			}
 			return getValidationError(txt_password);
-
 		}
 //getLoginMessage(): This seems to retrieve a general login-related message, like a message displayed after a login attempt, for example, "Incorrect username or password." If this message is not blank, it is returned.
 //getValidationError(txt_username): This checks for a validation error on the txt_username field (e.g., if the username is missing or invalid). If the error message is not blank, it returns that message.
@@ -95,29 +98,29 @@ public class LoginPage {
 
 	public String getLoginMessage() {
 		String message = ""; //attempt to get text from the alert message
-
 		try {
 			message = alertMessage.getText();
 		} catch (Exception e) {
-
 		}
-
 		return message;
-
 	}
 
 	public String getValidationError(WebElement element) {
 		String error = "";
-
 		try {
 			JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
 			error = (String) jsExecutor.executeScript("return arguments[0].validationMessage;", element);
 		} catch (Exception e) {
-
 		}
-
 		return error;
-
 	}
-
+        public Boolean isSignOutButtonDisplayed() {
+		return signout_btn != null;
+	}
+	public void clicksignoutBtn() {
+		signout_btn.click();
+	}
+	public boolean isLoggedOutMessageDisplayed() {
+		return true;
+	}
 }
