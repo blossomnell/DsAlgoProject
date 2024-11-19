@@ -49,5 +49,23 @@ public class LoginSteps {
 	public void the_user_gets_login_message(String expectedMessage) {
 		assertEquals("loginMessage", expectedMessage, loginPage.getAlertMessage());
 	}
+ @Given("the user is logged in")
+	public void the_user_is_logged_in() {
+		loginPage.navigatetologinpage();
+		loginPage.enterUsername("Ninjasquad");
+		loginPage.enterPassword("abss@123");
+		loginPage.clickloginBtn();
+	}
 
+	@When("the user clicks on Sign out button")
+	public void the_user_clicks_on_Sign_out_button() {
+		assertTrue("Sign out Button is not displayed", loginPage.isSignOutButtonDisplayed());
+		loginPage.clicksignoutBtn();
+	}
+
+	@Then("the user gets message {string}")
+	public void the_user_gets_logout_message(String expectedMessage) {
+		assertTrue("logged out message is not displayed", loginPage.isLoggedOutMessageDisplayed());
+	}
 }
+
