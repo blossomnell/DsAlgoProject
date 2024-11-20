@@ -1,0 +1,4 @@
+"BROKEN","EPIC","FAILED","FEATURE","PASSED","SKIPPED","STORY","UNKNOWN"
+"1","","0","DsAlgo login functionality/validation","6","0","the user tries to login with different credentials","0"
+"0","","0","DsAlgo login functionality/validation","1","0","the user tries signout function","0"
+"0","","0","DsAlgo login functionality/validation","1","0","the user is in the homepage and navigates to the signin page","0"
