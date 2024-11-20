@@ -4,7 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class RegistrationSteps {
+public class RegisterSteps {
 
 	@Given("the user is in homepage")
 	public void the_user_is_in_homepage() {
