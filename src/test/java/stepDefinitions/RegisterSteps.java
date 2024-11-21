@@ -29,7 +29,7 @@ public class RegisterSteps {
 		assertTrue("Username Field is not displayed", registerPage.isUsernameFieldDisplayed());
 		assertTrue("Password1 Field is not displayed", registerPage.isPassword1FieldDisplayed());
 		assertTrue("Password2 Field is not displayed", registerPage.isPassword2FieldDisplayed());
-		assertTrue("Register Button is not displayed", registerPage.isRegisterPageDisplayed());
+		assertTrue("Register Button is not displayed", registerPage.isRegisterButtonDisplayed());
 	}
 
 	@Given("the user is in the registration page")

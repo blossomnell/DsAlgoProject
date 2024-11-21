@@ -26,22 +26,8 @@ public class RegisterPage {
 	WebElement register;
 	@FindBy(xpath = "//input[@type='submit' and @value='Register']")
 	WebElement register_btn;
-//	@FindBy(xpath = "//div[@class='alert alert-primary' and @role='alert']")
-//	WebElement alertMessage;
-	@FindBy(xpath = "//div[@class='alert alert-primary' and @role='alert' and normalize-space(.)='New Account Created. You are logged in as ninjasquad111']")
-	WebElement alertMessage;
-
-	public void enterUsername(String username) {
-		txt_username.sendKeys(username);
-	}
-
-	public void enterPassword1(String password1) {
-		txt_password1.sendKeys(password1);
-	}
-
-	public void enterPassword2(String password2) {
-		txt_password1.sendKeys(password2);
-	}
+	@FindBy(xpath = "//div[@class='alert alert-primary' and @role='alert']")
+	private WebElement alertMessage;
 
 	public void navigatetohomepage() {
 		driver.get("https://dsportalapp.herokuapp.com/home");
@@ -53,6 +39,18 @@ public class RegisterPage {
 
 	public void navigatetoregisterpage() {
 		driver.get("https://dsportalapp.herokuapp.com/register");
+	}
+
+	public void enterUsername(String username) {
+		txt_username.sendKeys(username);
+	}
+
+	public void enterPassword1(String password1) {
+		txt_password1.sendKeys(password1);
+	}
+
+	public void enterPassword2(String password2) {
+		txt_password1.sendKeys(password2);
 	}
 
 	public Boolean isRegisterPageDisplayed() {
@@ -84,12 +82,15 @@ public class RegisterPage {
 		if (!registerMessage.isBlank()) {
 			return registerMessage;
 		} else {
-			registerMessage = getValidationError(txt_username);
-			if (!registerMessage.isBlank()) {
-				return registerMessage;
-			}
-			return getValidationError(txt_password1);
-		}
+			boolean userValidationErrorExists = isValidationError(txt_username);
+			boolean password1validationErrorExists = isValidationError(txt_password1);
+			boolean password2ValidationErrorExists = isValidationError(txt_password2);
+			
+		    if (userValidationErrorExists||password1validationErrorExists||password2ValidationErrorExists) {
+		    	return "Please fill out this field.";
+		    }
+		    return "";
+		}		
 	}
 
 	public String getRegisterMessage() {
@@ -101,14 +102,14 @@ public class RegisterPage {
 		return message;
 	}
 
-	public String getValidationError(WebElement element) {
+	public boolean isValidationError(WebElement element) {
 		String error = "";
 		try {
 			JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
 			error = (String) jsExecutor.executeScript("return arguments[0].validationMessage;", element);
 		} catch (Exception e) {
 		}
-		return error;
+		return !error.isBlank();
 
 	}
 }

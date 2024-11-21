@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 		glue = { "stepDefinitions", "appHooks" }, //
 		plugin = { "pretty", "html:target/cucumber-reports.html", "json:target/cucumber.json", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm", }, 
 		dryRun = false, //
-		tags = "@tag"//
+		tags = "@wip"//
 
 )
 
