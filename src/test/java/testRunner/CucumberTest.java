@@ -6,12 +6,11 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/features", //
-		glue = { "stepDefinitions", "appHooks" }, //
+@CucumberOptions(features = "src/test/resources/features", 
+		glue = { "stepDefinitions", "appHooks" }, 
 		plugin = { "pretty", "html:target/cucumber-reports.html", "json:target/cucumber.json", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm", }, 
 		dryRun = false, //
 		tags = "@wip"//
-
 )
 
 public class CucumberTest {

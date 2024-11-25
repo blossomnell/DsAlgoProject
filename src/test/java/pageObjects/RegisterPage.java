@@ -50,7 +50,7 @@ public class RegisterPage {
 	}
 
 	public void enterPassword2(String password2) {
-		txt_password1.sendKeys(password2);
+		txt_password2.sendKeys(password2);
 	}
 
 	public Boolean isRegisterPageDisplayed() {
