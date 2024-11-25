@@ -1,7 +1,6 @@
 package stepDefinitions;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.testng.Assert.assertTrue;
 
 import java.util.UUID;
 
@@ -27,11 +26,11 @@ public class RegisterSteps {
 	@Then("the user is redirected to the register page")
 	public void the_user_is_redirected_to_the_register_page() {
 		registerPage.navigatetoregisterpage();
-		assertTrue("Register page is not displayed", registerPage.isRegisterPageDisplayed());
-		assertTrue("Username Field is not displayed", registerPage.isUsernameFieldDisplayed());
-		assertTrue("Password1 Field is not displayed", registerPage.isPassword1FieldDisplayed());
-		assertTrue("Password2 Field is not displayed", registerPage.isPassword2FieldDisplayed());
-		assertTrue("Register Button is not displayed", registerPage.isRegisterButtonDisplayed());
+		assertTrue(registerPage.isRegisterPageDisplayed(), "Register page is not displayed");
+		assertTrue(registerPage.isUsernameFieldDisplayed(), "Username Field is not displayed");
+		assertTrue(registerPage.isPassword1FieldDisplayed(), "Password1 Field is not displayed");
+		assertTrue(registerPage.isPassword2FieldDisplayed(), "Password2 Field is not displayed");
+		assertTrue(registerPage.isRegisterButtonDisplayed(), "Register Button is not displayed");
 	}
 
 	@Given("the user is in the registration page")
@@ -55,7 +54,7 @@ public class RegisterSteps {
 
 	@Then("the user gets a message {string}")
 	public void the_user_gets_a_message(String expectedMessage) {
-		assertTrue("registerMessage", registerPage.getAlertMessage().contains(expectedMessage));
+		assertTrue(registerPage.getAlertMessage().contains(expectedMessage), "registerMessage");
 
 	}
 
