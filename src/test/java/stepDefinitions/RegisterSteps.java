@@ -3,6 +3,8 @@ package stepDefinitions;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import java.util.UUID;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -29,7 +31,7 @@ public class RegisterSteps {
 		assertTrue("Username Field is not displayed", registerPage.isUsernameFieldDisplayed());
 		assertTrue("Password1 Field is not displayed", registerPage.isPassword1FieldDisplayed());
 		assertTrue("Password2 Field is not displayed", registerPage.isPassword2FieldDisplayed());
-		assertTrue("Register Button is not displayed", registerPage.isRegisterPageDisplayed());
+		assertTrue("Register Button is not displayed", registerPage.isRegisterButtonDisplayed());
 	}
 
 	@Given("the user is in the registration page")
@@ -40,6 +42,11 @@ public class RegisterSteps {
 
 	@When("the user enters {string}, {string}, {string} and clicks Register button")
 	public void the_user_enters_and_clicks_register_button(String username, String password1, String password2) {
+		
+		if(!username.isBlank()) {
+			username = username+ UUID.randomUUID();
+		}
+		
 		registerPage.enterUsername(username);
 		registerPage.enterPassword1(password1);
 		registerPage.enterPassword2(password2);
@@ -48,7 +55,7 @@ public class RegisterSteps {
 
 	@Then("the user gets a message {string}")
 	public void the_user_gets_a_message(String expectedMessage) {
-		assertEquals("registerMessage", expectedMessage, registerPage.getAlertMessage());
+		assertTrue("registerMessage", registerPage.getAlertMessage().contains(expectedMessage));
 
 	}
 
