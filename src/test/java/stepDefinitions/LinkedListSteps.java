@@ -1,39 +1,53 @@
 package stepDefinitions;
 
+import static org.testng.Assert.assertTrue;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pageObjects.LinkedListPage;
+
 
 public class LinkedListSteps {
+	
+	LinkedListPage linkedListPage = new LinkedListPage();
   
 	@Given("the user is in the DsAlgo homepage")
 	public void the_user_is_in_the_ds_algo_homepage() {
-	    
+			linkedListPage.navigatetohomepage();
+			linkedListPage.signin();
+			linkedListPage.navigatetologinpage();
+			linkedListPage.enterUsername("Ninjasquad");
+			linkedListPage.enterPassword("abss@123");
+			linkedListPage.clickloginBtn();
 	}
 
 	@When("the user clicks the Get Started button under Linked List")
 	public void the_user_clicks_the_get_started_button_under_linked_list() {
-	    
+		linkedListPage.getstarted();
 	}
 
 	@Then("the user should be in the Linked List page")
 	public void the_user_should_be_in_the_linked_list_page() {
-	    
+		linkedListPage.navigatetolinkedlistpage();
+		
+		assertTrue(linkedListPage.isLinkedListPageDisplayed(), "LinkedList page is not displayed");
 	}
 
 	@Given("the user is in the Linked List page")
 	public void the_user_is_in_the_linked_list_page() {
-	   
+		linkedListPage.navigatetolinkedlistpage();
 	}
 
 	@When("the user clicks the Introduction button")
 	public void the_user_clicks_the_introduction_button() {
-	    
+	    linkedListPage.Introduction();
 	}
 
 	@Then("the user should be in the Introduction page")
 	public void the_user_should_be_in_the_introduction_page() {
-	  
+		linkedListPage.navigatetointroductionpage();
+		assertTrue(linkedListPage.isIntroductionPageDisplayed(), "Introduction page is not displayed");
 	}
 
 	@Given("the user is in the Introduction page")

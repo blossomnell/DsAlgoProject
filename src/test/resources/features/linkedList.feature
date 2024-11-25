@@ -1,13 +1,13 @@
 Feature: Linked List functionality
 Background: the user is already signed in
 
-  @tag1
+  @wip
   Scenario: exploring the Linked List page
     Given the user is in the DsAlgo homepage
     When the user clicks the Get Started button under Linked List
     Then the user should be in the Linked List page
 
-  @tag2
+  @wip
   Scenario: exploring the Introduction page
     Given the user is in the Linked List page
     When the user clicks the Introduction button
