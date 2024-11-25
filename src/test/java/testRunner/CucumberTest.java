@@ -25,11 +25,12 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
-    features = "src/test/resources/features/login.feature", // Path to feature files
-    glue = {"stepDefinitions", "appHooks"},                      // Step definition packages
-    plugin = {"pretty", "json:target/cucumber.json"},            // Add plugin for reporting
-    monochrome = true                                            // Makes console output readable
-)
+    features = "src/test/resources/features/datastructure.feature", // Path to feature files
+    glue = {"stepDefinitions","appHooks"},                      // Step definition packages
+    plugin = {"pretty", "html:target/cucumber-reports.html", "json:target/cucumber.json", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm" }, 
+    //            // Add plugin for reporting
+     monochrome = true// Makes console output readable
+   )
 public class CucumberTest extends AbstractTestNGCucumberTests {
 
     @Override

@@ -1,16 +1,20 @@
 package pageObjects;
 
+import java.util.Properties;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import Utilities.configReader;
 import webdriver.DriverFactory;
 
 public class LoginPage {
 
 	WebDriver driver;
+	Properties prop;
 
 //	public LoginPage(WebDriver driver) {
 //		this.driver = driver;
@@ -20,6 +24,8 @@ public class LoginPage {
 	public LoginPage() {
 		this.driver = DriverFactory.getDriver();
 		PageFactory.initElements(driver, this);
+		configReader reader = new configReader();
+		prop = reader.init_prop();
 	}
 
 	@FindBy(id = "id_username")
@@ -50,7 +56,7 @@ public class LoginPage {
 	}
 
 	public void navigatetohomepage() {
-		driver.get("https://dsportalapp.herokuapp.com/home");
+		driver.get(prop.getProperty("testurl") + "/home");
 	}
 
 	public void signin() {
@@ -58,7 +64,7 @@ public class LoginPage {
 	}
 
 	public void navigatetologinpage() {
-		driver.get("https://dsportalapp.herokuapp.com/login");
+		driver.get(prop.getProperty("testurl") +"/login");
 	}
 
 	public Boolean isLoginPageDisplayed() {

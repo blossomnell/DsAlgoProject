@@ -47,7 +47,7 @@ public class RegisterSteps {
 	}
 
 	@Then("the user gets a message {string}")
-	public void the_user_gets_a_message(String expectedMessage) {
+	public void the_user_get_message(String expectedMessage) {
 		assertEquals("registerMessage", expectedMessage, registerPage.getAlertMessage());
 
 	}
