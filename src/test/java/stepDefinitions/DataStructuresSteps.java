@@ -86,40 +86,30 @@ public class DataStructuresSteps{
 
 	@Then("the user sees {string}")
 	public void the_user_sees(String expectedOutcome) {
-		 if (expectedOutcome.contains("popup error message")) {
-	            String popupMessage = dsp.handlePopupError();
-	            Assert.assertTrue(popupMessage.contains("Error"), "Unexpected popup message: " + popupMessage);
-	        } else if (expectedOutcome.contains("output in the console")) {
-	            String consoleOutput = dsp.getOutputText();
-	            Assert.assertFalse(consoleOutput.isEmpty(), "No output found in the console.");
-	        } else if (expectedOutcome.contains("no action occurred")) {
-	            String consoleOutput = dsp.getOutputText();
-	            Assert.assertTrue(consoleOutput.isEmpty(), "Unexpected output in the console.");
-	        }
-	   
+	    if (expectedOutcome.contains("popup error message")) {
+	        String popupMessage = dsp.handlePopupError();
+	        Assert.assertTrue(popupMessage.contains("SyntaxError"), 
+	            "Popup message did not match the expected error text. Actual: " + popupMessage);
+	    } else if (expectedOutcome.contains("output in the console")) {
+	        String consoleOutput = dsp.getOutputText();
+	        Assert.assertFalse(consoleOutput.isEmpty(), 
+	            "No output found in the console.");
+	    } else {
+	        Assert.fail("Unexpected outcome specified in test case: " + expectedOutcome);
+	    }
 	}
 
-//	@When("the user enters \"\"invalidCode\"\" in the editor and clicks Run button")
-//	public void the_user_enters_invalid_code_in_the_editor_and_clicks_run_button() {
-//	    
-//	}
-//
-//	@When("the user enters \"\"print\\({int}){string} in the editor and clicks Run button")
-//	public void the_user_enters_print_in_the_editor_and_clicks_run_button(Integer int1, String string) {
-//	    
-//	}
+    @When("the user clicks the Practice Questions link")
+	public void the_user_clicks_the_practice_questions_link() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
 
-////	@When("the user clicks the Practice Questions link")
-////	public void the_user_clicks_the_practice_questions_link() {
-////	    // Write code here that turns the phrase above into concrete actions
-////	    throw new io.cucumber.java.PendingException();
-////	}
-////
-////	@Then("the user is in the empty Practice Question page")
-////	public void the_user_is_in_the_empty_practice_question_page() {
-////	    // Write code here that turns the phrase above into concrete actions
-////	    throw new io.cucumber.java.PendingException();
-////	}
+	@Then("the user is in the empty Practice Question page")
+	public void the_user_is_in_the_empty_practice_question_page() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
 ////
 ////
 ////

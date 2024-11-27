@@ -1,12 +1,17 @@
 package pageObjects;
 
+import java.time.Duration;
 import java.util.Properties;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Utilities.configReader;
 import webdriver.DriverFactory;
@@ -32,12 +37,19 @@ public class DataStructurePage {
 	 @FindBy(xpath = "//a[@href='/tryEditor' and contains(text(),'Try here')]")
 	 WebElement tryHereButton;
 
-	 @FindBy(xpath="//*[@id=\"answer_form\"]/div/div/div[1]/textarea")
+//	 @FindBy(xpath="//*[@id=\"answer_form\"]/div/div/div[1]/textarea")
+	 @FindBy(xpath="/html/body/div/div")
 	 WebElement tryEditorPage;
-	 @FindBy(xpath="//*[@id=\"answer_form\"]/div/div/div[1]/textarea")
+	 
+	 @FindBy(xpath="//form[@id='answer_form']/div/div/div/textarea")
 	    WebElement codeEditor;
-
-	 @FindBy(xpath ="//*[@id=\"answer_form\"]/button")
+	 
+	 @FindBy(xpath="//form[@id='answer_form']/div/div/div[6]")
+	    WebElement codeEditor_click;
+	 
+	 
+	// @FindBy(xpath ="//*[@id=\"answer_form\"]/button")
+    @FindBy(xpath ="//button[@type='button']")
 	    WebElement runButton;
 
 	 @FindBy(xpath= "//*[@id=\"output\"]")
@@ -85,24 +97,52 @@ public class DataStructurePage {
 		
 	}
 	public void enterCode(String code) {
-		 codeEditor.clear();
-	        codeEditor.sendKeys(code);
 		
+		codeEditor_click.click();
+		
+		
+
+		//codeEditorTextarea.clear();
+		codeEditor.sendKeys(code);
 	}
+//	public void clickRunButton() {
+//		
+//		runButton.click();
+//
+//		  JavascriptExecutor js = (JavascriptExecutor) driver;
+//		    js.executeAsyncScript("window.setTimeout(arguments[arguments.length - 1], 5000);");
+//
+//	}
+//	
 	public void clickRunButton() {
-		runButton.click();
-		
+	    try {
+	        runButton.click();
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+	        wait.until(ExpectedConditions.alertIsPresent()); // Wait for the alert
+	    } catch (Exception e) {
+	        System.out.println("No alert present.");
+	    }
 	}
+
+	
 	public String getOutputText() {
 		
 	  return outputConsole.getText();
 	}
+	
 	public String handlePopupError() {
-		 Alert alert = driver.switchTo().alert(); // Switch to popup alert
-	        String alertText = alert.getText();
-	        alert.accept(); // Click the OK button
+	    try {
+	        Alert alert = driver.switchTo().alert();
+	        String alertText = alert.getText(); // Get the alert text
+	        System.out.println("Alert text: " + alertText);
+	        alert.accept(); // Accept the alert
 	        return alertText;
+	    } catch (NoAlertPresentException e) {
+	        return "";
+	    }
 	}
+
+
 	
 	
 	
