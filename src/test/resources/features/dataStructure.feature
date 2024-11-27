@@ -25,7 +25,7 @@ Feature: User Actions in the Python Editor and Related Pages
 
     Examples: 
       | code              | expectedOutcome                                                  |
-      | print(\"Hello\")abc | the user sees popup error message and click ok button            |
+      | print(\"Hello\")abc  | popup error message containing SyntaxError          |
       | print(\"Hello\")    | the user is able to see the output in the console                |
   #Scenario: Navigate to Practice Questions Page
     #Given the user is in the Time Complexity page
