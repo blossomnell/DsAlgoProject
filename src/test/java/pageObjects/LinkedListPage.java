@@ -27,19 +27,21 @@ public class LinkedListPage {
 	WebElement getstarted_btn;
 	@FindBy(xpath = "//a[@href='introduction']")
 	WebElement introduction_btn;
-	
+	@FindBy(xpath = "a[@href-'/tryEditor']")
+	WebElement tryhere_btn;
+	@FindBy(xpath = "//div[@class = 'CodeMirror cm-s-default']")
+	WebElement txt_code;
+	@FindBy(xpath = "//button[text()='Run']")
+    WebElement run_btn;
+
 	public void navigatetohomepage() {
-		driver.get("https://dsportalapp.herokuapp.com/home");	
+		driver.get("https://dsportalapp.herokuapp.com/home");		
 	}
 
 	public void signin() {
 		signin_btn.click();		
 	}
-
-	public void clickloginBtn() {
-		login_btn.click();		
-	}
-
+	
 	public void navigatetologinpage() {
 		driver.get("https://dsportalapp.herokuapp.com/login");		
 	}
@@ -52,10 +54,14 @@ public class LinkedListPage {
 		txt_password.sendKeys(password);		
 	}
 
-	public void getstarted() {
-		getstarted_btn.click();	
+	public void clickloginBtn() {
+		login_btn.click();		
 	}
 
+	public void clickgetstartedBtn() {
+		getstarted_btn.click();	
+	}
+	
 	public void navigatetolinkedlistpage() {
 		driver.get("https://dsportalapp.herokuapp.com/linked-list/");		
 	}
@@ -64,17 +70,54 @@ public class LinkedListPage {
 		return true;
 	}
 
-	public void navigatetointroductionpage() {
-		driver.get("https://dsportalapp.herokuapp.com/linked-list/introduction/");	
+	public void Introduction() {
+		introduction_btn.click();	
 	}
 
 	public boolean isIntroductionPageDisplayed() {
 		return true;
 	}
 
-	public void Introduction() {
-		introduction_btn.click();
-		
+	public void navigatetointroductionpage() {
+		driver.get("https://dsportalapp.herokuapp.com/linked-list/introduction/");		
 	}
 
-}
+	public void Tryhere() {
+		tryhere_btn.click();	
+	}
+
+	public boolean isTryEditorPageDisplayed() {
+		return true;
+	}
+
+	public void navigatetotryeditorpage() {
+		driver.get("https://dsportalapp.herokuapp.com/tryEditor");		
+	}
+ 	
+	public boolean isRunButtonDisplayed() {
+		return run_btn != null;
+	}
+	
+	public void enterCode(String code) {
+		txt_code.sendKeys(code);		
+	}
+
+	public void clicksrunBtn() {
+		run_btn.click();		
+	}
+	
+	public String getAlertMessage() {
+	    
+		return null;
+	}
+
+	
+
+
+	}
+	
+	
+
+
+	
+	
