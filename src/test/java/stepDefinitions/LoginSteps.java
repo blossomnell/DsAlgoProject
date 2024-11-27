@@ -61,12 +61,12 @@ public class LoginSteps {
 	@When("the user clicks on Sign out button")
 	public void the_user_clicks_on_Sign_out_button() {
 		assertTrue(loginPage.isSignOutButtonDisplayed(), "Sign out Button is not displayed");
-		loginPage.clicksignoutBtn();
+		loginPage.clickSignOutBtn();
 	}
 
 	@Then("the user gets message {string}")
 	public void the_user_gets_logout_message(String expectedMessage) {
-		assertTrue(loginPage.isLoggedOutMessageDisplayed(), "logged out message is not displayed");
+		assertTrue(loginPage.isLoggedOutMessageDisplayed(expectedMessage), "logged out message is not displayed");
 	}
 }
 
