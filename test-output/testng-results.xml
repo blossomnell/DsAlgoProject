@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="0" failed="5" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-26T17:32:43 CST" name="Default suite" finished-at="2024-11-26T17:32:44 CST" duration-ms="920">
+  <suite started-at="2024-11-27T15:32:05 CST" name="Default suite" finished-at="2024-11-27T15:32:13 CST" duration-ms="8145">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CucumberTest@7c1e2a9e]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-11-26T17:32:43 CST" name="Default test" finished-at="2024-11-26T17:32:44 CST" duration-ms="920">
+    <test started-at="2024-11-27T15:32:05 CST" name="Default test" finished-at="2024-11-27T15:32:13 CST" duration-ms="8145">
       <class name="testRunner.CucumberTest">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.CucumberTest@7c1e2a9e]" started-at="2024-11-26T17:32:43 CST" name="setUpClass" finished-at="2024-11-26T17:32:43 CST" duration-ms="756" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.CucumberTest@7c1e2a9e]" started-at="2024-11-27T15:32:05 CST" name="setUpClass" finished-at="2024-11-27T15:32:06 CST" duration-ms="611" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@5eeedb60]]>
+                <![CDATA[org.testng.TestRunner@5854a18]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CucumberTest@7c1e2a9e]" started-at="2024-11-26T17:32:43 CST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-26T17:32:43 CST" duration-ms="58" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CucumberTest@7c1e2a9e]" started-at="2024-11-27T15:32:06 CST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T15:32:10 CST" duration-ms="3635" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -34,79 +34,10 @@
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.cucumberexpressions.CucumberExpressionException">
-            <message>
-              <![CDATA[This Cucumber Expression has a problem at column 25:
-
-the user gets a message (string}
-                        ^
-The '(' does not have a matching ')'.
-If you did not intend to use optional text you can use '\(' to escape the optional text]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.cucumberexpressions.CucumberExpressionException: This Cucumber Expression has a problem at column 25:
-
-the user gets a message (string}
-                        ^
-The '(' does not have a matching ')'.
-If you did not intend to use optional text you can use '\(' to escape the optional text
-at io.cucumber.cucumberexpressions.CucumberExpressionException.createMissingEndToken(CucumberExpressionException.java:22)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.lambda$parseBetween$5(CucumberExpressionParser.java:205)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parseToken(CucumberExpressionParser.java:244)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parseTokensUntil(CucumberExpressionParser.java:228)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.lambda$static$4(CucumberExpressionParser.java:135)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parseToken(CucumberExpressionParser.java:244)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parseTokensUntil(CucumberExpressionParser.java:228)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.lambda$parseBetween$5(CucumberExpressionParser.java:200)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parse(CucumberExpressionParser.java:166)
-at io.cucumber.cucumberexpressions.CucumberExpression.<init>(CucumberExpression.java:38)
-at io.cucumber.cucumberexpressions.ExpressionFactory.createExpression(ExpressionFactory.java:53)
-at io.cucumber.core.stepexpression.StepExpressionFactory.crateExpression(StepExpressionFactory.java:88)
-at io.cucumber.core.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:61)
-at io.cucumber.core.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:49)
-at io.cucumber.core.runner.CachingGlue.lambda$prepareGlue$3(CachingGlue.java:273)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at io.cucumber.core.runner.CachingGlue.prepareGlue(CachingGlue.java:272)
-at io.cucumber.core.runner.Runner.runPickle(Runner.java:72)
-at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:135)
-at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
-at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
-at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
-at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.cucumberexpressions.CucumberExpressionException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CucumberTest@7c1e2a9e]" started-at="2024-11-26T17:32:43 CST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-26T17:32:43 CST" duration-ms="6" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CucumberTest@7c1e2a9e]" started-at="2024-11-27T15:32:10 CST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-27T15:32:13 CST" duration-ms="3829" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -119,334 +50,10 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.cucumberexpressions.CucumberExpressionException">
-            <message>
-              <![CDATA[This Cucumber Expression has a problem at column 25:
-
-the user gets a message (string}
-                        ^
-The '(' does not have a matching ')'.
-If you did not intend to use optional text you can use '\(' to escape the optional text]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.cucumberexpressions.CucumberExpressionException: This Cucumber Expression has a problem at column 25:
-
-the user gets a message (string}
-                        ^
-The '(' does not have a matching ')'.
-If you did not intend to use optional text you can use '\(' to escape the optional text
-at io.cucumber.cucumberexpressions.CucumberExpressionException.createMissingEndToken(CucumberExpressionException.java:22)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.lambda$parseBetween$5(CucumberExpressionParser.java:205)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parseToken(CucumberExpressionParser.java:244)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parseTokensUntil(CucumberExpressionParser.java:228)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.lambda$static$4(CucumberExpressionParser.java:135)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parseToken(CucumberExpressionParser.java:244)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parseTokensUntil(CucumberExpressionParser.java:228)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.lambda$parseBetween$5(CucumberExpressionParser.java:200)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parse(CucumberExpressionParser.java:166)
-at io.cucumber.cucumberexpressions.CucumberExpression.<init>(CucumberExpression.java:38)
-at io.cucumber.cucumberexpressions.ExpressionFactory.createExpression(ExpressionFactory.java:53)
-at io.cucumber.core.stepexpression.StepExpressionFactory.crateExpression(StepExpressionFactory.java:88)
-at io.cucumber.core.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:61)
-at io.cucumber.core.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:49)
-at io.cucumber.core.runner.CachingGlue.lambda$prepareGlue$3(CachingGlue.java:273)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at io.cucumber.core.runner.CachingGlue.prepareGlue(CachingGlue.java:272)
-at io.cucumber.core.runner.Runner.runPickle(Runner.java:72)
-at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:135)
-at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
-at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
-at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
-at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.cucumberexpressions.CucumberExpressionException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CucumberTest@7c1e2a9e]" started-at="2024-11-26T17:32:43 CST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-26T17:32:43 CST" duration-ms="4" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["validating Run function with empty code, valid code and invalid code"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Linked List functionality"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="io.cucumber.cucumberexpressions.CucumberExpressionException">
-            <message>
-              <![CDATA[This Cucumber Expression has a problem at column 25:
-
-the user gets a message (string}
-                        ^
-The '(' does not have a matching ')'.
-If you did not intend to use optional text you can use '\(' to escape the optional text]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.cucumberexpressions.CucumberExpressionException: This Cucumber Expression has a problem at column 25:
-
-the user gets a message (string}
-                        ^
-The '(' does not have a matching ')'.
-If you did not intend to use optional text you can use '\(' to escape the optional text
-at io.cucumber.cucumberexpressions.CucumberExpressionException.createMissingEndToken(CucumberExpressionException.java:22)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.lambda$parseBetween$5(CucumberExpressionParser.java:205)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parseToken(CucumberExpressionParser.java:244)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parseTokensUntil(CucumberExpressionParser.java:228)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.lambda$static$4(CucumberExpressionParser.java:135)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parseToken(CucumberExpressionParser.java:244)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parseTokensUntil(CucumberExpressionParser.java:228)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.lambda$parseBetween$5(CucumberExpressionParser.java:200)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parse(CucumberExpressionParser.java:166)
-at io.cucumber.cucumberexpressions.CucumberExpression.<init>(CucumberExpression.java:38)
-at io.cucumber.cucumberexpressions.ExpressionFactory.createExpression(ExpressionFactory.java:53)
-at io.cucumber.core.stepexpression.StepExpressionFactory.crateExpression(StepExpressionFactory.java:88)
-at io.cucumber.core.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:61)
-at io.cucumber.core.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:49)
-at io.cucumber.core.runner.CachingGlue.lambda$prepareGlue$3(CachingGlue.java:273)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at io.cucumber.core.runner.CachingGlue.prepareGlue(CachingGlue.java:272)
-at io.cucumber.core.runner.Runner.runPickle(Runner.java:72)
-at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:135)
-at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
-at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
-at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
-at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.cucumberexpressions.CucumberExpressionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CucumberTest@7c1e2a9e]" started-at="2024-11-26T17:32:43 CST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-26T17:32:43 CST" duration-ms="5" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["validating Run function with empty code, valid code and invalid code"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Linked List functionality"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="io.cucumber.cucumberexpressions.CucumberExpressionException">
-            <message>
-              <![CDATA[This Cucumber Expression has a problem at column 25:
-
-the user gets a message (string}
-                        ^
-The '(' does not have a matching ')'.
-If you did not intend to use optional text you can use '\(' to escape the optional text]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.cucumberexpressions.CucumberExpressionException: This Cucumber Expression has a problem at column 25:
-
-the user gets a message (string}
-                        ^
-The '(' does not have a matching ')'.
-If you did not intend to use optional text you can use '\(' to escape the optional text
-at io.cucumber.cucumberexpressions.CucumberExpressionException.createMissingEndToken(CucumberExpressionException.java:22)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.lambda$parseBetween$5(CucumberExpressionParser.java:205)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parseToken(CucumberExpressionParser.java:244)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parseTokensUntil(CucumberExpressionParser.java:228)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.lambda$static$4(CucumberExpressionParser.java:135)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parseToken(CucumberExpressionParser.java:244)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parseTokensUntil(CucumberExpressionParser.java:228)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.lambda$parseBetween$5(CucumberExpressionParser.java:200)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parse(CucumberExpressionParser.java:166)
-at io.cucumber.cucumberexpressions.CucumberExpression.<init>(CucumberExpression.java:38)
-at io.cucumber.cucumberexpressions.ExpressionFactory.createExpression(ExpressionFactory.java:53)
-at io.cucumber.core.stepexpression.StepExpressionFactory.crateExpression(StepExpressionFactory.java:88)
-at io.cucumber.core.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:61)
-at io.cucumber.core.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:49)
-at io.cucumber.core.runner.CachingGlue.lambda$prepareGlue$3(CachingGlue.java:273)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at io.cucumber.core.runner.CachingGlue.prepareGlue(CachingGlue.java:272)
-at io.cucumber.core.runner.Runner.runPickle(Runner.java:72)
-at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:135)
-at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
-at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
-at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
-at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.cucumberexpressions.CucumberExpressionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CucumberTest@7c1e2a9e]" started-at="2024-11-26T17:32:43 CST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-26T17:32:44 CST" duration-ms="5" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["validating Run function with empty code, valid code and invalid code"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Linked List functionality"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="io.cucumber.cucumberexpressions.CucumberExpressionException">
-            <message>
-              <![CDATA[This Cucumber Expression has a problem at column 25:
-
-the user gets a message (string}
-                        ^
-The '(' does not have a matching ')'.
-If you did not intend to use optional text you can use '\(' to escape the optional text]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.cucumberexpressions.CucumberExpressionException: This Cucumber Expression has a problem at column 25:
-
-the user gets a message (string}
-                        ^
-The '(' does not have a matching ')'.
-If you did not intend to use optional text you can use '\(' to escape the optional text
-at io.cucumber.cucumberexpressions.CucumberExpressionException.createMissingEndToken(CucumberExpressionException.java:22)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.lambda$parseBetween$5(CucumberExpressionParser.java:205)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parseToken(CucumberExpressionParser.java:244)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parseTokensUntil(CucumberExpressionParser.java:228)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.lambda$static$4(CucumberExpressionParser.java:135)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parseToken(CucumberExpressionParser.java:244)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parseTokensUntil(CucumberExpressionParser.java:228)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.lambda$parseBetween$5(CucumberExpressionParser.java:200)
-at io.cucumber.cucumberexpressions.CucumberExpressionParser.parse(CucumberExpressionParser.java:166)
-at io.cucumber.cucumberexpressions.CucumberExpression.<init>(CucumberExpression.java:38)
-at io.cucumber.cucumberexpressions.ExpressionFactory.createExpression(ExpressionFactory.java:53)
-at io.cucumber.core.stepexpression.StepExpressionFactory.crateExpression(StepExpressionFactory.java:88)
-at io.cucumber.core.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:61)
-at io.cucumber.core.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:49)
-at io.cucumber.core.runner.CachingGlue.lambda$prepareGlue$3(CachingGlue.java:273)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at io.cucumber.core.runner.CachingGlue.prepareGlue(CachingGlue.java:272)
-at io.cucumber.core.runner.Runner.runPickle(Runner.java:72)
-at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:135)
-at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
-at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
-at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
-at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.cucumberexpressions.CucumberExpressionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.CucumberTest@7c1e2a9e]" started-at="2024-11-26T17:32:44 CST" name="tearDownClass" finished-at="2024-11-26T17:32:44 CST" duration-ms="36" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.CucumberTest@7c1e2a9e]" started-at="2024-11-27T15:32:13 CST" name="tearDownClass" finished-at="2024-11-27T15:32:13 CST" duration-ms="34" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
