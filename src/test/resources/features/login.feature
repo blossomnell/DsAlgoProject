@@ -29,4 +29,4 @@ Background: the user opens the homepage page
     Scenario: the user tries signout function
      Given the user is logged in
      When the user clicks on Sign out button
-     Then the user gets message "<output>"
+     Then the user gets message "Logged out successfully"
