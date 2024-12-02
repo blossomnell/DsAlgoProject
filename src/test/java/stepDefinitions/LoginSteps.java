@@ -65,7 +65,7 @@ public class LoginSteps {
 	}
 
 	@Then("the user gets message {string}")
-	public void the_user_gets_logout_message(String expectedMessage) {
+	public void the_user_gets_message(String expectedMessage) {
 		assertTrue(loginPage.isLoggedOutMessageDisplayed(expectedMessage), "logged out message is not displayed");
 	}
 }
