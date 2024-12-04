@@ -1,8 +1,9 @@
 package stepDefinitions;
 
-import static org.testng.Assert.assertTrue;
-
+//import static org.testng.Assert.assertTrue;
 import org.testng.Assert;
+//import org.testng.Assert;
+//import org.testng.Assert;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -27,7 +28,7 @@ public class LinkedListSteps {
 	@Then("the user should be in the Introduction page")
 	public void the_user_should_be_in_the_introduction_page() {
 		linkedListPage.navigatetointroductionpage();
-		assertTrue(linkedListPage.isIntroductionPageDisplayed(), "Introduction page is not displayed");
+		Assert.assertTrue(linkedListPage.isIntroductionPageDisplayed(), "Introduction page is not displayed");
 	}
 
 	@Given("the user is in the Introduction page")
@@ -43,8 +44,8 @@ public class LinkedListSteps {
 	@Then("the user should be in the python editor page")
 	public void the_user_should_be_in_the_python_editor_page() {
 		linkedListPage.navigatetotryeditorpage();
-		assertTrue(linkedListPage.isTryEditorPageDisplayed(), "Try Editor page is not displayed");
-		assertTrue(linkedListPage.isRunButtonDisplayed(), "Run button is not displayed");
+		Assert.assertTrue(linkedListPage.isTryEditorPageDisplayed(), "Try Editor page is not displayed");
+		Assert.assertTrue(linkedListPage.isRunButtonDisplayed(), "Run button is not displayed");
 	}
 
 	@Given("the user is in the python editor of Introduction page")
@@ -59,11 +60,16 @@ public class LinkedListSteps {
 	}
 
 	@Then("the user gets the message {string}")
-	public void the_user_gets_the_message(String expectedOutcome) {
-		//assertEquals(linkedListPage.getAlertMessage(),expectedMessage, "outputMessage");
-		assertTrue(linkedListPage.isExpectedOutcomeDisplayed(),"expected outcome is not displayed");
+	public void the_user_gets_the_message(String expectedOutcome) {		
+		
+		if(expectedOutcome.contains("SyntaxError"))
+			Assert.assertEquals(linkedListPage.getPopupAlertText(),expectedOutcome);
+
+		else
+			Assert.assertEquals(linkedListPage.getOutputTextFromTryEditorPage(), expectedOutcome);
+		
 	}
-		  
+	  
 	@Given("the user is in the Linked List page")
 	public void the_user_is_in_the_linked_list_page() {
 		linkedListPage.navigatetolinkedlistpage();
