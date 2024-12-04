@@ -1,19 +1,25 @@
 package pageObjects;
 
+import java.util.Properties;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import Utilities.configReader;
 import webdriver.DriverFactory;
 
 public class RegisterPage {
 	WebDriver driver;
+	Properties prop;
 
 	public RegisterPage() {
 		this.driver = DriverFactory.getDriver();
 		PageFactory.initElements(driver, this);
+		configReader reader = new configReader();
+		prop = reader.init_prop();
 	}
 
 	@FindBy(id = "id_username")
@@ -30,7 +36,8 @@ public class RegisterPage {
 	private WebElement alertMessage;
 
 	public void navigatetohomepage() {
-		driver.get("https://dsportalapp.herokuapp.com/home");
+		//driver.get("https://dsportalapp.herokuapp.com/home");
+		driver.get(prop.getProperty("testurl") + "/home");
 	}
 
 	public void register() {
@@ -38,7 +45,8 @@ public class RegisterPage {
 	}
 
 	public void navigatetoregisterpage() {
-		driver.get("https://dsportalapp.herokuapp.com/register");
+		//driver.get("https://dsportalapp.herokuapp.com/register");
+		driver.get(prop.getProperty("testurl") + "/register");
 	}
 
 	public void enterUsername(String username) {

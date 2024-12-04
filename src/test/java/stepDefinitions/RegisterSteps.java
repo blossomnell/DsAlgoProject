@@ -1,8 +1,10 @@
 package stepDefinitions;
 
-import static org.testng.Assert.assertTrue;
+//import static org.testng.Assert.assertTrue;
 
 import java.util.UUID;
+
+import org.testng.Assert;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -26,11 +28,11 @@ public class RegisterSteps {
 	@Then("the user is redirected to the register page")
 	public void the_user_is_redirected_to_the_register_page() {
 		registerPage.navigatetoregisterpage();
-		assertTrue(registerPage.isRegisterPageDisplayed(), "Register page is not displayed");
-		assertTrue(registerPage.isUsernameFieldDisplayed(), "Username Field is not displayed");
-		assertTrue(registerPage.isPassword1FieldDisplayed(), "Password1 Field is not displayed");
-		assertTrue(registerPage.isPassword2FieldDisplayed(), "Password2 Field is not displayed");
-		assertTrue(registerPage.isRegisterButtonDisplayed(), "Register Button is not displayed");
+		Assert.assertTrue(registerPage.isRegisterPageDisplayed(), "Register page is not displayed");
+		Assert.assertTrue(registerPage.isUsernameFieldDisplayed(), "Username Field is not displayed");
+		Assert.assertTrue(registerPage.isPassword1FieldDisplayed(), "Password1 Field is not displayed");
+		Assert.assertTrue(registerPage.isPassword2FieldDisplayed(), "Password2 Field is not displayed");
+		Assert.assertTrue(registerPage.isRegisterButtonDisplayed(), "Register Button is not displayed");
 	}
 
 	@Given("the user is in the registration page")
@@ -54,7 +56,7 @@ public class RegisterSteps {
 
 	@Then("the user gets a message {string}")
 	public void the_user_gets_a_message(String expectedMessage) {
-		assertTrue(registerPage.getAlertMessage().contains(expectedMessage), "registerMessage");
+		Assert.assertTrue(registerPage.getAlertMessage().contains(expectedMessage), "registerMessage");
 
 	}
 

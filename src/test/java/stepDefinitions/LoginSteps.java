@@ -1,7 +1,9 @@
 package stepDefinitions;
 
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+//import static org.testng.Assert.assertTrue;
+
+import org.testng.Assert;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -26,10 +28,10 @@ public class LoginSteps {
 	public void the_user_is_redirected_to_the_login_page() {
 		loginPage.navigatetologinpage();
 	
-		assertTrue(loginPage.isLoginPageDisplayed(), "Login page is not displayed");
-		assertTrue(loginPage.isUsernameFieldDisplayed(), "Username Field is not displayed");
-		assertTrue(loginPage.isPasswordFieldDisplayed(), "Password Fiels is not displayed");
-		assertTrue(loginPage.isLoginButtonDisplayed(), "Login Button is not displayed");
+		Assert.assertTrue(loginPage.isLoginPageDisplayed(), "Login page is not displayed");
+		Assert.assertTrue(loginPage.isUsernameFieldDisplayed(), "Username Field is not displayed");
+		Assert.assertTrue(loginPage.isPasswordFieldDisplayed(), "Password Fiels is not displayed");
+		Assert.assertTrue(loginPage.isLoginButtonDisplayed(), "Login Button is not displayed");
 	}
 
 	@Given("the user is in the login page")
@@ -60,13 +62,13 @@ public class LoginSteps {
 
 	@When("the user clicks on Sign out button")
 	public void the_user_clicks_on_Sign_out_button() {
-		assertTrue(loginPage.isSignOutButtonDisplayed(), "Sign out Button is not displayed");
+		Assert.assertTrue(loginPage.isSignOutButtonDisplayed(), "Sign out Button is not displayed");
 		loginPage.clickSignOutBtn();
 	}
 
 	@Then("the user gets message {string}")
-	public void the_user_gets_logout_message(String expectedMessage) {
-		assertTrue(loginPage.isLoggedOutMessageDisplayed(expectedMessage), "logged out message is not displayed");
+	public void the_user_gets_message(String expectedMessage) {
+		Assert.assertTrue(loginPage.isLoggedOutMessageDisplayed(expectedMessage), "logged out message is not displayed");
 	}
 }
 
