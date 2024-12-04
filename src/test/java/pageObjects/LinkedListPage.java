@@ -62,6 +62,10 @@ public class LinkedListPage {
 	@FindBy(xpath = "//a[@href='/linked-list/practice']")
 	WebElement practicequestions_btn;
 	
+	public void navigatetohomepage() {
+		driver.get(prop.getProperty("testurl") + "/home");		
+	}	
+		
 	public void clickgetstartedBtn() {
 		getstarted_btn.click();	
 	}
@@ -191,7 +195,9 @@ public class LinkedListPage {
         String alertText = alert.getText();
         alert.accept();
         return alertText;
-	}	
+	}
+
+	
 
 }
 

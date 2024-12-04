@@ -14,6 +14,21 @@ import pageObjects.LinkedListPage;
 public class LinkedListSteps {
 	
 	LinkedListPage linkedListPage = new LinkedListPage();
+	
+	@Given("the user is in Homepage")
+	public void the_user_is_in_homepage() {
+		linkedListPage.navigatetohomepage();
+	}
+	
+	@When("the user clicks the Get Started under Linked List")
+	public void the_user_clicks_the_get_started_under_linked_list() {
+		linkedListPage.clickgetstartedBtn();
+	}
+	
+	@Then("the user is navigated to Linked List page")
+	public void the_user_is_navigated_to_linked_list_page() {
+		linkedListPage.navigatetolinkedlistpage();
+	}
 		
 	@Given("the user is in Linked List page")
 	public void the_user_is_in_linked_list_page() {

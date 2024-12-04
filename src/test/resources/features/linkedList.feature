@@ -1,7 +1,13 @@
 Feature: Linked List functionality
 
 Background: 
-    Given the user is logged in 
+    Given the user is logged in
+ 
+ @tag
+ Scenario: exploring the LinkedList page
+    Given the user is in Homepage
+    When the user clicks the Get Started under Linked List
+    Then the user is navigated to Linked List page
     
  @tag
   Scenario: exploring the Introduction page
