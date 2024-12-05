@@ -1,9 +1,15 @@
 Feature: Linked List functionality
 
 Background: 
-    Given the user is logged in 
-    
+    Given the user is logged in
+
  @tag
+ Scenario: exploring the LinkedList page
+    Given the user is in Homepage
+    When the user clicks the Get Started under Linked List
+    Then the user is navigated to Linked List page
+    
+@tag
   Scenario: exploring the Introduction page
     Given the user is in Linked List page
     When the user clicks the Introduction 
@@ -23,7 +29,7 @@ Background:
        Examples:
          |  code                 |            expectedOutcome          |              
          |print(\\"Hello\\")abc  | SyntaxError: bad input on line 1    |   
-	 | print("Hello")        | Hello                               |
+	       | print("Hello")        | Hello                               |
           
  @tag
   Scenario: exploring the Creating Linked List page
