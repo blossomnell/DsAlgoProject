@@ -1,8 +1,8 @@
 Feature: User Actions in the Python Editor and Related Pages
 
-  #Background: 
-    #Given the user is logged in
-#
+  Background: 
+    Given the user is logged in
+
   #Scenario: Navigate to Time Complexity Page
     #Given the user is in the homepage
     #When the user clicks Get Started button under DataStructure
@@ -20,13 +20,16 @@ Feature: User Actions in the Python Editor and Related Pages
 
   Scenario Outline: Run code in the Python Editor
     Given the user is in the Python try editor page
-    When the user enters "<code>" in the editor and clicks Run button
+    When the user enters data from Excel in row <row> and column <column> 
     Then the user sees "<expectedOutcome>"
 
     Examples: 
-      | code              | expectedOutcome                                                  |
-      | print(\"Hello\")abc  | popup error message containing SyntaxError          |
-      | print(\"Hello\")    | the user is able to see the output in the console                |
+      | row | column |  expectedOutcome                                   |
+      
+      | 1 | 0      |popup error message containing SyntaxError        |
+      
+      | 2  | 0     |the user is able to see the output in the console|
+
   #Scenario: Navigate to Practice Questions Page
     #Given the user is in the Time Complexity page
     #When the user clicks the Practice Questions link

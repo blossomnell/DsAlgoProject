@@ -1,16 +1,27 @@
 package stepDefinitions;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
+import Utilities.ExcelReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.DataStructurePage;
-import pageObjects.LoginPage;
-import webdriver.DriverFactory;
+//import pageObjects.LoginPage;
+//import webdriver.DriverFactory;
 
 public class DataStructuresSteps{
+    ExcelReader excelReader;
+    public DataStructuresSteps() {
+        try {
+            excelReader = new ExcelReader("src/test/resources/config/TestData.xlsx");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 	//	WebDriver driver = DriverFactory.getDriver();
 	 DataStructurePage dsp = new  DataStructurePage();
 //		//LoginPage loginPage = new LoginPage();
@@ -78,8 +89,13 @@ public class DataStructuresSteps{
 	    
 	}
 
-	@When("the user enters {string} in the editor and clicks Run button")
-	public void the_user_enters_in_the_editor_and_clicks_run_button(String code) {
+	@When("the user enters data from Excel in row {int} and column {int}")
+	 public void the_user_enters_data_from_excel(int row, int column) {
+        String code = excelReader.getCellData("python DS", row, column);
+       if (code == null || code.isEmpty()) {
+           throw new IllegalArgumentException("The code fetched from Excel is empty or null.");
+       }
+        System.out.println("Code entered in editor: " + code);   
 		dsp.enterCode(code);
         dsp.clickRunButton();
 	}
@@ -88,12 +104,15 @@ public class DataStructuresSteps{
 	public void the_user_sees(String expectedOutcome) {
 	    if (expectedOutcome.contains("popup error message")) {
 	        String popupMessage = dsp.handlePopupError();
+	       // Assert.assertNotNull(popupMessage, "Expected a popup error message but none was displayed.");
+	        
 	        Assert.assertTrue(popupMessage.contains("SyntaxError"), 
 	            "Popup message did not match the expected error text. Actual: " + popupMessage);
 	    } else if (expectedOutcome.contains("output in the console")) {
 	        String consoleOutput = dsp.getOutputText();
+	       // Assert.assertNotNull(consoleOutput, "Expected console output but none was displayed.");       
 	        Assert.assertFalse(consoleOutput.isEmpty(), 
-	            "No output found in the console.");
+	            "No output found in the console");
 	    } else {
 	        Assert.fail("Unexpected outcome specified in test case: " + expectedOutcome);
 	    }
@@ -101,18 +120,11 @@ public class DataStructuresSteps{
 
     @When("the user clicks the Practice Questions link")
 	public void the_user_clicks_the_practice_questions_link() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   dsp.clickPracticeQuestionsLink();
 	}
 
 	@Then("the user is in the empty Practice Question page")
 	public void the_user_is_in_the_empty_practice_question_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-////
-////
-////
-////
-////
+	    Assert.assertTrue(dsp.ispracticeQuestionPageDisplayed(),"Practice Question page is not displayed");	}
+
 }

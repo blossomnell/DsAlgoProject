@@ -54,6 +54,12 @@ public class DataStructurePage {
 
 	 @FindBy(xpath= "//*[@id=\"output\"]")
 	    WebElement outputConsole;
+	 @FindBy(xpath="/html/body/div[2]/div/div[1]/div/a")
+	 WebElement practiceQuestionsLink;
+	 
+	 @FindBy(xpath="/html")
+	 WebElement practiceQuestionsPageTitle;
+	 
 
 	 
 
@@ -140,6 +146,14 @@ public class DataStructurePage {
 	    } catch (NoAlertPresentException e) {
 	        return "";
 	    }
+	}
+	public void clickPracticeQuestionsLink() {
+	 practiceQuestionsLink.click();
+		
+	}
+	public boolean ispracticeQuestionPageDisplayed() {
+		
+		return practiceQuestionsPageTitle.isDisplayed();
 	}
 
 
