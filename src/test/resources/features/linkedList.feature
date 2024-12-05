@@ -29,7 +29,7 @@ Background:
        Examples:
          |  code                 |            expectedOutcome          |              
          |print(\\"Hello\\")abc  | SyntaxError: bad input on line 1    |   
-	 | print("Hello")        | Hello                               |
+	       | print("Hello")        | Hello                               |
           
  @tag
   Scenario: exploring the Creating Linked List page
