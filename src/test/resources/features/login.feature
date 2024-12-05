@@ -1,5 +1,4 @@
 
-
 Feature: DsAlgo login functionality/validation
 Background: the user opens the homepage page
 
@@ -19,7 +18,7 @@ Background: the user opens the homepage page
       |username    |password  | output                        |
       |            |          | Please fill out this field.   |
       |            | abss@abc | Please fill out this field.   |
-      | Ninjasquad | 				  | Please fill out this field.   |
+      | Ninjasquad | 				     | Please fill out this field.   |
       | Ninjasquad | abss     | Invalid Username and Password |
       |  ninja     |abss@abc  | Invalid Username and Password |
       |  ninja     | abss     | Invalid Username and Password |
