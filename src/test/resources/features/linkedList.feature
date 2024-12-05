@@ -3,25 +3,25 @@ Feature: Linked List functionality
 Background: 
     Given the user is logged in
  
- @tag
+ @wip
  Scenario: exploring the LinkedList page
     Given the user is in Homepage
     When the user clicks the Get Started under Linked List
     Then the user is navigated to Linked List page
     
- @tag
+ @wip
   Scenario: exploring the Introduction page
     Given the user is in Linked List page
     When the user clicks the Introduction 
     Then the user should be in the Introduction page
     
- @tag
+ @wip
   Scenario: exploring the python editor of Introduction page
     Given the user is in the Introduction page
     When the user clicks the Try here button
     Then the user should be in the python editor page
         
- @tag
+ @wip
   Scenario Outline: validating Run function with invalid code and valid code
     Given the user is in the python editor of Introduction page
     When the user enters '<code>' in the python editor and clicks Run

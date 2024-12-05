@@ -1,6 +1,6 @@
 
 Feature: DsAlgo login functionality/validation
-Background: the user opens the homepage page
+Background: the user opens the homepage 
 
  @tag
   Scenario: the user is in the homepage and navigates to the signin page
