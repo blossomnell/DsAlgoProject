@@ -29,15 +29,7 @@ public class Hooks {
 		DriverFactory.quitDriver();
 
 	}
-//	
-//	@After(order=1)
-//	public void tearDown(Scenario scenario) {
-//		if(scenario.isFailed()) {
-//			String screenshotName = scenario.getName().replaceAll(null, null);
-//			byte[] sourcepath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-//			scenario.attach(sourcepath, "image/png", screenshotName);
-//			
-//		}
-//		
-//	}
+	
+	
+
 }

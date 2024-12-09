@@ -23,6 +23,6 @@ Background: user is in the registration page
       | Ninjasquad  | ninja    |      java              |  password_mismatch:The two password fields didn’t match.  |
       |  ninja!!!   | ninja    |     abss@123           |  password_mismatch:The two password fields didn’t match.  |
       | Ninjasquad  |abss@123  |    abss@1234           |  password_mismatch:The two password fields didn’t match.  |
-      | Ninjasquad  |abss@1234 |     abss@1234          |  New Account Created. You are logged in as Ninjasquad     |
+      | Ninjasquad  |abss@123  |     abss@123           |  New Account Created. You are logged in as Ninjasquad     |
       
       

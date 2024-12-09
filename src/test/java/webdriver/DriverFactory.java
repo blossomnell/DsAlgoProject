@@ -11,13 +11,12 @@ public class DriverFactory {
 	}
 	public static WebDriver getDriver() {
 		if (driver == null) {
-//			String driverPath = "driver/chromedriver.exe";
-//			System.out.println(driverPath);
-//			System.setProperty("webdriver.chrome.driver", driverPath);
+
 			ChromeOptions options = new ChromeOptions();
 
-			options.addArguments("--start-maximized"); // Optional: Start maximized for better visibility
+			options.addArguments("--start-maximized"); 
 			driver = new ChromeDriver(options);
+			
 		}
 		return driver;
 	}
