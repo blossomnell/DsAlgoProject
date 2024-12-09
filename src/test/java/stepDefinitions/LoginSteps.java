@@ -13,6 +13,7 @@ import pageObjects.LoginPage;
 
 public class LoginSteps {
 
+
 	LoginPage loginPage = new LoginPage();
 
 	@Given("the user is in the homepage")

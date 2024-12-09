@@ -16,10 +16,16 @@ public class QueuePage {
 	WebDriverWait wait;
 	Properties prop;
 	public QueuePage() {
-		this.driver = DriverFactory.getDriver();
-		PageFactory.initElements(driver, this);
+//		this.driver = DriverFactory.getDriver();
+//		PageFactory.initElements(driver, this);
+//		configReader reader = new configReader();
+//		prop = reader.init_prop();
+		
 		configReader reader = new configReader();
 		prop = reader.init_prop();
+		
+		this.driver = DriverFactory.getDriver(prop.getProperty("browser"));
+		PageFactory.initElements(driver, this);
 	}
 	@FindBy(xpath = "//a[@href='queue' and text()='Get Started']")
 	 WebElement getStartedButton;

@@ -21,6 +21,8 @@ private Properties prop;
 		}catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+		 prop.setProperty("browser", System.getProperty("browser", prop.getProperty("browser")));
 		return prop;
 	
 }

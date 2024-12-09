@@ -20,10 +20,16 @@ public class DataStructurePage {
 	WebDriver driver;
 	Properties prop;
 	public DataStructurePage() {
-		this.driver = DriverFactory.getDriver();
-		PageFactory.initElements(driver, this);
+//		this.driver = DriverFactory.getDriver();
+//		PageFactory.initElements(driver, this);
+//		configReader reader = new configReader();
+//		prop = reader.init_prop();
+		
 		configReader reader = new configReader();
 		prop = reader.init_prop();
+		
+		this.driver = DriverFactory.getDriver(prop.getProperty("browser"));
+		PageFactory.initElements(driver, this);
 	}
 	
 	 @FindBy(xpath = "//a[@href='data-structures-introduction' and text()='Get Started']")

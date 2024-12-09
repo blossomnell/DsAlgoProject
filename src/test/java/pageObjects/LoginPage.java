@@ -22,10 +22,12 @@ public class LoginPage {
 //	}
 
 	public LoginPage() {
-		this.driver = DriverFactory.getDriver();
-		PageFactory.initElements(driver, this);
+
 		configReader reader = new configReader();
 		prop = reader.init_prop();
+		
+		this.driver = DriverFactory.getDriver(prop.getProperty("browser"));
+		PageFactory.initElements(driver, this);
 	}
 
 	@FindBy(id = "id_username")

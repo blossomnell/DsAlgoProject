@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import Utilities.configReader;
 import webdriver.DriverFactory;
 
 public class RegisterPage {
@@ -14,6 +15,7 @@ public class RegisterPage {
 	public RegisterPage() {
 		this.driver = DriverFactory.getDriver();
 		PageFactory.initElements(driver, this);
+	
 	}
 
 	@FindBy(id = "id_username")

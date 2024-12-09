@@ -3,3 +3,5 @@ target/
 *.tmp
 /allure-results
 /target/classes/.cucumber
+.allure/
+.idea/

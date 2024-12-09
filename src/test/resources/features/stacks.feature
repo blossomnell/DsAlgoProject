@@ -47,7 +47,7 @@ Feature: user actions on stack pages
       #| code                  | expectedOutcome                                   |
       #| print(\\"Hello\\")abc | popup error message containing SyntaxError        |
       #| print(\\"Hello\\")    | the user is able to see the output in the console |
-#
+
   #Scenario: navigates to Applications page
     #Given the user in th stack page
     #When the user clicks on the Applications link
