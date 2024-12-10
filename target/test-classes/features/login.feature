@@ -2,7 +2,7 @@
 Feature: DsAlgo login functionality/validation
 Background: the user opens the homepage 
 
- @tag
+ @wip
   Scenario: the user is in the homepage and navigates to the signin page
     Given the user is in the homepage    
     When the user clicks the signin button  
