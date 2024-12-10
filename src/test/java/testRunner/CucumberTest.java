@@ -25,10 +25,12 @@ public class CucumberTest extends AbstractTestNGCucumberTests {
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
     @BeforeClass
-    @Parameters("browser")
-    public void setUp (String browser) { // Default to Chrome if not specified
-        System.out.println("Initializing browser: " + browser); // Debug log
-        driver.set(DriverFactory.getDriver(browser));
+    @Parameters({"browser", "headless"})
+    public void setUp(String browser, String headless) {
+        boolean isHeadless = Boolean.parseBoolean(headless); // Convert string to boolean
+        System.out.println("Initializing WebDriver for browser: " + browser + ", headless: " + isHeadless);
+        driver.set(DriverFactory.getDriver(browser, isHeadless));
+    
     }
 
     @AfterClass
