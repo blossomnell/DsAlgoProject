@@ -1,35 +1,34 @@
 package appHooks;
 
-import java.util.Properties;
-
-import Utilities.configReader;
-import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.After;
+import org.openqa.selenium.WebDriver;
 import webdriver.DriverFactory;
 
 public class Hooks {
-
-	private configReader ConfigReader;
-	Properties prop;
-
-	@Before(order = 0)
-	public void getProperty() {
-		ConfigReader = new configReader();
-		prop = ConfigReader.init_prop();
-	}
-
-	@Before(order = 1)
-	public void launchBrowser() {
-		String browserName = prop.getProperty("browser");
-
-	}
-
-	@After(order = 0)
-	public void quitBrowser() {
-		DriverFactory.quitDriver();
-
-	}
 	
 	
-
+	
+	
+	
+	
+	
+	
+	
+//	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+//
+//	@Before
+//	public void setUp() {
+//		String browser = System.getProperty("browser", "chrome"); // Default to Chrome if not set
+//		driver.set(DriverFactory.getDriver(browser));
+//	}
+//
+//	@After
+//	public void tearDown() {
+//		DriverFactory.quitDriver();
+//	}
+//
+//	public static WebDriver getDriver() {
+//		return driver.get();
+//	}
 }

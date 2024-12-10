@@ -1,8 +1,13 @@
 package testRunner;
 
+import io.cucumber.java.After;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import webdriver.DriverFactory;
 
 @CucumberOptions(
@@ -14,27 +19,96 @@ import webdriver.DriverFactory;
                 "json:target/cucumber.json",
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
         },
-        tags = "@wip"
+        tags="@wip"
 )
 public class CucumberTest extends AbstractTestNGCucumberTests {
-    private static WebDriver driver;
+    private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-    // Initialize the WebDriver before running tests
     @BeforeClass
     @Parameters("browser")
-    public static void setUp(String browser) {
-        driver = DriverFactory.getDriver(browser);
+    public void setUp (String browser) { // Default to Chrome if not specified
+        System.out.println("Initializing browser: " + browser); // Debug log
+        driver.set(DriverFactory.getDriver(browser));
     }
-    // Quit the WebDriver after running tests
+
     @AfterClass
-    public static void tearDown() {
-        DriverFactory.quitDriver();
+    public void tearDown() {
+        if (driver.get() != null) {
+            System.out.println("Quitting WebDriver for thread: " + Thread.currentThread().getName());
+            driver.get().quit();
+            driver.remove();
+        }
     }
 
     public static WebDriver getDriver() {
-        return driver; // Provide WebDriver instance for step definitions
+        return driver.get();
     }
 }
+
+//import io.cucumber.testng.AbstractTestNGCucumberTests;
+//import io.cucumber.testng.CucumberOptions;
+//import org.openqa.selenium.WebDriver;
+//import org.testng.annotations.BeforeClass;
+//import org.testng.annotations.Optional;
+//import org.testng.annotations.Parameters;
+//import webdriver.DriverFactory;
+//
+//@CucumberOptions(
+//        features = "src/test/resources/features", // Path to feature files
+//        glue = { "stepDefinitions", "appHooks" }, // Package for step definitions and hooks
+//        plugin = {
+//                "pretty",
+//                "html:target/cucumber-reports.html",
+//                "json:target/cucumber.json",
+//                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
+//                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+//                
+//        },
+//        tags="@wip"
+//)
+//public class CucumberTest extends AbstractTestNGCucumberTests {
+//    private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+//
+//    @BeforeClass
+//    @Parameters("browser")
+//    public void setUp(@Optional("chrome") String browser) { // Default to Chrome if not specified
+//        driver.set(DriverFactory.getDriver(browser));
+//    }
+//
+//    public static WebDriver getDriver() {
+//        return driver.get();
+//    }
+//}
+//import io.cucumber.testng.AbstractTestNGCucumberTests;
+//import io.cucumber.testng.CucumberOptions;
+//import org.openqa.selenium.WebDriver;
+//import org.testng.annotations.BeforeClass;
+//import org.testng.annotations.Parameters;
+//import webdriver.DriverFactory;
+//
+//@CucumberOptions(
+//        features = "src/test/resources/features", // Path to feature files
+//        glue = { "stepDefinitions", "appHooks" }, // Package for step definitions and hooks
+//        plugin = {
+//                "pretty",
+//                "html:target/cucumber-reports.html",
+//                "json:target/cucumber.json",
+//                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
+//        }
+//)
+//public class CucumberTest extends AbstractTestNGCucumberTests {
+//    private static WebDriver driver;
+//
+//    @BeforeClass
+//    @Parameters("browser")
+//    public void setUp(String browser) {
+//        driver = DriverFactory.getDriver(browser); // Initialize driver based on the browser parameter
+//    }
+//
+//    public static WebDriver getDriver() {
+//        return driver; // Provide WebDriver instance for step definitions
+//    }
+//}
 
 //import org.testng.annotations.DataProvider;
 //
@@ -50,10 +124,10 @@ public class CucumberTest extends AbstractTestNGCucumberTests {
 //)
 //public class CucumberTest extends AbstractTestNGCucumberTests {
 //	@Override 
-//    @DataProvider(parallel = false) 
+//   @DataProvider(parallel = false) 
 //    public Object[][] scenarios() {
-//        return super.scenarios();
+//       return super.scenarios();
 //    }
 //}
-
- 
+//
+// 

@@ -6,8 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class configReader {
-  
-	
+  	
 private Properties prop;
 	
 	//this method is used to load the properties from config.properties file
@@ -21,6 +20,7 @@ private Properties prop;
 		}catch (IOException e) {
 			e.printStackTrace();
 		}
+	 
 		return prop;
 	
 }
