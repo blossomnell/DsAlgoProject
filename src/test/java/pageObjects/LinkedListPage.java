@@ -11,7 +11,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.configReader;
-import webdriver.DriverFactory;
+
+import testRunner.CucumberTest;
 
 import java.util.Objects;
 import java.util.Properties;
@@ -21,7 +22,7 @@ public class LinkedListPage {
 	Properties prop;
 	
 	public LinkedListPage() {
-		this.driver = DriverFactory.getDriver();
+		this.driver = CucumberTest.getDriver();
 		PageFactory.initElements(driver, this);
 		configReader reader = new configReader();
 		prop = reader.init_prop();

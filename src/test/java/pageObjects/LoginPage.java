@@ -9,7 +9,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.configReader;
-import webdriver.DriverFactory;
+
+import testRunner.CucumberTest;
 
 public class LoginPage {
 
@@ -17,7 +18,7 @@ public class LoginPage {
 	Properties prop;
 
 	public LoginPage() {
-		this.driver = DriverFactory.getDriver();
+		this.driver = CucumberTest.getDriver();
 		PageFactory.initElements(driver, this);
 		configReader reader = new configReader();
 		prop = reader.init_prop();
