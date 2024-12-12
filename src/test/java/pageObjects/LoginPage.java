@@ -68,18 +68,18 @@ public class LoginPage {
 	}
 
 	public Boolean isUsernameFieldDisplayed() {
-		return txt_username != null; 
-	//checks if the txt_username field is not null and returns true if it is not null, indicating that the username field is displayed.
+		//return txt_username != null;
+		return txt_username.isDisplayed();
 	}
 
 	public Boolean isPasswordFieldDisplayed() {
-		return txt_password != null; 
-	//checks whether the txt_password field is not null and returns true if it is not null, indicating that the password field is displayed or initialized.
+		//return txt_password != null; 
+		return txt_password.isDisplayed();
 	}
 
 	public Boolean isLoginButtonDisplayed() {
-		return login_btn != null; 
-	//checks if the login_btn is not null, returning true if it is not null and indicating that the login button is initialized and available. If login_btn is null, it returns false, suggesting that the login button does not exist (or is not initialized).
+		//return login_btn != null;
+		return login_btn.isDisplayed();
 	}
 
 	public String getAlertMessage() {
