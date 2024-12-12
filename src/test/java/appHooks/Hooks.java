@@ -1,18 +1,11 @@
 package appHooks;
 
-import io.cucumber.java.Before;
-import io.cucumber.java.After;
-import org.openqa.selenium.WebDriver;
-import webdriver.DriverFactory;
+//import io.cucumber.java.Before;
+//import io.cucumber.java.After;
+//import org.openqa.selenium.WebDriver;
+//import webdriver.DriverFactory;
 
 public class Hooks {
-	
-	
-	
-	
-	
-	
-	
 	
 	
 //	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
