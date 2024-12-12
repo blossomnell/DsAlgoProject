@@ -75,6 +75,11 @@ public class LinkedListPage {
 		//driver.get("https://dsportalapp.herokuapp.com/linked-list/");
 		driver.get(prop.getProperty("testurl") + "/linked-list/");
 	}
+	
+	public boolean isLinkedListPageDisplayed() {
+		return Objects.requireNonNull(driver.getCurrentUrl()).endsWith("/linked-list/");
+	}
+	
 	public void Introduction() {
 		introduction_btn.click();	
 	}

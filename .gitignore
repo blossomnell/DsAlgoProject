@@ -1,1 +1,6 @@
-target/
+/target/
+/test-output/
+Extent Reports/
+ExtentReports/
+allure-reports/
+allure-results/

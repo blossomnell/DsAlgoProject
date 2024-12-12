@@ -2,13 +2,13 @@
 Feature: DsAlgo portal registration functionality
 Background: user is in the registration page
 
-@tag
+@wip
   Scenario: the user is in the homepage and navigates to the registration page
     Given the user is in homepage    
     When the user clicks the Register  
     Then the user is redirected to the register page
     
-@tag
+@wip
   Scenario Outline: the user tries enters various credential combinations 
     Given the user is in the registration page 
     When the user enters "<username>", "<password>", "<password confirmation>" and clicks Register button

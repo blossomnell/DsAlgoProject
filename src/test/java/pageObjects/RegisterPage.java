@@ -67,19 +67,23 @@ public class RegisterPage {
 	}
 
 	public boolean isUsernameFieldDisplayed() {
-		return txt_username != null;
+		//return txt_username != null;
+		return txt_username.isDisplayed();
 	}
 
 	public boolean isPassword1FieldDisplayed() {
-		return txt_password1 != null;
+		//return txt_password1 != null;
+		return txt_password1.isDisplayed();		
 	}
 
 	public boolean isPassword2FieldDisplayed() {
-		return txt_password2 != null;
+		//return txt_password2 != null;
+		return txt_password2.isDisplayed();
 	}
 
 	public Boolean isRegisterButtonDisplayed() {
-		return register_btn != null;
+		//return register_btn != null;
+		return register_btn.isDisplayed();
 	}
 
 	public void clickregisterBtn() {
