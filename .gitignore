@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 target/
 /test-output
 *.tmp
@@ -7,3 +8,12 @@ target/
 .idea/
 /ExtentReports
 /apache-maven-3.9.9
+=======
+/target/
+/test-output/
+Extent Reports/
+ExtentReports/
+allure-reports/
+allure-results/
+>>>>>>> 366d9463f4993990df81620dc3f0913866037313
+/allure-reports
