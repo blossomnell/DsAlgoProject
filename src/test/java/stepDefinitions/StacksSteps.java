@@ -1,7 +1,10 @@
 package stepDefinitions;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 
+import Utilities.ExcelReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,6 +13,14 @@ import pageObjects.StackPage;
 public class StacksSteps{
 	
 	StackPage stack= new StackPage();
+	ExcelReader excelReader;
+    public StacksSteps() {
+        try {
+            excelReader = new ExcelReader("src/test/resources/config/TestData.xlsx");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 	
 	@When("the user clicks on the Get started button under stack")
 	public void the_user_clicks_on_the_get_started_button_under_stack() {

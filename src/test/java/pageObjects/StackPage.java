@@ -30,10 +30,14 @@ public class StackPage {
 		
 	}
 	  
-	@FindBy(xpath = "//a[@href='data-structures-introduction' and text()='Get Started']")
+	//@FindBy(xpath = "//a[@href='data-structures-introduction' and text()='Get Started']")
+	@FindBy(xpath = "//a[@href='stack' and text()='Get Started']")
 		WebElement getStartedButton;
+	
 	@FindBy(xpath = "//html/body/div[2]/h4")
+	// @FindBy(xpath = "//h4[@class='bg-secondary text-white' and text()='Stack']")
 	WebElement stackTitle;
+	
 	 @FindBy(xpath = "//a[@href='operations-in-stack']")
 	    WebElement operationsInStackLink;
 
@@ -42,21 +46,29 @@ public class StackPage {
 //	 @FindBy(xpath = "//a[@href='/tryEditor' and contains(text(),'Try here')]")
 	 @FindBy(xpath="//a[contains(@href, '/tryEditor')]")
 	     WebElement tryHereButton;
+	 
 	 @FindBy(xpath = "/html/body/div/div")
      WebElement tryEditorPage;
-	 @FindBy(xpath = "/html/body/div[2]/ul[2]/a")
+	 
+	 @FindBy(xpath="//a[@href='implementation' and text()='Implementation']")
      WebElement ImplementationLink;
-	 @FindBy(xpath="/html/body/div[2]/div/div[2]/strong/p")
+
+	 @FindBy(xpath="//p[@class='bg-secondary text-white' and text()='Implementation']")
 	 WebElement implementationPage;
-	 @FindBy(xpath = "/html/body/div[2]/ul[3]/a")
+	 
+	 @FindBy(xpath="//a[@href='stack-applications' and text()='Applications']")
      WebElement ApplicationLink;
-	 @FindBy(xpath="/html/body/div[2]/div/div[2]/strong/p")
+	
+	 @FindBy(xpath="//p[@class='bg-secondary text-white' and text()='Applications']")
 	 WebElement ApplicationPage; 
 	 @FindBy(xpath ="/html/body/div[2]/div/div[1]/div/a")
+	// @FindBy(xpath="//a[@href='/stack/practice' and text()='Practice Questions']")
 	 WebElement practiceQuestionLink;
-	 @FindBy(xpath ="/html/body")
-	 WebElement practicePage;
 	 
+//	 @FindBy(xpath ="/html/body")
+//	 WebElement practicePage;
+	 @FindBy(xpath ="//a[@class='navbar-brand' and text()='NumpyNinja']")
+	 WebElement practicePage;
 	 
 	 
 	

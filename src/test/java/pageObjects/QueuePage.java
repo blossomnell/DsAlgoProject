@@ -31,26 +31,46 @@ public class QueuePage {
 	 WebElement getStartedButton;
 	@FindBy(xpath = "/html/body/div[2]/h4")
       WebElement QueuePageTitle;
-	@FindBy(xpath = "/html/body/div[2]/ul[1]/a")
+//	@FindBy(xpath = "/html/body/div[2]/ul[1]/a")
+	
+	@FindBy(xpath = "//a[@href='implementation-lists']")
 	 WebElement ImplementationOfQueueInPythonLink;
-	@FindBy(xpath = "/html/body/div[2]/div/div[2]/strong/p")
+//	@FindBy(xpath = "/html/body/div[2]/div/div[2]/strong/p")
+	 
+	@FindBy(xpath = "//p[@class='bg-secondary text-white' and text()='Implementation of Queue in Python']")
 	 WebElement ImplementationOfQueueInPythonPageTitle;
 	
 //	@FindBy(xpath = "//p[text()='Implementation using collections.deque']")
 	@FindBy(xpath = "//a[contains(text(),'Implementation using collections.deque')]")	
 	 WebElement ImplementationUsingCollectionsDequeLink;
 
-	@FindBy(xpath = "/html/body/div[2]/div/div[2]/strong/p")
+//	@FindBy(xpath = "/html/body/div[2]/div/div[2]/strong/p")
+	
+	@FindBy(xpath = "//p[@class='bg-secondary text-white' and text()='Implementation using collections.deque']")
 	 WebElement ImplementationUsingCollectionsDequePageTitle;
 	
-	@FindBy(xpath = "/html/body/div[2]/ul[3]/a")
+//	@FindBy(xpath = "/html/body/div[2]/ul[3]/a")
+	 
+	@FindBy(xpath = "//a[@href='Implementation-array' and @class='list-group-item' and text()='Implementation using array']")
 	 WebElement ImplementationUsingArrayLink ;
-	@FindBy(xpath = "/html/body/div[2]/div/div[2]/strong/p")
+//	@FindBy(xpath = "/html/body/div[2]/div/div[2]/strong/p")
+	 
+	@FindBy(xpath = "//p[@class='bg-secondary text-white' and text()='Implementation using array']")
 	 WebElement ImplementationUsingArrayPageTitle ;
-	@FindBy(xpath = "/html/body/div[2]/ul[4]/a")
+//	@FindBy(xpath = "/html/body/div[2]/ul[4]/a")
+	 
+	@FindBy(xpath = "//a[@href='QueueOp' and @class='list-group-item' and text()='Queue Operations']")
 	 WebElement QueueOperationsLink;
-	@FindBy(xpath = "/html/body/div[2]/div/div[2]/strong/p")
+//	@FindBy(xpath = "/html/body/div[2]/div/div[2]/strong/p")
+	 
+	@FindBy(xpath = "//p[@class='bg-secondary text-white' and text()='Queue Operations']")
 	 WebElement QueueOperationsTitle;
+	
+//	 @FindBy(xpath="//a[@href='/queue/practice' and text()='Practice Questions']")
+//	 WebElement practiceQuestionLink;
+//	 
+//	 @FindBy(xpath ="//a[@class='navbar-brand' and text()='NumpyNinja']")
+//	 WebElement practicePage;
 	
 //	@FindBy(xpath = "")
 //	private WebElement ;
@@ -128,5 +148,15 @@ public class QueuePage {
 		driver.get(prop.getProperty("testurl") + "/queue/QueueOp");
 		
 	}
+
+//	public void clickPracticeQuestionsLink() {
+//		practiceQuestionLink.click();	
+//		
+//	}
+//
+//	public boolean isPracticePageDisplayed() {
+//		
+//		return practicePage.isDisplayed();
+//	}
 
 }

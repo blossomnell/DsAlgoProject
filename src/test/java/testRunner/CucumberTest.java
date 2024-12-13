@@ -22,7 +22,12 @@ package testRunner;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
+
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
+
+import Utilities.configReader;
 
 @CucumberOptions(
     features = "src/test/resources/features/login.feature", // Path to feature files
@@ -34,8 +39,10 @@ import org.testng.annotations.DataProvider;
 public class CucumberTest extends AbstractTestNGCucumberTests {
 
     @Override
-    @DataProvider(parallel = false) // Set parallel execution to false
+    @DataProvider(parallel = true) // Set parallel execution to false
     public Object[][] scenarios() {
         return super.scenarios();
     }
+   
+    
 }

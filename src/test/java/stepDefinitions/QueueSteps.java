@@ -1,8 +1,11 @@
 
 package stepDefinitions;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 
+import Utilities.ExcelReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,6 +13,16 @@ import pageObjects.QueuePage;
 import pageObjects.StackPage;
 
 public class QueueSteps {
+	
+	 ExcelReader excelReader;
+	    public QueueSteps() {
+	        try {
+	            excelReader = new ExcelReader("src/test/resources/config/TestData.xlsx");
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+	    }
+	
 	QueuePage queue= new QueuePage();
 	@When("the user clicks on the Get started button under queue")
 	public void the_user_clicks_on_the_get_started_button_under_queue() {
@@ -118,6 +131,18 @@ public class QueueSteps {
 	public void the_user_in_queue_operations_page() {
 		queue.operationsInQueuePage();
 	}
+	
+//	@When("the user clicks on the Practice questions link")
+//	public void the_user_clicks_on_the_practice_questions_link() {
+//		queue.clickPracticeQuestionsLink();
+//	    
+//	}
+//
+//	@Then("the user navigates to the Practice page")
+//	public void the_user_navigates_to_the_practice_page() {
+//		Assert.assertTrue(queue.isPracticePageDisplayed(),"Practice page is not Displayed");
+//	    
+//	}
 
 	
 

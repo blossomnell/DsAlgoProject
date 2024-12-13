@@ -20,13 +20,16 @@ Feature: user actions on stack pages
 #
   #Scenario Outline: Run code in the Python Editor
     #Given the user is in the try editor page in stack
-    #When the user enters '<code>' in the editor and clicks Run button
+  #When the user enters data from Excel in row <row> and column <column> 
     #Then the user sees "<expectedOutcome>"
 #
-    #Examples:
-      #| code                  | expectedOutcome                                   |
-      #| print(\\"Hello\\")abc | popup error message containing SyntaxError        |
-      #| print(\\"Hello\\")    | the user is able to see the output in the console |
+     #Examples: 
+      #| row | column |  expectedOutcome                                   |
+         #
+      #| 1 | 0      |popup error message containing SyntaxError        |
+      #
+      #| 2  | 0     |the user is able to see the output in the console|
+  #
 #
   #Scenario: navigates to Implementation page
     #Given the user in th stack page
@@ -40,14 +43,17 @@ Feature: user actions on stack pages
 #
   #Scenario Outline: Run code in the Python Editor
     #Given the user is in the try editor page in Implementation
-    #When the user enters "<code>" in the editor and clicks Run button
+    #When the user enters data from Excel in row <row> and column <column> 
     #Then the user sees "<expectedOutcome>"
 #
-    #Examples:
-      #| code                  | expectedOutcome                                   |
-      #| print(\\"Hello\\")abc | popup error message containing SyntaxError        |
-      #| print(\\"Hello\\")    | the user is able to see the output in the console |
-
+      #Examples: 
+      #| row | column |  expectedOutcome                                   |
+         #
+      #| 1 | 0      |popup error message containing SyntaxError        |
+      #
+      #| 2  | 0     |the user is able to see the output in the console|
+  #
+#
   #Scenario: navigates to Applications page
     #Given the user in th stack page
     #When the user clicks on the Applications link
@@ -60,15 +66,18 @@ Feature: user actions on stack pages
 #
   #Scenario Outline: Run code in the Python Editor
     #Given the user is in the try editor page in Application
-    #When the user enters '<code>' in the editor and clicks Run button
+   #When the user enters data from Excel in row <row> and column <column> 
     #Then the user sees "<expectedOutcome>"
 #
-    #Examples:
-      #| code                 | expectedOutcome                                   |
-      #| print(\\"abcd123\\")abc | popup error message containing SyntaxError        |
-      #| print(\\"Hi\\")      | the user is able to see the output in the console |
-#
-  #Scenario: Navigate to Practice questions page
-    #Given the user in operations in Stack page
-    #When the user clicks on the Practice questions link
-    #Then the user navigates to the Practice page
+     #Examples: 
+      #| row | column |  expectedOutcome                                   |
+         #
+      #| 1 | 0      |popup error message containing SyntaxError        |
+      #
+      #| 2  | 0     |the user is able to see the output in the console|
+  #
+
+  Scenario: Navigate to Practice questions page
+    Given the user in operations in Stack page
+    When the user clicks on the Practice questions link
+    Then the user navigates to the Practice page

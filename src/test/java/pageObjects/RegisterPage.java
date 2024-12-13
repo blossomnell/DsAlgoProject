@@ -13,7 +13,7 @@ public class RegisterPage {
 	WebDriver driver;
 
 	public RegisterPage() {
-		this.driver = DriverFactory.getDriver();
+		this.driver = DriverFactory.getDriver("chrome");
 		PageFactory.initElements(driver, this);
 	
 	}
