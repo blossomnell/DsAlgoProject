@@ -31,7 +31,7 @@ public class QueuePage {
 	 WebElement getStartedButton;
 	@FindBy(xpath = "/html/body/div[2]/h4")
       WebElement QueuePageTitle;
-//	@FindBy(xpath = "/html/body/div[2]/ul[1]/a")
+
 	
 	@FindBy(xpath = "//a[@href='implementation-lists']")
 	 WebElement ImplementationOfQueueInPythonLink;

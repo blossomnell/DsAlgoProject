@@ -14,8 +14,7 @@
 
 	<dependencies>
 	 
-		<!--
-		https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
+		<!--https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
 		<dependency>
 			<groupId>tech.grasshopper</groupId>
 			<artifactId>extentreports-cucumber7-adapter</artifactId>
@@ -28,10 +27,7 @@
     <version>2.29.1</version>
 </dependency>
 
-
-
-
-		<!-- Selenium -->
+<!-- Selenium -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
@@ -50,6 +46,11 @@
 </dependency>
 
 
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-core</artifactId>
+			<version>7.20.1</version>
+		</dependency>
 
 		<!-- ChromeDriver -->
 		<dependency>
@@ -62,16 +63,8 @@
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
-			<version>7.12.1</version>
+			<version>7.20.1</version>
 		</dependency>
-		 <!-- Cucumber Core -->
-    <dependency>
-        <groupId>io.cucumber</groupId>
-        <artifactId>cucumber-core</artifactId>
-        <version>7.20.1</version>
-    </dependency>
-
-		
 
 		<dependency>
 			<groupId>io.qameta.allure</groupId>
@@ -80,41 +73,36 @@
 		</dependency>
 
 		<dependency>
-			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-junit</artifactId>
-			<version>7.12.1</version>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.10.2</version>
 			<scope>test</scope>
 		</dependency>
 
-		
 
-
-		
 		<dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.10.2</version> <!-- Ensure you're using a compatible version -->
-    <scope>test</scope>
-</dependency>
-<dependency>
-        <groupId>io.cucumber</groupId>
-        <artifactId>cucumber-testng</artifactId>
-        <version>7.20.1</version>
-    </dependency>
-</dependencies>
-
-	<build>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>7.20.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+<build>
 		<plugins>
 			<!-- Plugin for Cucumber -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.0.0-M5</version>
-				<configuration>
-					<includes>
-						<include>**/*Test.java</include>
-					</includes>
-				</configuration>
+
+		<configuration>
+			<parallel>methods</parallel>
+			<threadCount>4</threadCount>
+			<suiteXmlFiles>
+			<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+			</suiteXmlFiles>
+	    </configuration>
+
 			</plugin>
 			<plugin>
 				<groupId>io.qameta.allure</groupId>

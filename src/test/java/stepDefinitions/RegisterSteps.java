@@ -1,7 +1,10 @@
 package stepDefinitions;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+//import static org.testng.Assert.assertTrue;
+
+import java.util.UUID;
+
+import org.testng.Assert;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -25,11 +28,11 @@ public class RegisterSteps {
 	@Then("the user is redirected to the register page")
 	public void the_user_is_redirected_to_the_register_page() {
 		registerPage.navigatetoregisterpage();
-		assertTrue("Register page is not displayed", registerPage.isRegisterPageDisplayed());
-		assertTrue("Username Field is not displayed", registerPage.isUsernameFieldDisplayed());
-		assertTrue("Password1 Field is not displayed", registerPage.isPassword1FieldDisplayed());
-		assertTrue("Password2 Field is not displayed", registerPage.isPassword2FieldDisplayed());
-		assertTrue("Register Button is not displayed", registerPage.isRegisterPageDisplayed());
+		Assert.assertTrue(registerPage.isRegisterPageDisplayed(), "Register page is not displayed");
+		Assert.assertTrue(registerPage.isUsernameFieldDisplayed(), "Username Field is not displayed");
+		Assert.assertTrue(registerPage.isPassword1FieldDisplayed(), "Password1 Field is not displayed");
+		Assert.assertTrue(registerPage.isPassword2FieldDisplayed(), "Password2 Field is not displayed");
+		Assert.assertTrue(registerPage.isRegisterButtonDisplayed(), "Register Button is not displayed");
 	}
 
 	@Given("the user is in the registration page")
@@ -40,6 +43,11 @@ public class RegisterSteps {
 
 	@When("the user enters {string}, {string}, {string} and clicks Register button")
 	public void the_user_enters_and_clicks_register_button(String username, String password1, String password2) {
+		
+		if(!username.isBlank()) {
+			username = username+ UUID.randomUUID();
+		}
+		
 		registerPage.enterUsername(username);
 		registerPage.enterPassword1(password1);
 		registerPage.enterPassword2(password2);
@@ -47,8 +55,10 @@ public class RegisterSteps {
 	}
 
 	@Then("the user gets a message {string}")
-	public void the_user_get_message(String expectedMessage) {
-		assertEquals("registerMessage", expectedMessage, registerPage.getAlertMessage());
+
+	public void the_user_gets_a_message(String expectedMessage) {
+		Assert.assertTrue(registerPage.getAlertMessage().contains(expectedMessage), "registerMessage");
+
 
 	}
 

@@ -4,7 +4,7 @@ import java.time.Duration;
 import java.util.Properties;
 
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.JavascriptExecutor;
+//import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,22 +14,25 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Utilities.configReader;
-import webdriver.DriverFactory;
+import testRunner.CucumberTest;
+//import webdriver.DriverFactory;
 
 public class DataStructurePage {
 	WebDriver driver;
 	Properties prop;
+	
+	
 	public DataStructurePage() {
-//		this.driver = DriverFactory.getDriver();
-//		PageFactory.initElements(driver, this);
-//		configReader reader = new configReader();
-//		prop = reader.init_prop();
-		
+		this.driver = CucumberTest.getDriver();
+		PageFactory.initElements(driver, this);
 		configReader reader = new configReader();
 		prop = reader.init_prop();
 		
-		this.driver = DriverFactory.getDriver(prop.getProperty("browser"));
-		PageFactory.initElements(driver, this);
+//		configReader reader = new configReader();
+//		prop = reader.init_prop();
+//		
+//		this.driver = DriverFactory.getDriver(prop.getProperty("browser"));
+//		PageFactory.initElements(driver, this);
 	}
 	
 	 @FindBy(xpath = "//a[@href='data-structures-introduction' and text()='Get Started']")
