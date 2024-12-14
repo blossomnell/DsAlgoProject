@@ -35,14 +35,18 @@ public class DataStructurePage {
 //		PageFactory.initElements(driver, this);
 	}
 	
-	 @FindBy(xpath = "//a[@href='data-structures-introduction' and text()='Get Started']")
-	WebElement getStartedButton;
+	 @FindBy(xpath = "//a[@href='data-structures-introduction' and text()='Get Started']") 
+	 WebElement getStartedButton;
+	 
 	@FindBy(xpath = "//h4[text()='Data Structures-Introduction']")
 	WebElement pageTitle;
+	
 	 @FindBy(xpath = "//a[@href='time-complexity' and text()='Time Complexity']")
 	     WebElement timeComplexityLink;
+	 
 	 @FindBy(xpath = "//p[@class='bg-secondary text-white' and text()='Time Complexity']")
 	     WebElement timeComplexityHeading;
+	 
 	 @FindBy(xpath = "//a[@href='/tryEditor' and contains(text(),'Try here')]")
 	 WebElement tryHereButton;
 
@@ -63,6 +67,7 @@ public class DataStructurePage {
 
 	 @FindBy(xpath= "//*[@id=\"output\"]")
 	    WebElement outputConsole;
+	 
 	 @FindBy(xpath="/html/body/div[2]/div/div[1]/div/a")
 	 WebElement practiceQuestionsLink;
 	 
@@ -164,36 +169,5 @@ public class DataStructurePage {
 		
 		return practiceQuestionsPageTitle.isDisplayed();
 	}
-
-
-	
-	
-	
-	
-//	@FindBy(id = "id_username")
-//	WebElement txt_username;
-//	@FindBy(id = "id_password")
-//	WebElement txt_password;
-//	@FindBy(xpath = "//input[@type='submit'and @value='Login']")
-//	WebElement login_btn;
-//
-//	public void navigatetologinpage() {
-//		driver.get("https://dsportalapp.herokuapp.com/login");
-//		
-//	}
-//
-//	public void enterUsername(String username) {
-//		txt_username.sendKeys(username);
-//	}
-//
-//	public void enterPassword(String password) {
-//		txt_password.sendKeys(password);
-//	}
-//
-//	public void clickloginBtn() {
-//		login_btn.click();
-//		
-//	}
-//	
 	
 }

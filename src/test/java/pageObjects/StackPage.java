@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Utilities.configReader;
+import testRunner.CucumberTest;
 import webdriver.DriverFactory;
 
 public class StackPage {
@@ -22,15 +23,13 @@ public class StackPage {
 //		PageFactory.initElements(driver, this);
 //		configReader reader = new configReader();
 //		prop = reader.init_prop();
+		this.driver = CucumberTest.getDriver();
+		PageFactory.initElements(driver, this);
 		configReader reader = new configReader();
 		prop = reader.init_prop();
-		
-		this.driver = DriverFactory.getDriver(prop.getProperty("browser"));
-		PageFactory.initElements(driver, this);
-		
 	}
 	  
-	//@FindBy(xpath = "//a[@href='data-structures-introduction' and text()='Get Started']")
+	
 	@FindBy(xpath = "//a[@href='stack' and text()='Get Started']")
 		WebElement getStartedButton;
 	
@@ -43,6 +42,7 @@ public class StackPage {
 
 	 @FindBy(xpath = "//p[@class='bg-secondary text-white' and text()='Operations in Stack']")
 	     WebElement operationsInStackPageTitle;
+	 
 //	 @FindBy(xpath = "//a[@href='/tryEditor' and contains(text(),'Try here')]")
 	 @FindBy(xpath="//a[contains(@href, '/tryEditor')]")
 	     WebElement tryHereButton;
@@ -61,12 +61,11 @@ public class StackPage {
 	
 	 @FindBy(xpath="//p[@class='bg-secondary text-white' and text()='Applications']")
 	 WebElement ApplicationPage; 
+	 
 	 @FindBy(xpath ="/html/body/div[2]/div/div[1]/div/a")
 	// @FindBy(xpath="//a[@href='/stack/practice' and text()='Practice Questions']")
 	 WebElement practiceQuestionLink;
 	 
-//	 @FindBy(xpath ="/html/body")
-//	 WebElement practicePage;
 	 @FindBy(xpath ="//a[@class='navbar-brand' and text()='NumpyNinja']")
 	 WebElement practicePage;
 	 

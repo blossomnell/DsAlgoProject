@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Utilities.configReader;
+import testRunner.CucumberTest;
 import webdriver.DriverFactory;
 
 public class QueuePage {
@@ -21,47 +22,37 @@ public class QueuePage {
 //		configReader reader = new configReader();
 //		prop = reader.init_prop();
 		
+		this.driver = CucumberTest.getDriver();
+		PageFactory.initElements(driver, this);
 		configReader reader = new configReader();
 		prop = reader.init_prop();
-		
-		this.driver = DriverFactory.getDriver(prop.getProperty("browser"));
-		PageFactory.initElements(driver, this);
 	}
 	@FindBy(xpath = "//a[@href='queue' and text()='Get Started']")
 	 WebElement getStartedButton;
+	
 	@FindBy(xpath = "/html/body/div[2]/h4")
       WebElement QueuePageTitle;
 
-	
 	@FindBy(xpath = "//a[@href='implementation-lists']")
 	 WebElement ImplementationOfQueueInPythonLink;
-//	@FindBy(xpath = "/html/body/div[2]/div/div[2]/strong/p")
-	 
-	@FindBy(xpath = "//p[@class='bg-secondary text-white' and text()='Implementation of Queue in Python']")
+
+	 @FindBy(xpath = "//p[@class='bg-secondary text-white' and text()='Implementation of Queue in Python']")
 	 WebElement ImplementationOfQueueInPythonPageTitle;
 	
-//	@FindBy(xpath = "//p[text()='Implementation using collections.deque']")
-	@FindBy(xpath = "//a[contains(text(),'Implementation using collections.deque')]")	
+    @FindBy(xpath = "//a[contains(text(),'Implementation using collections.deque')]")	
 	 WebElement ImplementationUsingCollectionsDequeLink;
-
-//	@FindBy(xpath = "/html/body/div[2]/div/div[2]/strong/p")
 	
 	@FindBy(xpath = "//p[@class='bg-secondary text-white' and text()='Implementation using collections.deque']")
 	 WebElement ImplementationUsingCollectionsDequePageTitle;
-	
-//	@FindBy(xpath = "/html/body/div[2]/ul[3]/a")
 	 
 	@FindBy(xpath = "//a[@href='Implementation-array' and @class='list-group-item' and text()='Implementation using array']")
 	 WebElement ImplementationUsingArrayLink ;
-//	@FindBy(xpath = "/html/body/div[2]/div/div[2]/strong/p")
 	 
 	@FindBy(xpath = "//p[@class='bg-secondary text-white' and text()='Implementation using array']")
 	 WebElement ImplementationUsingArrayPageTitle ;
-//	@FindBy(xpath = "/html/body/div[2]/ul[4]/a")
 	 
 	@FindBy(xpath = "//a[@href='QueueOp' and @class='list-group-item' and text()='Queue Operations']")
 	 WebElement QueueOperationsLink;
-//	@FindBy(xpath = "/html/body/div[2]/div/div[2]/strong/p")
 	 
 	@FindBy(xpath = "//p[@class='bg-secondary text-white' and text()='Queue Operations']")
 	 WebElement QueueOperationsTitle;

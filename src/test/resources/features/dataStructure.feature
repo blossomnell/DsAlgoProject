@@ -3,7 +3,7 @@ Feature: User Actions in the Python Editor and Related Pages
   Background: 
     Given the user is logged in
 
-  @wip
+   @wip
   Scenario: Navigate to Time Complexity Page
     Given the user is in the homepage
     When the user clicks Get Started button under DataStructure
