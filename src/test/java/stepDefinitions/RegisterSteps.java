@@ -55,8 +55,10 @@ public class RegisterSteps {
 	}
 
 	@Then("the user gets a message {string}")
+
 	public void the_user_gets_a_message(String expectedMessage) {
 		Assert.assertTrue(registerPage.getAlertMessage().contains(expectedMessage), "registerMessage");
+
 
 	}
 

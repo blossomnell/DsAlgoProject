@@ -20,7 +20,7 @@ private Properties prop;
 		}catch (IOException e) {
 			e.printStackTrace();
 		}
-	 
+
 		return prop;
 	
 }

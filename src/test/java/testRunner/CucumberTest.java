@@ -1,5 +1,6 @@
 package testRunner;
 
+
 //import io.cucumber.java.After;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
@@ -21,7 +22,7 @@ import webdriver.DriverFactory;
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
-        tags="@tag"
+        tags="@smoke"
 )
 public class CucumberTest extends AbstractTestNGCucumberTests {
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
@@ -56,3 +57,4 @@ public class CucumberTest extends AbstractTestNGCucumberTests {
 }
 
  
+

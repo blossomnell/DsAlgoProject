@@ -10,17 +10,21 @@ import org.openqa.selenium.support.PageFactory;
 
 import Utilities.configReader;
 
+
 import testRunner.CucumberTest;
+
 
 public class RegisterPage {
 	WebDriver driver;
 	Properties prop;
 
 	public RegisterPage() {
+
 		this.driver = CucumberTest.getDriver();
 		PageFactory.initElements(driver, this);
 		configReader reader = new configReader();
 		prop = reader.init_prop();
+
 	}
 
 	@FindBy(id = "id_username")
