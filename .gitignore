@@ -17,3 +17,4 @@ allure-reports/
 allure-results/
 >>>>>>> 366d9463f4993990df81620dc3f0913866037313
 /allure-reports
+src/test/resources/chromedriver.exe
