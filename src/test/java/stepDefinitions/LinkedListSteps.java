@@ -226,7 +226,7 @@ public class LinkedListSteps {
 	public void the_user_should_see_the_practice_questions_page() {
 		linkedListPage.navigatetopracticequestionspage();
 	}
-
-
+    
+	
 }
 	

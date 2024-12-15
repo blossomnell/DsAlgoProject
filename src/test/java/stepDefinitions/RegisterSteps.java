@@ -5,7 +5,6 @@ package stepDefinitions;
 import java.util.UUID;
 
 import org.testng.Assert;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -13,8 +12,8 @@ import pageObjects.RegisterPage;
 
 public class RegisterSteps {
 
-	RegisterPage registerPage = new RegisterPage();
-
+	RegisterPage registerPage = new RegisterPage();	
+	
 	@Given("the user is in homepage")
 	public void the_user_is_in_homepage() {
 		registerPage.navigatetohomepage();

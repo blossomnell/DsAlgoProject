@@ -4,7 +4,6 @@ import static org.testng.Assert.assertEquals;
 //import static org.testng.Assert.assertTrue;
 
 import org.testng.Assert;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -13,7 +12,7 @@ import pageObjects.LoginPage;
 public class LoginSteps {
 
 	LoginPage loginPage = new LoginPage();
-
+	
 	@Given("the user is in the homepage")
 	public void the_user_is_in_the_homepage() {
 		loginPage.navigatetohomepage();

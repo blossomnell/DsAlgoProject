@@ -62,6 +62,8 @@ public class LinkedListPage {
 	WebElement deletion_btn;
 	@FindBy(xpath = "//a[@href='/linked-list/practice']")
 	WebElement practicequestions_btn;
+	@FindBy(xpath = "//a[@href='/logout' and text()='Sign out']")
+	WebElement signoutBtn;
 	
 	public void navigatetohomepage() {
 		driver.get(prop.getProperty("testurl") + "/home");		
