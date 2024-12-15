@@ -57,7 +57,9 @@ public class DataStructurePage {
 	 @FindBy(xpath="//form[@id='answer_form']/div/div/div/textarea")
 	    WebElement codeEditor;
 	 
+	
 	 @FindBy(xpath="//form[@id='answer_form']/div/div/div[6]")
+//	 @FindBy(xpath="//*[@id=\"answer_form\"]/div/div/div[6]/div[1]/div/div/div/div[5]/div/pre")
 	    WebElement codeEditor_click;
 	 
 	 
@@ -87,10 +89,10 @@ public class DataStructurePage {
 		
 		return pageTitle.isDisplayed() && pageTitle.getText().contains("Data Structures");
 	}
-	public void navigatetoDatastructurePage() {
-		driver.get(prop.getProperty("testurl") + "/data-structures-introduction");
-		
-	}
+//	public void navigatetoDatastructurePage() {
+//		driver.get(prop.getProperty("testurl") + "/data-structures-introduction");
+//		
+//	}
 	public void clickTimeComplexityLink() {
         timeComplexityLink.click();
     }
@@ -98,11 +100,11 @@ public class DataStructurePage {
 		
 	 return timeComplexityHeading.isDisplayed();
 	}
-	public void navigatetoTimeComplexityPage() {
-		driver.get(prop.getProperty("testurl") + "/data-structures-introduction/time-complexity");
+//	public void navigatetoTimeComplexityPage() {
+//		driver.get(prop.getProperty("testurl") + "/data-structures-introduction/time-complexity");
+//		
 		
-		
-	}
+//	}
 	public void clickTryhereButton() {
 		tryHereButton.click();
 		
@@ -112,10 +114,10 @@ public class DataStructurePage {
 		
 		return tryEditorPage.isDisplayed();
 	}
-	public void navigatetoTryEditorPage() {
-		driver.get(prop.getProperty("testurl") + "/tryEditor");
-		
-	}
+//	public void navigatetoTryEditorPage() {
+//		driver.get(prop.getProperty("testurl") + "/tryEditor");
+//		
+//	}
 	public void enterCode(String code) {
 		
 		codeEditor_click.click();

@@ -56,7 +56,10 @@ public class DataStructuresSteps{
 
 	@Given("the user is in the Data Structures-Introduction page")
 	public void the_user_is_in_the_data_structures_introduction_page() {
-	    dsp.navigatetoDatastructurePage();
+	    //dsp.navigatetoDatastructurePage();
+		 dsp.clickGetStarted();
+//		 Assert.assertTrue(dsp.isIntroductionPageDisplayed(),
+//	                "Data Structures-Introduction page is not displayed.");
 	}
 
 	@When("the user clicks the Time Complexity link")
@@ -72,7 +75,12 @@ public class DataStructuresSteps{
 
 	@Given("the user is in the Time Complexity page")
 	public void the_user_is_in_the_time_complexity_page() {
-	   dsp.navigatetoTimeComplexityPage();
+		 dsp.clickGetStarted();
+		// Assert.assertTrue(dsp.isIntroductionPageDisplayed(),
+	      //          "Data Structures-Introduction page is not displayed.");
+		 dsp.clickTimeComplexityLink();
+		 //Assert.assertTrue(dsp.isTimeComplexityPageDisplayed(),"The user is not on the Time Complexity page!");
+//	   dsp.navigatetoTimeComplexityPage();
 	}
 	@When("the user scrolls down and clicks the Try here button in Time Complexity Page")
 	public void the_user_scrolls_down_and_clicks_the_try_here_button_in_time_complexity_page() {
@@ -85,8 +93,14 @@ public class DataStructuresSteps{
 
 	@Given("the user is in the Python try editor page")
 	public void the_user_is_in_the_python_try_editor_page() {
-		dsp.navigatetoTryEditorPage();
-	    
+//		//dsp.navigatetoTryEditorPage();
+		dsp.clickGetStarted();
+//		Assert.assertTrue(dsp.isIntroductionPageDisplayed(),
+//				"Data Structures-Introduction page is not displayed.");
+		dsp.clickTimeComplexityLink();
+
+		dsp.clickTryhereButton();
+	//	Assert.assertTrue(dsp.isTryEditorPageDisplayed(),"The user is not in try editor page");
 	}
 
 	@When("the user enters data from Excel in row {int} and column {int}")

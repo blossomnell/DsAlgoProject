@@ -37,7 +37,8 @@ public class QueueSteps {
 
 	@Given("the user in th queue page")
 	public void the_user_in_th_queue_page() {
-		queue.navigateToQueuepage(); 
+//		queue.navigateToQueuepage(); 
+		queue.clickGetStarted();
 	}
 
 	@When("the user clicks on the Implementation of Queue in Python link")
@@ -53,12 +54,18 @@ public class QueueSteps {
 
 	@Given("the user in Implementation of Queue in Python page")
 	public void the_user_in_implementation_of_queue_in_python_page() {
-	   queue.navigateToImplementationOfQueueInPython();
+//	   queue.navigateToImplementationOfQueueInPython();
+		queue.clickGetStarted();
+		 queue.clickImplementationOfQueueInPythonLink();
 	}
 
 	@Given("the user is in the try editor page in Implementation of Queue in Python")
 	public void the_user_is_in_the_try_editor_page_in_implementation_of_queue_in_python() {
-		queue.navigateToTryEditorPage();
+//		queue.navigateToTryEditorPage();
+		queue.clickGetStarted();
+		 queue.clickImplementationOfQueueInPythonLink();
+		queue.clickTryhereButton();
+		
 	}
 	@When("the user clicks on the Implementation using collections.deque link")
 	public void the_user_clicks_on_the_implementation_using_collections_deque_link() {
@@ -73,12 +80,17 @@ public class QueueSteps {
 
 	@Given("the user in Implementation using collections.deque page")
 	public void the_user_in_implementation_using_collections_deque_page() {
-	    queue.navigateToImplementationUsingCollectionsDequePage();
+//	    queue.navigateToImplementationUsingCollectionsDequePage();
+		queue.clickGetStarted();
+		queue.clickImplementationUsingCollectionsDequeLink();
 	}
 
 	@Given("the user is in the try editor page in Implementation using collections.deque")
 	public void the_user_is_in_the_try_editor_page_in_implementation_using_collections_deque() {
-	queue.navigateToTryEditorPage();
+//	queue.navigateToTryEditorPage();
+		queue.clickGetStarted();
+		queue.clickImplementationUsingCollectionsDequeLink();
+		queue.clickTryhereButton();
 	}
 	
 	
@@ -95,12 +107,17 @@ public class QueueSteps {
 
 	@Given("the user in Implementation using array page")
 	public void the_user_in_implementation_using_array_page() {
-		queue.navigateToImplementationUsingArrayPage();	
+//		queue.navigateToImplementationUsingArrayPage();	
+		queue.clickGetStarted();
+		queue.clickImplementationUsingarrayLink();
 		}
 
 	@Given("the user is in the try editor page in Implementation using array")
 	public void the_user_is_in_the_try_editor_page_in_implementation_using_array() {
-		queue.navigateToTryEditorPage();
+//		queue.navigateToTryEditorPage();
+		queue.clickGetStarted();
+		queue.clickImplementationUsingarrayLink();
+		queue.clickTryhereButton();
 	}
 	
 	

@@ -130,6 +130,14 @@ public class StacksSteps{
 		stack.scrollDownAndClickTryHere();
 	    
 	}
+//	@Given("the user in operations in Stack page")
+//	public void the_user_in_operations_in_Stack_page() {
+////		stack.navigateToApplicationPage();
+//		stack.clickGetStarted();
+//		stack.clickOperationsInStackLink();
+//	}
+
+
 	@When("the user clicks on the Practice questions link")
 	public void the_user_clicks_on_the_practice_questions_link() {
 		stack.clickPracticeQuestionsLink();

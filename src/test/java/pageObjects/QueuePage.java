@@ -32,6 +32,9 @@ public class QueuePage {
 	
 	@FindBy(xpath = "/html/body/div[2]/h4")
       WebElement QueuePageTitle;
+	
+	 @FindBy(xpath = "//a[@href='/tryEditor' and contains(text(),'Try here')]")
+	 WebElement tryHereButton;
 
 	@FindBy(xpath = "//a[@href='implementation-lists']")
 	 WebElement ImplementationOfQueueInPythonLink;
@@ -140,6 +143,11 @@ public class QueuePage {
 		
 	}
 
+	public void clickTryhereButton() {
+		tryHereButton.click();
+		
+		
+	}
 //	public void clickPracticeQuestionsLink() {
 //		practiceQuestionLink.click();	
 //		
