@@ -3,7 +3,7 @@ Feature: Linked List functionality
 Background: 
     Given the user is logged in
 
-@tag
+@tag 
  Scenario: exploring the LinkedList page
     Given the user is in Homepage
     When the user clicks the Get Started under Linked List

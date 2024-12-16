@@ -36,6 +36,7 @@ public class CucumberTest extends AbstractTestNGCucumberTests {
         driver.set(DriverFactory.getDriver(browser, isHeadless));
     
     }
+    
 
     @AfterClass
     public void tearDown() {
@@ -44,6 +45,7 @@ public class CucumberTest extends AbstractTestNGCucumberTests {
             driver.get().quit();
             driver.remove();
         }
+        
     }
 
     public static WebDriver getDriver() {
