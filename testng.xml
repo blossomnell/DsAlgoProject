@@ -3,21 +3,21 @@
 <suite  name="CrossBrowserSuite" parallel="tests" thread-count="3">
     <test name="ChromeTest">
         <parameter name="browser" value="chrome" />
-        <parameter name="headless" value="true" />
+        <parameter name="headless" value="false" />
         <classes>
             <class name="testRunner.CucumberTest" />
         </classes>
     </test>
 <!--    <test name="FirefoxTest">-->
 <!--        <parameter name="browser" value="firefox" />-->
-<!--        <parameter name="headless" value="true" />-->
+<!--        <parameter name="headless" value="false" />-->
 <!--        <classes>-->
 <!--            <class name="testRunner.CucumberTest" />-->
 <!--        </classes>-->
 <!--    </test>-->
 <!--    <test name="EdgeTest">-->
 <!--        <parameter name="browser" value="edge" />-->
-<!--        <parameter name="headless" value="true" />-->
+<!--        <parameter name="headless" value="false" />-->
 <!--        <classes>-->
 <!--            <class name="testRunner.CucumberTest" />-->
 <!--        </classes>-->

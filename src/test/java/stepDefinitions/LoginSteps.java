@@ -48,8 +48,8 @@ public class LoginSteps {
 	@Then("the user gets login message {string}")
 	public void the_user_gets_login_message(String expectedMessage) {
 		assertEquals(loginPage.getAlertMessage(),expectedMessage, "loginMessage");
-		
 	}
+	
  @Given("the user is logged in")
 	public void the_user_is_logged_in() {
 		loginPage.navigatetologinpage();
@@ -67,6 +67,7 @@ public class LoginSteps {
 	@Then("the user gets message {string}")
 	public void the_user_gets_message(String expectedMessage) {
 		Assert.assertTrue(loginPage.isLoggedOutMessageDisplayed(expectedMessage), "logged out message is not displayed");
+
 	}
 }
 

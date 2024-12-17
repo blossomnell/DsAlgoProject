@@ -10,15 +10,20 @@ import org.openqa.selenium.support.PageFactory;
 
 import Utilities.configReader;
 
+
 import testRunner.CucumberTest;
+
 
 public class LoginPage {
 
 	WebDriver driver;
 	Properties prop;
 
+
+
 	public LoginPage() {
 		this.driver = CucumberTest.getDriver();
+
 		PageFactory.initElements(driver, this);
 		configReader reader = new configReader();
 		prop = reader.init_prop();
@@ -50,7 +55,9 @@ public class LoginPage {
 	}
 
 	public void navigatetohomepage() {
+
 		//driver.get("https://dsportalapp.herokuapp.com/home");
+
 		driver.get(prop.getProperty("testurl") + "/home");
 	}
 
@@ -59,7 +66,9 @@ public class LoginPage {
 	}
 
 	public void navigatetologinpage() {
+
 		//driver.get("https://dsportalapp.herokuapp.com/login");
+
 		driver.get(prop.getProperty("testurl") +"/login");
 	}
 

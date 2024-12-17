@@ -1,4 +1,3 @@
-
 Feature: DsAlgo portal registration functionality
 Background: user is in the registration page
 
