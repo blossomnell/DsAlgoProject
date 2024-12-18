@@ -87,10 +87,10 @@ public class StackPage {
 	}
 
 
-	public void navigateToStackpage() {
-		driver.get(prop.getProperty("testurl") + "/stack");
-		
-	}
+//	public void navigateToStackpage() {
+//		driver.get(prop.getProperty("testurl") + "/stack");
+//		
+//	}
 
 
 	public void clickOperationsInStackLink() {
@@ -105,10 +105,10 @@ public class StackPage {
 		 }
 
 
-	public void navigateOperationsInStackPage() {
-		driver.get(prop.getProperty("testurl") + "/stack/operations-in-stack");
-		
-	}
+//	public void navigateOperationsInStackPage() {
+//		driver.get(prop.getProperty("testurl") + "/stack/operations-in-stack");
+//		
+//	}
 
 
 	public void scrollDownAndClickTryHere() {
@@ -126,11 +126,11 @@ public class StackPage {
 	}
 
 
-	public void navigateToTryEditorPage() {
-		driver.get(prop.getProperty("testurl") + "/tryEditor");
-		
-		
-	}
+//	public void navigateToTryEditorPage() {
+//		driver.get(prop.getProperty("testurl") + "/tryEditor");
+//		
+//		
+//	}
 
 
 	public void clickImplementationLink() {
@@ -144,11 +144,11 @@ public class StackPage {
 	}
 
 
-	public void navigateToImplementationPage() {
-		driver.get(prop.getProperty("testurl") + "/stack/implementation");
-		
-		
-	}
+//	public void navigateToImplementationPage() {
+//		driver.get(prop.getProperty("testurl") + "/stack/implementation");
+//		
+//		
+//	}
     public void clickApplicationLink() {
     	ApplicationLink.click();
 		
@@ -160,11 +160,11 @@ public class StackPage {
 	}
 
 
-	public void navigateToApplicationPage() {
-		driver.get(prop.getProperty("testurl") + "/stack/stack-applications");
-		
-		
-	}
+//	public void navigateToApplicationPage() {
+//		driver.get(prop.getProperty("testurl") + "/stack/stack-applications");
+//		
+//		
+//	}
 
 
 

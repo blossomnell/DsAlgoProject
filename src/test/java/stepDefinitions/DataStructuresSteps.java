@@ -17,11 +17,20 @@ public class DataStructuresSteps{
     ExcelReader excelReader;
     public DataStructuresSteps() {
         try {
-            excelReader = new ExcelReader("src/test/resources/config/TestData.xlsx");
+            String filePath = System.getProperty("user.dir") + "/src/test/resources/config/TestData.xlsx";
+            excelReader = new ExcelReader(filePath);
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
         }
     }
+
+//    public DataStructuresSteps() {
+//        try {
+//            excelReader = new ExcelReader("src/test/resources/config/TestData.xlsx");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 	//	WebDriver driver = DriverFactory.getDriver();
 	 DataStructurePage dsp = new  DataStructurePage();
 //		//LoginPage loginPage = new LoginPage();
@@ -102,17 +111,33 @@ public class DataStructuresSteps{
 		dsp.clickTryhereButton();
 	//	Assert.assertTrue(dsp.isTryEditorPageDisplayed(),"The user is not in try editor page");
 	}
+//
+//	@When("the user enters data from Excel in row {int} and column {int}")
+//	 public void the_user_enters_data_from_excel(int row, int column) {
+//        String code = excelReader.getCellData("python DS", row, column);
+//       if (code == null || code.isEmpty()) {
+//           throw new IllegalArgumentException("The code fetched from Excel is empty or null.");
+//       }
+//        System.out.println("Code entered in editor: " + code);   
+//		dsp.enterCode(code);
+//        dsp.clickRunButton();
+//	}
+	
+	@When("the user enters data from sheet {string} and row {int}")
+	public void the_user_enters_data_from_sheet_and_row(String sheetName, int row) {
+	    // Default column index for fetching data
+	    int column = 0; // Always fetch the first column
+	    
+	    String code = excelReader.getCellData(sheetName, row, column);
+	    if (code == null || code.isEmpty()) {
+	        throw new IllegalArgumentException("The code fetched from Excel is empty or null.");
+	    }
 
-	@When("the user enters data from Excel in row {int} and column {int}")
-	 public void the_user_enters_data_from_excel(int row, int column) {
-        String code = excelReader.getCellData("python DS", row, column);
-       if (code == null || code.isEmpty()) {
-           throw new IllegalArgumentException("The code fetched from Excel is empty or null.");
-       }
-        System.out.println("Code entered in editor: " + code);   
-		dsp.enterCode(code);
-        dsp.clickRunButton();
+	    System.out.println("Code entered in editor: " + code);
+	    dsp.enterCode(code);
+	    dsp.clickRunButton();
 	}
+
 
 	@Then("the user sees {string}")
 	public void the_user_sees(String expectedOutcome) {

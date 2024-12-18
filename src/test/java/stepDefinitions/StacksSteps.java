@@ -14,14 +14,14 @@ public class StacksSteps{
 	
 	StackPage stack= new StackPage();
 	ExcelReader excelReader;
-    public StacksSteps() {
+    public StacksSteps()  {
         try {
-            excelReader = new ExcelReader("src/test/resources/config/TestData.xlsx");
+            String filePath = System.getProperty("user.dir") + "/src/test/resources/config/TestData.xlsx";
+            excelReader = new ExcelReader(filePath);
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
         }
     }
-	
 	@When("the user clicks on the Get started button under stack")
 	public void the_user_clicks_on_the_get_started_button_under_stack() {
 		stack.clickGetStarted();

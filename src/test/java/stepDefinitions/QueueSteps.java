@@ -15,11 +15,12 @@ import pageObjects.StackPage;
 public class QueueSteps {
 	
 	 ExcelReader excelReader;
-	    public QueueSteps() {
+	    public QueueSteps()  {
 	        try {
-	            excelReader = new ExcelReader("src/test/resources/config/TestData.xlsx");
+	            String filePath = System.getProperty("user.dir") + "/src/test/resources/config/TestData.xlsx";
+	            excelReader = new ExcelReader(filePath);
 	        } catch (IOException e) {
-	            e.printStackTrace();
+	            throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
 	        }
 	    }
 	
@@ -135,18 +136,26 @@ public class QueueSteps {
 	}
 	@Given("the user in operations in queue page")
 	public void the_user_in_operations_in_queue_page() {
-		queue.operationsInQueuePage();
+//		queue.operationsInQueuePage();
+		queue.clickGetStarted();
+		queue.clickQueueOperationsLink();
 
 	}
 	@Given("the user is in the try editor page in Queue Operations")
 	public void the_user_is_in_the_try_editor_page_in_queue_operations() {
-		queue.navigateToTryEditorPage();
+//		queue.navigateToTryEditorPage();
+		queue.clickGetStarted();
+		queue.clickQueueOperationsLink();
+		queue.clickTryhereButton();
+
 	}
 
 
 	@Given("the user in Queue Operations page")
 	public void the_user_in_queue_operations_page() {
-		queue.operationsInQueuePage();
+//		queue.operationsInQueuePage();
+		queue.clickGetStarted();
+		queue.clickQueueOperationsLink();
 	}
 	
 //	@When("the user clicks on the Practice questions link")

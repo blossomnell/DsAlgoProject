@@ -80,10 +80,10 @@ public class QueuePage {
 		return QueuePageTitle.isDisplayed();
 	}
 
-	public void navigateToQueuepage() {
-		driver.get(prop.getProperty("testurl") + "/queue");
-		
-	}
+//	public void navigateToQueuepage() {
+//		driver.get(prop.getProperty("testurl") + "/queue");
+//		
+//	}
 
 	public void clickImplementationOfQueueInPythonLink() {
 		ImplementationOfQueueInPythonLink.click();
@@ -93,17 +93,17 @@ public class QueuePage {
 		return ImplementationOfQueueInPythonPageTitle.isDisplayed();
 	}
 
-	public void navigateToImplementationOfQueueInPython() {
-		driver.get(prop.getProperty("testurl") + "/queue/implementation-lists");		
-	}
+//	public void navigateToImplementationOfQueueInPython() {
+//		driver.get(prop.getProperty("testurl") + "/queue/implementation-lists");		
+//	}
 
-	public void navigateToTryEditorPage() {
-		driver.get(prop.getProperty("testurl") + "/tryEditor");		
-	}
-
-	public void navigateToImplementationUsingCollectionsDequePage() {
-		driver.get(prop.getProperty("testurl") + "/queue/implementation-collections");		
-	}
+//	public void navigateToTryEditorPage() {
+//		driver.get(prop.getProperty("testurl") + "/tryEditor");		
+//	}
+//
+//	public void navigateToImplementationUsingCollectionsDequePage() {
+//		driver.get(prop.getProperty("testurl") + "/queue/implementation-collections");		
+//	}
 
 	public boolean isImplementationUsingCollectionDequePageDispayed() {
 	
@@ -124,9 +124,9 @@ public class QueuePage {
 		return ImplementationUsingArrayPageTitle.isDisplayed();
 	}
 
-	public void navigateToImplementationUsingArrayPage() {
-		driver.get(prop.getProperty("testurl") + "/queue/Implementation-array");		
-	}
+//	public void navigateToImplementationUsingArrayPage() {
+//		driver.get(prop.getProperty("testurl") + "/queue/Implementation-array");		
+//	}
 
 	public void clickQueueOperationsLink() {
 		QueueOperationsLink.click();
@@ -138,10 +138,10 @@ public class QueuePage {
 		return QueueOperationsTitle.isDisplayed();
 	}
 
-	public void operationsInQueuePage() {
-		driver.get(prop.getProperty("testurl") + "/queue/QueueOp");
-		
-	}
+//	public void operationsInQueuePage() {
+//		driver.get(prop.getProperty("testurl") + "/queue/QueueOp");
+//		
+//	}
 
 	public void clickTryhereButton() {
 		tryHereButton.click();
