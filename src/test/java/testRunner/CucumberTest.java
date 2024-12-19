@@ -38,7 +38,6 @@ public class CucumberTest extends AbstractTestNGCucumberTests {
     
     }
     
-
     @AfterClass
     public void tearDown() {
         if (driver.get() != null) {

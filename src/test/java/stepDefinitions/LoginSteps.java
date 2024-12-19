@@ -1,17 +1,28 @@
 package stepDefinitions;
 
 import static org.testng.Assert.assertEquals;
-
+import java.io.IOException;
 import org.testng.Assert;
+import Utilities.ExcelReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.LoginPage;
 
 public class LoginSteps {
-
-	LoginPage loginPage = new LoginPage();
 	
+	ExcelReader excelReader;
+    public LoginSteps() {
+        try {
+            String filePath = System.getProperty("user.dir") + "/src/test/resources/config/TestData.xlsx";
+            excelReader = new ExcelReader(filePath);
+                      
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
+        }
+    }
+	LoginPage loginPage = new LoginPage();
+		
 	@Given("the user is in the homepage")
 	public void the_user_is_in_the_homepage() {
 		loginPage.navigatetohomepage();
@@ -37,12 +48,23 @@ public class LoginSteps {
 		loginPage.navigatetohomepage();
 		loginPage.signin();
 	}
-
-	@When("the user enters {string} and  {string} and clicks login button")
-	public void the_user_enters_and_and_clicks_login_button(String username, String password) {
-		loginPage.enterUsername(username);
-		loginPage.enterPassword(password);
-		loginPage.clickloginBtn();
+		
+	@When("the user enters the data from sheet {string} and row {int}")
+	public void the_user_enters_the_data_from_sheet_and_row(String sheetName, int row) {
+		
+        String username = excelReader.getCellData(sheetName, row, 0);
+        String password = excelReader.getCellData(sheetName, row, 1);
+        
+        System.out.println("Username: " + username + ", Password: " + password);
+        
+        if (username != null && !username.isEmpty()) {
+            loginPage.enterUsername(username);
+        }
+        if (password != null && !password.isEmpty()) {
+            loginPage.enterPassword(password);
+        }
+       
+        loginPage.clickloginBtn();
 	}
 
 	@Then("the user gets login message {string}")
@@ -50,7 +72,7 @@ public class LoginSteps {
 		assertEquals(loginPage.getAlertMessage(),expectedMessage, "loginMessage");
 	}
 	
- @Given("the user is logged in")
+    @Given("the user is logged in")
 	public void the_user_is_logged_in() {
 		loginPage.navigatetologinpage();
 		loginPage.enterUsername("Ninjasquad");

@@ -66,7 +66,7 @@ public class LinkedListPage {
 	WebElement signoutBtn;
 	
 	public void navigatetohomepage() {
-		driver.get(prop.getProperty("testurl") + "/home");		
+		//driver.get(prop.getProperty("testurl") + "/home");		
 	}	
 		
 	public void clickgetstartedBtn() {
@@ -75,7 +75,7 @@ public class LinkedListPage {
     
 	public void navigatetolinkedlistpage() {
 		//driver.get("https://dsportalapp.herokuapp.com/linked-list/");
-		driver.get(prop.getProperty("testurl") + "/linked-list/");
+		//driver.get(prop.getProperty("testurl") + "/linked-list/");
 	}
 	
 	public boolean isLinkedListPageDisplayed() {
@@ -92,7 +92,7 @@ public class LinkedListPage {
 
 	public void navigatetointroductionpage() {
 		//driver.get("https://dsportalapp.herokuapp.com/linked-list/introduction/");	
-		driver.get(prop.getProperty("testurl") + "/linked-list/introduction/");
+		//driver.get(prop.getProperty("testurl") + "/linked-list/introduction/");
 	}
 
 	public void Tryhere() {
@@ -101,7 +101,7 @@ public class LinkedListPage {
 
 	public void navigatetotryeditorpage() {
 		//driver.get("https://dsportalapp.herokuapp.com/tryEditor");	
-		driver.get(prop.getProperty("testurl") + "/tryEditor");
+		//driver.get(prop.getProperty("testurl") + "/tryEditor");
 	}
  	
 	public boolean isTryEditorPageDisplayed() {
@@ -141,7 +141,7 @@ public class LinkedListPage {
 
 	public void navigatetocreatinglinkedlistpage() {
 		//driver.get("https://dsportalapp.herokuapp.com/linked-list/creating-linked-list");
-		driver.get(prop.getProperty("testurl") + "/linked-list/creating-linked-list/");
+		//driver.get(prop.getProperty("testurl") + "/linked-list/creating-linked-list/");
 	}
 
 	public void TypesofLinkedList() {
@@ -150,7 +150,7 @@ public class LinkedListPage {
 
 	public void navigatetotypesoflinkedlistpage() {
 		//driver.get("https://dsportalapp.herokuapp.com/linked-list/types-of-linked-list/");	
-		driver.get(prop.getProperty("testurl") + "/linked-list/types-of-linked-list/");
+		//driver.get(prop.getProperty("testurl") + "/linked-list/types-of-linked-list/");
 	}
 
 	public void ImplementLinkedListinPython() {
@@ -159,7 +159,7 @@ public class LinkedListPage {
 
 	public void navigatetoimplementlinkedlistinpythonpage() {
 		//driver.get("https://dsportalapp.herokuapp.com/linked-list/implement-linked-list-in-python/");
-		driver.get(prop.getProperty("testurl") + "/linked-list/implement-linked-list-in-python/");
+		//driver.get(prop.getProperty("testurl") + "/linked-list/implement-linked-list-in-python/");
 	}
 
 	public void Traversal() {
@@ -168,7 +168,7 @@ public class LinkedListPage {
 
 	public void navigatetotraversalpage() {
 		//driver.get("https://dsportalapp.herokuapp.com/linked-list/traversal/");
-		driver.get(prop.getProperty("testurl") + "/linked-list/traversal/");
+		//driver.get(prop.getProperty("testurl") + "/linked-list/traversal/");
 	}
 
 	public void Insertion() {
@@ -177,7 +177,7 @@ public class LinkedListPage {
 
 	public void navigatetoinsertionpage() {
 		//driver.get("https://dsportalapp.herokuapp.com/linked-list/insertion-in-linked-list/");
-		driver.get(prop.getProperty("testurl") + "/linked-list/insertion-in-linked-list/");	
+		//driver.get(prop.getProperty("testurl") + "/linked-list/insertion-in-linked-list/");	
 	}
 
 	public void Deletion() {
@@ -186,7 +186,7 @@ public class LinkedListPage {
 
 	public void navigatetodeletionpage() {
 		//driver.get("https://dsportalapp.herokuapp.com/linked-list/deletion-in-linked-list/");
-		driver.get(prop.getProperty("testurl") + "/linked-list/deletion-in-linked-list/");
+		//driver.get(prop.getProperty("testurl") + "/linked-list/deletion-in-linked-list/");
 	}
 
 	public void PracticeQuestions() {
@@ -195,7 +195,7 @@ public class LinkedListPage {
 
 	public void navigatetopracticequestionspage() {
 		//driver.get("https://dsportalapp.herokuapp.com/linked-list/practice");
-		driver.get(prop.getProperty("testurl") + "/linked-list/practice");
+		//driver.get(prop.getProperty("testurl") + "/linked-list/practice");
 	}
 	
 	public String getPopupAlertText() {    

@@ -1,17 +1,24 @@
 package stepDefinitions;
 
-//import static org.testng.Assert.assertTrue;
+import java.io.IOException;
 import org.testng.Assert;
-//import org.testng.Assert;
-//import org.testng.Assert;
-
+import Utilities.ExcelReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.LinkedListPage;
 
-
 public class LinkedListSteps {
+	
+	 ExcelReader excelReader;
+	    public LinkedListSteps() {
+	        try {
+	            String filePath = System.getProperty("user.dir") + "/src/test/resources/config/TestData.xlsx";
+	            excelReader = new ExcelReader(filePath);
+	        } catch (IOException e) {
+	            throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
+	        }
+	    }
 	
 	LinkedListPage linkedListPage = new LinkedListPage();
 	
@@ -32,7 +39,8 @@ public class LinkedListSteps {
 		
 	@Given("the user is in Linked List page")
 	public void the_user_is_in_linked_list_page() {
-		 linkedListPage.navigatetolinkedlistpage();
+		 linkedListPage.clickgetstartedBtn();
+		 //linkedListPage.navigatetolinkedlistpage();
 	}
 
 	@When("the user clicks the Introduction")
@@ -48,7 +56,9 @@ public class LinkedListSteps {
 
 	@Given("the user is in the Introduction page")
 	public void the_user_is_in_the_introduction_page() {
-		linkedListPage.navigatetointroductionpage();
+		linkedListPage.clickgetstartedBtn();
+		linkedListPage.Introduction();
+		//linkedListPage.navigatetointroductionpage();
 	}
 
 	@When("the user clicks the Try here button")
@@ -65,15 +75,26 @@ public class LinkedListSteps {
 
 	@Given("the user is in the python editor of Introduction page")
 	public void the_user_is_in_the_python_editor_of_introduction_page() {
-		linkedListPage.navigatetotryeditorpage();
+		linkedListPage.clickgetstartedBtn();
+		linkedListPage.Introduction();
+		linkedListPage.Tryhere();
+		//linkedListPage.navigatetotryeditorpage();
 	}
+	
+	@When("the user enters data from sheet {string} and row {int}")
+	public void the_user_enters_data_from_sheet_and_row(String sheetName, int row) {
+	    int column = 0; 
+	    
+	    String code = excelReader.getCellData(sheetName, row, column);
+	    if (code == null || code.isEmpty()) {
+	        throw new IllegalArgumentException("The code fetched from Excel is empty or null.");
+	    }
 
-	@When("the user enters {string} in the python editor and clicks Run")
-	public void the_user_enters_in_the_python_editor_and_clicks_run(String code) {	
-		linkedListPage.enterCode(code);
-		linkedListPage.clicksrunBtn();
+	    System.out.println("Code entered in editor: " + code);	    
+	    linkedListPage.enterCode(code);
+	    linkedListPage.clicksrunBtn();
 	}
-
+	
 	@Then("the user gets the message {string}")
 	public void the_user_gets_the_message(String expectedOutcome) {		
 		
@@ -87,7 +108,8 @@ public class LinkedListSteps {
 	  
 	@Given("the user is in the Linked List page")
 	public void the_user_is_in_the_linked_list_page() {
-		linkedListPage.navigatetolinkedlistpage();
+		linkedListPage.clickgetstartedBtn();
+		//linkedListPage.navigatetolinkedlistpage();
 	}
 
 	@When("the user clicks on the Creating Linked List")
@@ -103,7 +125,9 @@ public class LinkedListSteps {
 
 	@Given("the user is in the Creating Linked List page")
 	public void the_user_is_in_the_creating_linked_list_page() {
-		linkedListPage.navigatetocreatinglinkedlistpage();
+		linkedListPage.clickgetstartedBtn();
+		linkedListPage.CreatingLinkedList();
+		//linkedListPage.navigatetocreatinglinkedlistpage();
 	}
 
 	@When("the user clicks Try here button")
@@ -113,7 +137,10 @@ public class LinkedListSteps {
 
 	@Given("the user is in the python editor of Creating Linked List page")
 	public void the_user_is_in_the_python_editor_of_creating_linked_list_page() {
-		linkedListPage.navigatetotryeditorpage();
+		linkedListPage.clickgetstartedBtn();
+		linkedListPage.CreatingLinkedList();
+		linkedListPage.Tryhere();
+		//linkedListPage.navigatetotryeditorpage();
 	}
 
 	@When("the user clicks on Types of Linked List")
@@ -128,12 +155,17 @@ public class LinkedListSteps {
 
 	@Given("the user is in the Types of Linked List page")
 	public void the_user_is_in_the_types_of_linked_list_page() {
-		linkedListPage.navigatetotypesoflinkedlistpage();
+		linkedListPage.clickgetstartedBtn();
+		linkedListPage.TypesofLinkedList();
+		//linkedListPage.navigatetotypesoflinkedlistpage();
 	}
 
 	@Given("the user is in the python editor of Types of Linked List page")
 	public void the_user_is_in_the_python_editor_of_types_of_linked_list_page() {
-		linkedListPage.navigatetotryeditorpage();
+		linkedListPage.clickgetstartedBtn();
+		linkedListPage.TypesofLinkedList();
+		linkedListPage.Tryhere();
+		//linkedListPage.navigatetotryeditorpage();
 	}
 
 	@When("the user clicks the Implement Linked List in Python")
@@ -148,12 +180,17 @@ public class LinkedListSteps {
 
 	@Given("the user is in the Implement Linked List in Python page")
 	public void the_user_is_in_the_implement_linked_list_in_python_page() {
-		linkedListPage.navigatetoimplementlinkedlistinpythonpage();
+		linkedListPage.clickgetstartedBtn();
+		linkedListPage.ImplementLinkedListinPython();
+		//linkedListPage.navigatetoimplementlinkedlistinpythonpage();
 	}
 
 	@Given("the user is in the python editor of the Implement Linked List in Python page")
 	public void the_user_is_in_the_python_editor_of_the_implement_linked_list_in_python_page() {
-		linkedListPage.navigatetotryeditorpage();
+		linkedListPage.clickgetstartedBtn();
+		linkedListPage.ImplementLinkedListinPython();
+		linkedListPage.Tryhere();
+		//linkedListPage.navigatetotryeditorpage();
 	}
 
 	@When("the user clicks the Traversal")
@@ -168,12 +205,17 @@ public class LinkedListSteps {
 
 	@Given("the user is in the Traversal page")
 	public void the_user_is_in_the_traversal_page() {
-		linkedListPage.navigatetotraversalpage();
+		linkedListPage.clickgetstartedBtn();
+		linkedListPage.Traversal();
+		//linkedListPage.navigatetotraversalpage();
 	}
 
 	@Given("the user is in the python editor of the Traversal page")
 	public void the_user_is_in_the_python_editor_of_the_traversal_page() {
-		linkedListPage.navigatetotryeditorpage(); 
+		linkedListPage.clickgetstartedBtn();
+		linkedListPage.Traversal();
+		linkedListPage.Tryhere();
+		//linkedListPage.navigatetotryeditorpage(); 
 	}
 
 	@When("the user clicks the Insertion")
@@ -188,12 +230,17 @@ public class LinkedListSteps {
 
 	@Given("the user is in the Insertion page")
 	public void the_user_is_in_the_insertion_page() {
-		linkedListPage.navigatetoinsertionpage(); 
+		linkedListPage.clickgetstartedBtn();
+		linkedListPage.Insertion();
+		//linkedListPage.navigatetoinsertionpage(); 
 	}
 
 	@Given("the user is in the python editor of the Insertion page")
 	public void the_user_is_in_the_python_editor_of_the_insertion_page() {
-		linkedListPage.navigatetotryeditorpage(); 
+		linkedListPage.clickgetstartedBtn();
+		linkedListPage.Insertion();
+		linkedListPage.Tryhere();
+		//linkedListPage.navigatetotryeditorpage(); 
 	}
 
 	@When("the user clicks the Deletion")
@@ -208,14 +255,18 @@ public class LinkedListSteps {
 
 	@Given("the user is in the Deletion page")
 	public void the_user_is_in_the_deletion_page() {
-		linkedListPage.navigatetodeletionpage();
+		linkedListPage.clickgetstartedBtn();
+		linkedListPage.Deletion();
+		//linkedListPage.navigatetodeletionpage();
 	}
 
 	@Given("the user is in the python editor of the Deletion page")
 	public void the_user_is_in_the_python_editor_of_the_deletion_page() {
-		linkedListPage.navigatetotryeditorpage();
+		linkedListPage.clickgetstartedBtn();
+		linkedListPage.Deletion();
+		linkedListPage.Tryhere();
+		//linkedListPage.navigatetotryeditorpage();
 	}
-	
 	
 	@When("the user clicks the Practice Questions")
 	public void the_user_clicks_the_practice_questions() {

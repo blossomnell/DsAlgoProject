@@ -9,8 +9,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.configReader;
-
-
 import testRunner.CucumberTest;
 
 
@@ -18,8 +16,6 @@ public class LoginPage {
 
 	WebDriver driver;
 	Properties prop;
-
-
 
 	public LoginPage() {
 		this.driver = CucumberTest.getDriver();

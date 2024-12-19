@@ -3,24 +3,25 @@ Feature: User Actions in the Python Editor and Related Pages
   Background: 
     Given the user is logged in
 
-   @tag
+ @tag
   Scenario: Navigate to Time Complexity Page
     Given the user is in the homepage
     When the user clicks Get Started button under DataStructure
     Then the user is navigated to Data Structures-Introduction page
 
-  @tag
+ @tag
   Scenario: Navigate to Time Complexity Page
     Given the user is in the Data Structures-Introduction page
     When the user clicks the Time Complexity link
     Then the user is navigated Time Complexity page
-  @tag
+    
+ @tag
   Scenario: Navigate to Python Editor Page
     Given the user is in the Time Complexity page
     When the user scrolls down and clicks the Try here button in Time Complexity Page
     Then the user is in the try editor page
 
-    @tag
+ @tag
   Scenario Outline: Run code in the Python Editor
     Given the user is in the Python try editor page
     When the user enters data from Excel in row <row> and column <column>
@@ -31,7 +32,7 @@ Feature: User Actions in the Python Editor and Related Pages
       |   1 |      0 | popup error message containing SyntaxError        |
       |   2 |      0 | the user is able to see the output in the console |
 
-    @tag
+ @tag
   Scenario: Navigate to Practice Questions Page
     Given the user is in the Time Complexity page
     When the user clicks the Practice Questions link

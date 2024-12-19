@@ -3,7 +3,7 @@ Feature: Linked List functionality
 Background: 
     Given the user is logged in
 
-@tag 
+@tag
  Scenario: exploring the LinkedList page
     Given the user is in Homepage
     When the user clicks the Get Started under Linked List
@@ -20,16 +20,17 @@ Background:
     Given the user is in the Introduction page
     When the user clicks the Try here button
     Then the user should be in the python editor page
-        
+          
  @tag
   Scenario Outline: validating Run function with invalid code and valid code
     Given the user is in the python editor of Introduction page
-    When the user enters '<code>' in the python editor and clicks Run
-    Then the user gets the message '<expectedOutcome>'   
-       Examples:
-         |  code                 |            expectedOutcome          |              
-         |print(\\"Hello\\")abc  | SyntaxError: bad input on line 1    |   
-	       | print("Hello")        | Hello                               |
+    When the user enters data from sheet "<sheetName>" and row <row>
+    Then the user gets the message "<expectedOutcome>"
+
+    Examples: 
+      | sheetName | row |       expectedOutcome                   |
+      | python DS |   1 | SyntaxError: bad input on line 1        |
+      | python DS |   2 | hello                                   |       
           
  @tag
   Scenario: exploring the Creating Linked List page
@@ -46,12 +47,14 @@ Background:
  @tag
   Scenario Outline: validating Run function with invalid code and valid code
     Given the user is in the python editor of Creating Linked List page
-    When the user enters '<code>' in the python editor and clicks Run
-    Then the user gets the message '<expectedOutcome>' 
-       Examples:
-         |  code                 |            expectedOutcome         | 
-         |print(\\"Hello\\")abc  | SyntaxError: bad input on line 1   |                 
-         | print("Hello")        | Hello                              |
+    When the user enters data from sheet "<sheetName>" and row <row>
+    Then the user gets the message "<expectedOutcome>"
+
+    Examples: 
+      | sheetName | row |      expectedOutcome                    |
+      | python DS |   1 | SyntaxError: bad input on line 1        |
+      | python DS |   2 | hello                                   |  
+      
  @tag
   Scenario: exploring the Types of Linked List page
     Given the user is in the Linked List page
@@ -67,12 +70,13 @@ Background:
   @tag
   Scenario Outline: validating Run function with invalid code and valid code
     Given the user is in the python editor of Types of Linked List page
-    When the user enters '<code>' in the python editor and clicks Run
-    Then the user gets the message '<expectedOutcome>' 
-      Examples:
-         |  code                 |            expectedOutcome         | 
-         |print(\\"Hello\\")abc  | SyntaxError: bad input on line 1   |                 
-         | print("Hello")        | Hello                              | 
+    When the user enters data from sheet "<sheetName>" and row <row>
+    Then the user gets the message "<expectedOutcome>"
+
+    Examples: 
+      | sheetName | row |       expectedOutcome                   |
+      | python DS |   1 | SyntaxError: bad input on line 1        |
+      | python DS |   2 | hello                                   |   
        
  @tag
   Scenario: exploring the Implement Linked List in Python page
@@ -89,12 +93,14 @@ Background:
  @tag
   Scenario Outline: validating Run function with invalid code and valid code
     Given the user is in the python editor of the Implement Linked List in Python page
-    When the user enters '<code>' in the python editor and clicks Run
-    Then the user gets the message '<expectedOutcome>' 
-      Examples:
-         |  code                 |            expectedOutcome         | 
-         |print(\\"Hello\\")abc  | SyntaxError: bad input on line 1   |                 
-         | print("Hello")        | Hello                              |
+    When the user enters data from sheet "<sheetName>" and row <row>
+    Then the user gets the message "<expectedOutcome>"
+
+    Examples: 
+      | sheetName | row |       expectedOutcome                   |
+      | python DS |   1 | SyntaxError: bad input on line 1        |
+      | python DS |   2 | hello                                   |
+      
  @tag
   Scenario: exploring the Traversal page
     Given the user is in the Linked List page
@@ -107,15 +113,16 @@ Background:
     When the user clicks the Try here button
     Then the user should be in the python editor page
     
-@tag
+ @tag
   Scenario Outline: validating Run function with invalid code and valid code
     Given the user is in the python editor of the Traversal page
-    When the user enters '<code>' in the python editor and clicks Run
-    Then the user gets the message '<expectedOutcome>'
-      Examples:     
-         |  code                 |            expectedOutcome         | 
-         |print(\\"Hello\\")abc  | SyntaxError: bad input on line 1   |                 
-         | print("Hello")        | Hello                              |
+     When the user enters data from sheet "<sheetName>" and row <row>
+    Then the user gets the message "<expectedOutcome>"
+
+    Examples: 
+      | sheetName | row |        expectedOutcome                  |
+      | python DS |   1 | SyntaxError: bad input on line 1        |
+      | python DS |   2 | hello                                   |
              
  @tag
   Scenario: exploring the Insertion page
@@ -132,12 +139,13 @@ Background:
  @tag
   Scenario Outline: validating Run function with invalid code and valid code
     Given the user is in the python editor of the Insertion page
-    When the user enters '<code>' in the python editor and clicks Run
-    Then the user gets the message '<expectedOutcome>'
-      Examples:
-         |  code                 |            expectedOutcome         | 
-         |print(\\"Hello\\")abc  | SyntaxError: bad input on line 1   |                 
-         | print("Hello")        | Hello                              |
+     When the user enters data from sheet "<sheetName>" and row <row>
+    Then the user gets the message "<expectedOutcome>"
+
+    Examples: 
+      | sheetName | row |         expectedOutcome                 |
+      | python DS |   1 | SyntaxError: bad input on line 1        |
+      | python DS |   2 | hello                                   |
          
  @tag
   Scenario: exploring the Deletion page
@@ -151,15 +159,16 @@ Background:
     When the user clicks Try here button
     Then the user should be in the python editor page
     
- @tag
+ @wip
   Scenario Outline: validating Run function with invalid code and valid code
     Given the user is in the python editor of the Deletion page
-    When the user enters '<code>' in the python editor and clicks Run
-    Then the user gets the message '<expectedOutcome>'
-       Examples: 
-         |  code                 |            expectedOutcome         | 
-         |print(\\"Hello\\")abc  | SyntaxError: bad input on line 1   |                 
-         | print("Hello")        | Hello                              |
+     When the user enters data from sheet "<sheetName>" and row <row>
+    Then the user gets the message "<expectedOutcome>"
+
+    Examples: 
+      | sheetName | row |         expectedOutcome                 |
+      | python DS |   1 | SyntaxError: bad input on line 1        |
+      | python DS |   2 | hello                                   |
          
  @tag
   Scenario: Exploring the practice questions page

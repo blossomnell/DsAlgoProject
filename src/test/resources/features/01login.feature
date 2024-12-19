@@ -1,4 +1,3 @@
-
 Feature: DsAlgo login functionality/validation
 Background: the user opens the homepage 
 
@@ -8,24 +7,24 @@ Background: the user opens the homepage
     When the user clicks the signin button  
     Then the user is redirected to the login page
    
-@tag 
+@tag
   Scenario Outline: the user tries to login with different credentials
-    Given the user is in the login page      
-    When the user enters "<username>" and  "<password>" and clicks login button
-    Then the user gets login message "<output>"
-    
-    Examples: 
-      |username    |password  | output                        |
-      |            |          | Please fill out this field.   |
-      |            | abss@abc | Please fill out this field.   |
-      | Ninjasquad | 	        | Please fill out this field.   |
-      | Ninjasquad | abss     | Invalid Username and Password |
-      |  ninja     |abss@abc  | Invalid Username and Password |
-      |  ninja     | abss     | Invalid Username and Password |
-      | Ninjasquad | abss@123 | You are logged in             |
-
-  @tag 
-    Scenario: the user tries signout function
+   Given the user is in the login page
+   When the user enters the data from sheet "<sheetName>" and row <row>
+   Then the user gets login message "<output>"
+   
+   Examples: 
+      | sheetName  |  row |      output                   |
+      | Login      |   1  | Please fill out this field.   |
+      | Login      |   2  | Please fill out this field.   |
+      | Login      |   3  | Please fill out this field.   |
+      | Login      |   4  | Invalid Username and Password |
+      | Login      |   5  | Invalid Username and Password |
+      | Login      |   6  | Invalid Username and Password |
+      | Login      |   7  | You are logged in             |
+     
+ @tag 
+   Scenario: the user tries signout function
      Given the user is logged in
      When the user clicks on Sign out button
      Then the user gets message "Logged out successfully"
