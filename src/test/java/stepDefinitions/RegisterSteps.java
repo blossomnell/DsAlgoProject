@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.UUID;
 import org.testng.Assert;
 import Utilities.ExcelReader;
+import Utilities.configReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -14,14 +15,15 @@ public class RegisterSteps {
 	ExcelReader excelReader;
     public RegisterSteps() {
         try {
-            String filePath = System.getProperty("user.dir") + "/src/test/resources/config/TestData.xlsx";
+        	 String filePath = System.getProperty("user.dir") + "/" + reader.init_prop().getProperty("excelFilePath");
+            //String filePath = System.getProperty("user.dir") + "/src/test/resources/config/TestData.xlsx";
             excelReader = new ExcelReader(filePath);
                       
         } catch (IOException e) {
             throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
         }
     }
-
+    configReader reader = new configReader();
 	RegisterPage registerPage = new RegisterPage();	
 	
 	@Given("the user is in homepage")

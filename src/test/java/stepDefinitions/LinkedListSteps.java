@@ -3,6 +3,7 @@ package stepDefinitions;
 import java.io.IOException;
 import org.testng.Assert;
 import Utilities.ExcelReader;
+import Utilities.configReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -13,14 +14,15 @@ public class LinkedListSteps {
 	 ExcelReader excelReader;
 	    public LinkedListSteps() {
 	        try {
-	            String filePath = System.getProperty("user.dir") + "/src/test/resources/config/TestData.xlsx";
+	        	String filePath = System.getProperty("user.dir") + "/" + reader.init_prop().getProperty("excelFilePath");
+	            //String filePath = System.getProperty("user.dir") + "/src/test/resources/config/TestData.xlsx";
 	            excelReader = new ExcelReader(filePath);
 	        } catch (IOException e) {
 	            throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
 	        }
 	    }
-	
-	LinkedListPage linkedListPage = new LinkedListPage();
+	    configReader reader = new configReader();
+	    LinkedListPage linkedListPage = new LinkedListPage();
 	
 	@Given("the user is in Homepage")
 	public void the_user_is_in_homepage() {

@@ -159,7 +159,7 @@ Background:
     When the user clicks Try here button
     Then the user should be in the python editor page
     
- @wip
+ @tag
   Scenario Outline: validating Run function with invalid code and valid code
     Given the user is in the python editor of the Deletion page
      When the user enters data from sheet "<sheetName>" and row <row>
