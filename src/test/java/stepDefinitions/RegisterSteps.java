@@ -23,6 +23,7 @@ public class RegisterSteps {
             throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
         }
     }
+    
     configReader reader = new configReader();
 	RegisterPage registerPage = new RegisterPage();	
 	

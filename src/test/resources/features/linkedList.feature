@@ -9,7 +9,7 @@ Background:
     When the user clicks the Get Started under Linked List
     Then the user is navigated to Linked List page
     
-@tag
+ @tag
   Scenario: exploring the Introduction page
     Given the user is in Linked List page
     When the user clicks the Introduction 
@@ -67,7 +67,7 @@ Background:
     When the user clicks the Try here button
     Then the user should be in the python editor page
    
-  @tag
+ @tag
   Scenario Outline: validating Run function with invalid code and valid code
     Given the user is in the python editor of Types of Linked List page
     When the user enters data from sheet "<sheetName>" and row <row>

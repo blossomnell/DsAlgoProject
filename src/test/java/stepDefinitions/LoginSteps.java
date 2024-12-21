@@ -23,6 +23,7 @@ public class LoginSteps {
             throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
         }
     }
+    
     configReader reader = new configReader();
 	LoginPage loginPage = new LoginPage();
 		
@@ -38,8 +39,7 @@ public class LoginSteps {
 
 	@Then("the user is redirected to the login page")
 	public void the_user_is_redirected_to_the_login_page() {
-		loginPage.navigatetologinpage();
-	
+		//loginPage.navigatetologinpage();
 		Assert.assertTrue(loginPage.isLoginPageDisplayed(), "Login page is not displayed");
 		Assert.assertTrue(loginPage.isUsernameFieldDisplayed(), "Username Field is not displayed");
 		Assert.assertTrue(loginPage.isPasswordFieldDisplayed(), "Password Fiels is not displayed");
@@ -77,7 +77,7 @@ public class LoginSteps {
 	
     @Given("the user is logged in")
 	public void the_user_is_logged_in() {
-		loginPage.navigatetologinpage();
+		loginPage.navigatetologinpage();	
 		loginPage.enterUsername("Ninjasquad");
 		loginPage.enterPassword("abss@123");
 		loginPage.clickloginBtn();

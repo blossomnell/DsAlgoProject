@@ -1,5 +1,6 @@
 package pageObjects;
 
+import java.util.Objects;
 import java.util.Properties;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -64,7 +65,7 @@ public class RegisterPage {
 	}
 
 	public Boolean isRegisterPageDisplayed() {
-		return true;
+		return Objects.requireNonNull(driver.getCurrentUrl()).endsWith("/register");
 	}
 
 	public boolean isUsernameFieldDisplayed() {
@@ -107,7 +108,6 @@ public class RegisterPage {
 		    return "";
 		}		
 	
-
 	public String getRegisterMessage() {
 		String message = ""; // attempt to get text from the alert message
 		try {

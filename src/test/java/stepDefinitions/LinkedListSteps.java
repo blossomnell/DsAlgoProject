@@ -36,7 +36,8 @@ public class LinkedListSteps {
 	
 	@Then("the user is navigated to Linked List page")
 	public void the_user_is_navigated_to_linked_list_page() {
-		linkedListPage.navigatetolinkedlistpage();
+		//linkedListPage.navigatetolinkedlistpage();
+		Assert.assertTrue(linkedListPage.isLinkedListPageDisplayed(), "LinkedList page is not displayed");
 	}
 		
 	@Given("the user is in Linked List page")
@@ -52,7 +53,7 @@ public class LinkedListSteps {
 
 	@Then("the user should be in the Introduction page")
 	public void the_user_should_be_in_the_introduction_page() {
-		linkedListPage.navigatetointroductionpage();
+		//linkedListPage.navigatetointroductionpage();
 		Assert.assertTrue(linkedListPage.isIntroductionPageDisplayed(), "Introduction page is not displayed");
 	}
 
@@ -70,7 +71,7 @@ public class LinkedListSteps {
 
 	@Then("the user should be in the python editor page")
 	public void the_user_should_be_in_the_python_editor_page() {
-		linkedListPage.navigatetotryeditorpage();
+		//linkedListPage.navigatetotryeditorpage();
 		Assert.assertTrue(linkedListPage.isTryEditorPageDisplayed(), "Try Editor page is not displayed");
 		Assert.assertTrue(linkedListPage.isRunButtonDisplayed(), "Run button is not displayed");
 	}
@@ -121,8 +122,8 @@ public class LinkedListSteps {
 
 	@Then("the user should be in the Creating Linked List page")
 	public void the_user_should_be_in_the_creating_linked_list_page() {
-		linkedListPage.navigatetocreatinglinkedlistpage();
-		//assertTrue(linkedListPage.isCreatingLinkedListPageDisplayed(), "Creating Linked List page is not displayed");
+		//linkedListPage.navigatetocreatinglinkedlistpage();
+		Assert.assertTrue(linkedListPage.isCreatingLinkedListPageDisplayed(), "CreatingLinkedList page is not displayed");
 	}
 
 	@Given("the user is in the Creating Linked List page")
@@ -152,7 +153,8 @@ public class LinkedListSteps {
 
 	@Then("the user should be in the Types of Linked List page")
 	public void the_user_should_be_in_the_types_of_linked_list_page() {
-		linkedListPage.navigatetotypesoflinkedlistpage();
+		//linkedListPage.navigatetotypesoflinkedlistpage();
+		Assert.assertTrue(linkedListPage.isTypesofLinkedListPageDisplayed(), "TypesofLinkedList page is not displayed");		
 	}
 
 	@Given("the user is in the Types of Linked List page")
@@ -177,7 +179,8 @@ public class LinkedListSteps {
 
 	@Then("the user should be in the Implement Linked List in Python page")
 	public void the_user_should_be_in_the_implement_linked_list_in_python_page() {
-		linkedListPage.navigatetoimplementlinkedlistinpythonpage();
+		//linkedListPage.navigatetoimplementlinkedlistinpythonpage();
+		Assert.assertTrue(linkedListPage.isImplementLinkedListinPythonPageDisplayed(), "ImplementLinkedListinPython page is not displayed");
 	}
 
 	@Given("the user is in the Implement Linked List in Python page")
@@ -202,7 +205,8 @@ public class LinkedListSteps {
 
 	@Then("the user should be in the Traversal page")
 	public void the_user_should_be_in_the_traversal_page() {
-		linkedListPage.navigatetotraversalpage();
+		//linkedListPage.navigatetotraversalpage();
+		Assert.assertTrue(linkedListPage.isTraversalPageDisplayed(), "Traversal page is not displayed");
 	}
 
 	@Given("the user is in the Traversal page")
@@ -227,7 +231,8 @@ public class LinkedListSteps {
 
 	@Then("the user should be in the Insertion page")
 	public void the_user_should_be_in_the_insertion_page() {
-		linkedListPage.navigatetoinsertionpage(); 
+		//linkedListPage.navigatetoinsertionpage(); 
+		Assert.assertTrue(linkedListPage.isInsertionPageDisplayed(), "Insertion page is not displayed");
 	}
 
 	@Given("the user is in the Insertion page")
@@ -252,7 +257,8 @@ public class LinkedListSteps {
 
 	@Then("the user should be in the Deletion page")
 	public void the_user_should_be_in_the_deletion_page() {
-		linkedListPage.navigatetodeletionpage(); 
+		//linkedListPage.navigatetodeletionpage(); 
+		Assert.assertTrue(linkedListPage.isDeletionPageDisplayed(), "Deletion page is not displayed");
 	}
 
 	@Given("the user is in the Deletion page")
@@ -277,7 +283,8 @@ public class LinkedListSteps {
 
 	@Then("the user should see the Practice Questions page")
 	public void the_user_should_see_the_practice_questions_page() {
-		linkedListPage.navigatetopracticequestionspage();
+		//linkedListPage.navigatetopracticequestionspage();
+		Assert.assertTrue(linkedListPage.isPracticeQuestionsPageDisplayed(), "PracticeQuestions page is not displayed");
 	}
     
 	
