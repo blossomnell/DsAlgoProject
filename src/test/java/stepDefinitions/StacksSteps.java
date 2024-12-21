@@ -17,12 +17,10 @@ public class StacksSteps{
 	ExcelReader excelReader;
     public StacksSteps()  {
         try {
-<<<<<<< Updated upstream
-            String filePath = System.getProperty("user.dir") + "/src/test/resources/config/TestData.xlsx";
-=======
+
         	String filePath = System.getProperty("user.dir") + "/" + reader.init_prop().getProperty("excelFilePath");
             //String filePath = System.getProperty("user.dir") + "/src/test/resources/config/TestData.xlsx";
->>>>>>> Stashed changes
+
             excelReader = new ExcelReader(filePath);
         } catch (IOException e) {
             throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);

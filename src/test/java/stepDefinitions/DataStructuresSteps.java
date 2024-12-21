@@ -7,11 +7,9 @@ import java.io.IOException;
 import org.testng.Assert;
 
 import Utilities.ExcelReader;
-<<<<<<< Updated upstream
-//import Utilities.configReader;
-=======
+
 import Utilities.configReader;
->>>>>>> Stashed changes
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -21,23 +19,7 @@ import pageObjects.DataStructurePage;
 
 public class DataStructuresSteps{
     ExcelReader excelReader;
-<<<<<<< Updated upstream
-    
-    public DataStructuresSteps() {
-        try {
-//        	 configReader reader = new configReader();
-             
-            String filePath = System.getProperty("user.dir") + "/src/test/resources/config/TestData.xlsx";
-//          String filePath = System.getProperty("user.dir") + "/" + prop.getProperty("testDataFile");
-//          System.out.println("File Path: " + filePath);
-            excelReader = new ExcelReader(filePath);
-        } catch (IOException e) {
-            throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
-        }
-    }
 
-//    public DataStructuresSteps() {
-=======
    public DataStructuresSteps() {
        try {
        	String filePath = System.getProperty("user.dir") + "/" + reader.init_prop().getProperty("excelFilePath");
@@ -49,7 +31,6 @@ public class DataStructuresSteps{
    }
    configReader reader = new configReader();
    DataStructurePage dsp = new  DataStructurePage(); 
->>>>>>> Stashed changes
 //        try {
 //            excelReader = new ExcelReader("src/test/resources/config/TestData.xlsx");
 //        } catch (IOException e) {
