@@ -1,20 +1,32 @@
 package stepDefinitions;
 
-//import static org.testng.Assert.assertTrue;
-
+import java.io.IOException;
 import java.util.UUID;
-
 import org.testng.Assert;
-
+import Utilities.ExcelReader;
+import Utilities.configReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.RegisterPage;
 
 public class RegisterSteps {
-
-	RegisterPage registerPage = new RegisterPage();
-
+	
+	ExcelReader excelReader;
+    public RegisterSteps() {
+        try {
+        	 String filePath = System.getProperty("user.dir") + "/" + reader.init_prop().getProperty("excelFilePath");
+            //String filePath = System.getProperty("user.dir") + "/src/test/resources/config/TestData.xlsx";
+            excelReader = new ExcelReader(filePath);
+                      
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
+        }
+    }
+    
+    configReader reader = new configReader();
+	RegisterPage registerPage = new RegisterPage();	
+	
 	@Given("the user is in homepage")
 	public void the_user_is_in_homepage() {
 		registerPage.navigatetohomepage();
@@ -41,25 +53,42 @@ public class RegisterSteps {
 		registerPage.register();
 	}
 
-	@When("the user enters {string}, {string}, {string} and clicks Register button")
-	public void the_user_enters_and_clicks_register_button(String username, String password1, String password2) {
+	@When("the user enters data from the sheet {string} and row {int}")
+	public void the_user_enters_data_from_the_sheet_and_row(String sheetName, int row) {
 		
-		if(!username.isBlank()) {
-			username = username+ UUID.randomUUID();
-		}
-		
-		registerPage.enterUsername(username);
-		registerPage.enterPassword1(password1);
-		registerPage.enterPassword2(password2);
-		registerPage.clickregisterBtn();
+	    String username = excelReader.getCellData(sheetName, row, 0);
+	    String password1 = excelReader.getCellData(sheetName, row, 1);
+	    String password2 = excelReader.getCellData(sheetName, row, 2);
+
+	    System.out.println("Username: " + (username.isBlank() ? "EMPTY" : username));
+	    System.out.println("Password1: " + (password1.isBlank() ? "EMPTY" : password1));
+	    System.out.println("Password2: " + (password2.isBlank() ? "EMPTY" : password2));
+
+	    if (!username.isBlank()) {
+	        username = username + UUID.randomUUID();
+	    }
+
+	    if (!username.isBlank()) {
+	        registerPage.enterUsername(username);
+	    }
+	    if (!password1.isBlank()) {
+	        registerPage.enterPassword1(password1);
+	    }
+	    if (!password2.isBlank()) {
+	        registerPage.enterPassword2(password2);
+	    }
+	    
+	    registerPage.clickregisterBtn();
 	}
 
 	@Then("the user gets a message {string}")
-
 	public void the_user_gets_a_message(String expectedMessage) {
-		Assert.assertTrue(registerPage.getAlertMessage().contains(expectedMessage), "registerMessage");
+	    String actualMessage = registerPage.getAlertMessage();
+	    System.out.println("Expected: " + expectedMessage);
+	    System.out.println("Actual: " + actualMessage);
 
-
+	    Assert.assertTrue(actualMessage.contains(expectedMessage),
+	            "Expected message: '" + expectedMessage + "', but got: '" + actualMessage + "'.");
 	}
 
 }

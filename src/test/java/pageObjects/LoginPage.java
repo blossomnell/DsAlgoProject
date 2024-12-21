@@ -1,5 +1,6 @@
 package pageObjects;
 
+import java.util.Objects;
 import java.util.Properties;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -9,8 +10,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.configReader;
-
-
 import testRunner.CucumberTest;
 
 
@@ -18,8 +17,6 @@ public class LoginPage {
 
 	WebDriver driver;
 	Properties prop;
-
-
 
 	public LoginPage() {
 		this.driver = CucumberTest.getDriver();
@@ -42,38 +39,30 @@ public class LoginPage {
 	@FindBy(xpath = "//a[@href='/logout' and text()='Sign out']")
 	WebElement signoutBtn;
 
+	public void navigatetohomepage() {
+		//driver.get("https://dsportalapp.herokuapp.com/home");
+		driver.get(prop.getProperty("testurl") + "/home");
+	}
+	
+	public void signin() {
+		signin_btn.click();
+	}
+	
+	public void navigatetologinpage() {
+		//driver.get("https://dsportalapp.herokuapp.com/login");
+		driver.get(prop.getProperty("testurl") +"/login");
+	}
+	
+	public Boolean isLoginPageDisplayed() {
+		return Objects.requireNonNull(driver.getCurrentUrl()).endsWith("/login");	
+	}
+	
 	public void enterUsername(String username) {
 		txt_username.sendKeys(username);
 	}
 
 	public void enterPassword(String password) {
 		txt_password.sendKeys(password);
-	}
-
-	public void clickloginBtn() {
-		login_btn.click();
-	}
-
-	public void navigatetohomepage() {
-
-		//driver.get("https://dsportalapp.herokuapp.com/home");
-
-		driver.get(prop.getProperty("testurl") + "/home");
-	}
-
-	public void signin() {
-		signin_btn.click();
-	}
-
-	public void navigatetologinpage() {
-
-		//driver.get("https://dsportalapp.herokuapp.com/login");
-
-		driver.get(prop.getProperty("testurl") +"/login");
-	}
-
-	public Boolean isLoginPageDisplayed() {
-		return true;
 	}
 
 	public Boolean isUsernameFieldDisplayed() {
@@ -89,6 +78,10 @@ public class LoginPage {
 	public Boolean isLoginButtonDisplayed() {
 		//return login_btn != null;
 		return login_btn.isDisplayed();
+	}
+	
+	public void clickloginBtn() {
+		login_btn.click();
 	}
 
 	public String getAlertMessage() {
