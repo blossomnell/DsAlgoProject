@@ -26,11 +26,8 @@ public class StacksSteps{
             throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
         }
     }
-<<<<<<< Updated upstream
-=======
+
     configReader reader = new configReader();
-	
->>>>>>> Stashed changes
 	@When("the user clicks on the Get started button under stack")
 	public void the_user_clicks_on_the_get_started_button_under_stack() {
 		stack.clickGetStarted();
