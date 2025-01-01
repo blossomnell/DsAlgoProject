@@ -21,16 +21,6 @@ Feature: User Actions in the Python Editor and Related Pages
     When the user scrolls down and clicks the Try here button in Time Complexity Page
     Then the user is in the try editor page
 
-  #@tag
-  #Scenario Outline: Run code in the Python Editor
-  #Given the user is in the Python try editor page
-  #When the user enters data from Excel in row <row> and column <column>
-  #Then the user sees "<expectedOutcome>"
-  #
-  #Examples:
-  #| row | column | expectedOutcome                                   |
-  #|   1 |      0 | popup error message containing SyntaxError        |
-  #|   2 |      0 | the user is able to see the output in the console |
   @tag
   Scenario Outline: Run code in the Python Editor
     Given the user is in the Python try editor page

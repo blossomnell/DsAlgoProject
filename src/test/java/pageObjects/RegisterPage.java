@@ -1,5 +1,6 @@
 package pageObjects;
 
+import java.util.Objects;
 import java.util.Properties;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -9,10 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.configReader;
-
-
 import testRunner.CucumberTest;
-
 
 public class RegisterPage {
 	WebDriver driver;
@@ -67,7 +65,7 @@ public class RegisterPage {
 	}
 
 	public Boolean isRegisterPageDisplayed() {
-		return true;
+		return Objects.requireNonNull(driver.getCurrentUrl()).endsWith("/register");
 	}
 
 	public boolean isUsernameFieldDisplayed() {
@@ -98,7 +96,8 @@ public class RegisterPage {
 		String registerMessage = getRegisterMessage();
 		if (!registerMessage.isBlank()) {
 			return registerMessage;
-		} else {
+		} 
+		//else {
 			boolean userValidationErrorExists = isValidationError(txt_username);
 			boolean password1validationErrorExists = isValidationError(txt_password1);
 			boolean password2ValidationErrorExists = isValidationError(txt_password2);
@@ -108,8 +107,7 @@ public class RegisterPage {
 		    }
 		    return "";
 		}		
-	}
-
+	
 	public String getRegisterMessage() {
 		String message = ""; // attempt to get text from the alert message
 		try {

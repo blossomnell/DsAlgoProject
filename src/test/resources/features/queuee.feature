@@ -90,16 +90,6 @@ Feature: user actions on queue pages
     When the user scroll down and clicks try here button
     Then the user navigates to try editor page
 
-  #@tag
-  #Scenario Outline: Run code in the Python Editor
-  #Given the user is in the try editor page in Queue Operations
-  #When the user enters data from Excel in row <row> and column <column>
-  #Then the user sees "<expectedOutcome>"
-  #
-  #Examples:
-  #| row | column | expectedOutcome                                   |
-  #|   1 |      0 | popup error message containing SyntaxError        |
-  #|   2 |      0 | the user is able to see the output in the console |
   @tag
   Scenario Outline: Run code in the Python Editor
     Given the user is in the Python try editor page

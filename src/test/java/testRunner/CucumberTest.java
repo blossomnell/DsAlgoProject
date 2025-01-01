@@ -10,6 +10,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 
 import org.testng.annotations.Parameters;
+
+
 import webdriver.DriverFactory;
 
 @CucumberOptions(
@@ -35,7 +37,7 @@ public class CucumberTest extends AbstractTestNGCucumberTests {
         driver.set(DriverFactory.getDriver(browser, isHeadless));
     
     }
-
+    
     @AfterClass
     public void tearDown() {
         if (driver.get() != null) {
@@ -43,6 +45,7 @@ public class CucumberTest extends AbstractTestNGCucumberTests {
             driver.get().quit();
             driver.remove();
         }
+        
     }
 
     public static WebDriver getDriver() {
