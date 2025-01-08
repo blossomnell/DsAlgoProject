@@ -2,8 +2,9 @@ package webdriver;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.safari.SafariDriver;
+//import org.openqa.selenium.safari.SafariDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -23,8 +24,8 @@ public class BaseClass {
 			tlDriver.set(new FirefoxDriver());
 		
 	}
-		else if(browser.equals("safari")) {
-			tlDriver.set(new SafariDriver());
+		else if(browser.equals("edge")) {
+			tlDriver.set(new EdgeDriver());
 		
 	}
 		else {
@@ -39,4 +40,7 @@ public class BaseClass {
 	public static synchronized WebDriver getDriver() {
 		return tlDriver.get();
 	}
+	
+	
 }
+

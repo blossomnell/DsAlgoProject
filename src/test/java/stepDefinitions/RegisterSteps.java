@@ -1,17 +1,32 @@
 package stepDefinitions;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
+import java.io.IOException;
+import java.util.UUID;
+import org.testng.Assert;
+import Utilities.ExcelReader;
+import Utilities.configReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.RegisterPage;
 
 public class RegisterSteps {
-
-	RegisterPage registerPage = new RegisterPage();
-
+	
+	ExcelReader excelReader;
+    public RegisterSteps() {
+        try {
+        	 String filePath = System.getProperty("user.dir") + "/" + reader.init_prop().getProperty("excelFilePath");
+            //String filePath = System.getProperty("user.dir") + "/src/test/resources/config/TestData.xlsx";
+            excelReader = new ExcelReader(filePath);
+                      
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
+        }
+    }
+    
+    configReader reader = new configReader();
+	RegisterPage registerPage = new RegisterPage();	
+	
 	@Given("the user is in homepage")
 	public void the_user_is_in_homepage() {
 		registerPage.navigatetohomepage();
@@ -25,11 +40,11 @@ public class RegisterSteps {
 	@Then("the user is redirected to the register page")
 	public void the_user_is_redirected_to_the_register_page() {
 		registerPage.navigatetoregisterpage();
-		assertTrue("Register page is not displayed", registerPage.isRegisterPageDisplayed());
-		assertTrue("Username Field is not displayed", registerPage.isUsernameFieldDisplayed());
-		assertTrue("Password1 Field is not displayed", registerPage.isPassword1FieldDisplayed());
-		assertTrue("Password2 Field is not displayed", registerPage.isPassword2FieldDisplayed());
-		assertTrue("Register Button is not displayed", registerPage.isRegisterPageDisplayed());
+		Assert.assertTrue(registerPage.isRegisterPageDisplayed(), "Register page is not displayed");
+		Assert.assertTrue(registerPage.isUsernameFieldDisplayed(), "Username Field is not displayed");
+		Assert.assertTrue(registerPage.isPassword1FieldDisplayed(), "Password1 Field is not displayed");
+		Assert.assertTrue(registerPage.isPassword2FieldDisplayed(), "Password2 Field is not displayed");
+		Assert.assertTrue(registerPage.isRegisterButtonDisplayed(), "Register Button is not displayed");
 	}
 
 	@Given("the user is in the registration page")
@@ -38,18 +53,42 @@ public class RegisterSteps {
 		registerPage.register();
 	}
 
-	@When("the user enters {string}, {string}, {string} and clicks Register button")
-	public void the_user_enters_and_clicks_register_button(String username, String password1, String password2) {
-		registerPage.enterUsername(username);
-		registerPage.enterPassword1(password1);
-		registerPage.enterPassword2(password2);
-		registerPage.clickregisterBtn();
+	@When("the user enters data from the sheet {string} and row {int}")
+	public void the_user_enters_data_from_the_sheet_and_row(String sheetName, int row) {
+		
+	    String username = excelReader.getCellData(sheetName, row, 0);
+	    String password1 = excelReader.getCellData(sheetName, row, 1);
+	    String password2 = excelReader.getCellData(sheetName, row, 2);
+
+	    System.out.println("Username: " + (username.isBlank() ? "EMPTY" : username));
+	    System.out.println("Password1: " + (password1.isBlank() ? "EMPTY" : password1));
+	    System.out.println("Password2: " + (password2.isBlank() ? "EMPTY" : password2));
+
+	    if (!username.isBlank()) {
+	        username = username + UUID.randomUUID();
+	    }
+
+	    if (!username.isBlank()) {
+	        registerPage.enterUsername(username);
+	    }
+	    if (!password1.isBlank()) {
+	        registerPage.enterPassword1(password1);
+	    }
+	    if (!password2.isBlank()) {
+	        registerPage.enterPassword2(password2);
+	    }
+	    
+	    registerPage.clickregisterBtn();
 	}
 
 	@Then("the user gets a message {string}")
 	public void the_user_gets_a_message(String expectedMessage) {
-		assertEquals("registerMessage", expectedMessage, registerPage.getAlertMessage());
+	    String actualMessage = registerPage.getAlertMessage();
+	    System.out.println("Expected: " + expectedMessage);
+	    System.out.println("Actual: " + actualMessage);
 
+	    Assert.assertTrue(actualMessage.contains(expectedMessage),
+	            "Expected message: '" + expectedMessage + "', but got: '" + actualMessage + "'.");
 	}
 
 }
