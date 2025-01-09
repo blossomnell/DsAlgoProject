@@ -77,7 +77,7 @@ public class LoginSteps {
 	
     @Given("the user is logged in")
 	public void the_user_is_logged_in() {
-		loginPage.navigatetologinpage();	
+    	loginPage.navigatetologinpage();
 		loginPage.enterUsername("Ninjasquad");
 		loginPage.enterPassword("abss@123");
 		loginPage.clickloginBtn();

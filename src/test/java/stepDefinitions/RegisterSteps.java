@@ -39,7 +39,7 @@ public class RegisterSteps {
 
 	@Then("the user is redirected to the register page")
 	public void the_user_is_redirected_to_the_register_page() {
-		registerPage.navigatetoregisterpage();
+		//registerPage.navigatetoregisterpage();
 		Assert.assertTrue(registerPage.isRegisterPageDisplayed(), "Register page is not displayed");
 		Assert.assertTrue(registerPage.isUsernameFieldDisplayed(), "Username Field is not displayed");
 		Assert.assertTrue(registerPage.isPassword1FieldDisplayed(), "Password1 Field is not displayed");

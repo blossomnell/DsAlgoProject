@@ -5,7 +5,7 @@ Background:
 
 @tag
  Scenario: exploring the LinkedList page
-    Given the user is in Homepage
+    Given the user is logged in
     When the user clicks the Get Started under Linked List
     Then the user is navigated to Linked List page
     
