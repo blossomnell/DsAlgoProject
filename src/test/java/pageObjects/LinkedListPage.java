@@ -60,9 +60,9 @@ public class LinkedListPage {
 	@FindBy(xpath = "//a[@href='/logout' and text()='Sign out']")
 	WebElement signoutBtn;
 		
-	public void navigatetohomepage() {
-		driver.get(prop.getProperty("testurl") + "/home");		
-	}	
+//	public void navigatetohomepage() {
+//		driver.get(prop.getProperty("testurl") + "/home");		
+//	}	
 	
 	public void clickgetstartedBtn() {
 		getstarted_btn.click();	
