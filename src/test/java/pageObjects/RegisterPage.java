@@ -47,10 +47,11 @@ public class RegisterPage {
 		register.click();
 	}
 
-	public void navigatetoregisterpage() {
-		//driver.get("https://dsportalapp.herokuapp.com/register");
-		driver.get(prop.getProperty("testurl") + "/register");
-	}
+	
+//	public void navigatetoregisterpage() {
+//		//driver.get("https://dsportalapp.herokuapp.com/register");
+//		driver.get(prop.getProperty("testurl") + "/register");
+//	}
 
 	public void enterUsername(String username) {
 		txt_username.sendKeys(username);

@@ -1,7 +1,5 @@
 package testRunner;
 
-
-//import io.cucumber.java.After;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 import org.openqa.selenium.WebDriver;
@@ -10,8 +8,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 
 import org.testng.annotations.Parameters;
-
-
 import webdriver.DriverFactory;
 
 @CucumberOptions(
@@ -44,8 +40,7 @@ public class CucumberTest extends AbstractTestNGCucumberTests {
             System.out.println("Quitting WebDriver for thread: " + Thread.currentThread().getName());
             driver.get().quit();
             driver.remove();
-        }
-        
+        }       
     }
 
     public static WebDriver getDriver() {

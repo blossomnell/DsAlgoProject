@@ -48,11 +48,6 @@ public class LoginPage {
 		signin_btn.click();
 	}
 	
-	public void navigatetologinpage() {
-		//driver.get("https://dsportalapp.herokuapp.com/login");
-		driver.get(prop.getProperty("testurl") +"/login");
-	}
-	
 	public Boolean isLoginPageDisplayed() {
 		return Objects.requireNonNull(driver.getCurrentUrl()).endsWith("/login");	
 	}
@@ -115,12 +110,19 @@ public class LoginPage {
 		}
 		return error;
 	}
+	public void navigatetologinpage() {
+		//driver.get("https://dsportalapp.herokuapp.com/login");
+		driver.get(prop.getProperty("testurl") +"/login");
+	}
+	
 	public Boolean isSignOutButtonDisplayed() {
 		return signoutBtn != null;
 	}
+	
 	public void clickSignOutBtn() {
 		signoutBtn.click();
 	}
+	
 	public boolean isLoggedOutMessageDisplayed(String expectedMessage) {
 		return getLoginMessage().equals(expectedMessage);
 	}

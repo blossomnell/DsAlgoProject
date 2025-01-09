@@ -29,6 +29,7 @@ public class DriverFactory {
                     if (headless) {
                         firefoxOptions.addArguments("--headless");
                         firefoxOptions.addArguments("--width=1920", "--height=1080");
+                        //firefoxOptions.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080");
                     }
                     driver.set(new FirefoxDriver(firefoxOptions));
                     break;
