@@ -8,8 +8,7 @@ import pageObjects.LinkedListPage;
 
 public class LinkedListSteps {
     LinkedListPage linkedListPage = new LinkedListPage();
-	
-	
+		
 	@When("the user clicks the Get Started under Linked List")
 	public void the_user_clicks_the_get_started_under_linked_list() {
 		linkedListPage.clickgetstartedBtn();
@@ -78,9 +77,17 @@ public class LinkedListSteps {
         linkedListPage.enterCode(code);
         linkedListPage.clicksrunBtn();
     }
-
-    @Then("the user gets the message {string}")
-    public void the_user_gets_the_message(String expectedOutcome) {        
+	//from sheet "<sheetName>" and row <row>
+    @Then("the user gets the expectedOutcome from sheet {string} and row {int}")
+    public void the_user_gets_the_expectedOutcome_from_sheet_and_row(String sheetName, int row) {  
+    	
+    	String expectedOutcome = linkedListPage.getExcelData(sheetName, row, 1);
+    	if (expectedOutcome ==null|| expectedOutcome.isEmpty()) {
+    		throw new IllegalArgumentException("Expected outcome fetched from Excel is empty or null.");
+    	
+    	}
+    	
+    	System.out.println("Expected Outcome fetched from Excel: " + expectedOutcome);
         if (expectedOutcome.contains("SyntaxError"))
             Assert.assertEquals(linkedListPage.getPopupAlertText(), expectedOutcome);
         else
