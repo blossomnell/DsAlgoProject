@@ -9,10 +9,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import Utilities.configReader;
 import testRunner.CucumberTest;
-
 
 public class RegisterPage {
     WebDriver driver;
@@ -55,7 +53,6 @@ public class RegisterPage {
 		register.click();
 	}
 
-	
 	public void enterUsername(String username) {
 		txt_username.sendKeys(username);
 	}
@@ -73,22 +70,18 @@ public class RegisterPage {
 	}
 
 	public boolean isUsernameFieldDisplayed() {
-		//return txt_username != null;
 		return txt_username.isDisplayed();
 	}
 
 	public boolean isPassword1FieldDisplayed() {
-		//return txt_password1 != null;
 		return txt_password1.isDisplayed();		
 	}
 
 	public boolean isPassword2FieldDisplayed() {
-		//return txt_password2 != null;
 		return txt_password2.isDisplayed();
 	}
 
 	public Boolean isRegisterButtonDisplayed() {
-		//return register_btn != null;
 		return register_btn.isDisplayed();
 	}
 
@@ -101,7 +94,6 @@ public class RegisterPage {
 		if (!registerMessage.isBlank()) {
 			return registerMessage;
 		} 
-		//else {
 			boolean userValidationErrorExists = isValidationError(txt_username);
 			boolean password1validationErrorExists = isValidationError(txt_password1);
 			boolean password2ValidationErrorExists = isValidationError(txt_password2);

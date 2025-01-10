@@ -7,7 +7,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.RegisterPage;
 
-
 public class RegisterSteps {
     RegisterPage registerPage = new RegisterPage();
 	
