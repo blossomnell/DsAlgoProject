@@ -5,23 +5,31 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import Utilities.configReader;
 import testRunner.CucumberTest;
-
+import Utilities.ExcelReader;
 import java.util.Objects;
 import java.util.Properties;
 
 public class LinkedListPage {
-	WebDriver driver;
-	Properties prop;
-	
-	public LinkedListPage() {
-		this.driver = CucumberTest.getDriver();
-		PageFactory.initElements(driver, this);
-		configReader reader = new configReader();
-		prop = reader.init_prop();
-	}
+    WebDriver driver;
+    Properties prop;
+    ExcelReader excelReader;
+    
+    public LinkedListPage() {
+        this.driver = CucumberTest.getDriver();
+        PageFactory.initElements(driver, this);
+        configReader reader = new configReader();
+        prop = reader.init_prop();
+        
+        // Initialize the ExcelReader here
+        try {
+            String filePath = System.getProperty("user.dir") + "/" + prop.getProperty("excelFilePath");
+            excelReader = new ExcelReader(filePath);
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to load Excel file: " + e.getMessage(), e);
+        }
+    }
 	
 	@FindBy(id = "id_username")
 	WebElement txt_username;
@@ -59,10 +67,7 @@ public class LinkedListPage {
 	WebElement practicequestions_btn;
 	@FindBy(xpath = "//a[@href='/logout' and text()='Sign out']")
 	WebElement signoutBtn;
-		
-//	public void navigatetohomepage() {
-//		driver.get(prop.getProperty("testurl") + "/home");		
-//	}	
+			
 	
 	public void clickgetstartedBtn() {
 		getstarted_btn.click();	
@@ -169,7 +174,11 @@ public class LinkedListPage {
         alert.accept();
         return alertText;
 	}
+
 	
+	public String getExcelData(String sheetName, int row, int column) {
+        return excelReader.getCellData(sheetName, row, column);
+    }
 		
 	}
 	

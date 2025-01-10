@@ -1,31 +1,16 @@
 package stepDefinitions;
 
-import java.io.IOException;
 import java.util.UUID;
 import org.testng.Assert;
-import Utilities.ExcelReader;
-import Utilities.configReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.RegisterPage;
 
+
 public class RegisterSteps {
-	
-	ExcelReader excelReader;
-    public RegisterSteps() {
-        try {
-        	 String filePath = System.getProperty("user.dir") + "/" + reader.init_prop().getProperty("excelFilePath");
-            //String filePath = System.getProperty("user.dir") + "/src/test/resources/config/TestData.xlsx";
-            excelReader = new ExcelReader(filePath);
-                      
-        } catch (IOException e) {
-            throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
-        }
-    }
-    
-    configReader reader = new configReader();
-	RegisterPage registerPage = new RegisterPage();	
+
+    RegisterPage registerPage = new RegisterPage();
 	
 	@Given("the user is in homepage")
 	public void the_user_is_in_homepage() {
@@ -55,11 +40,11 @@ public class RegisterSteps {
 
 	@When("the user enters data from the sheet {string} and row {int}")
 	public void the_user_enters_data_from_the_sheet_and_row(String sheetName, int row) {
-		
-	    String username = excelReader.getCellData(sheetName, row, 0);
-	    String password1 = excelReader.getCellData(sheetName, row, 1);
-	    String password2 = excelReader.getCellData(sheetName, row, 2);
-
+			
+		 String username = registerPage.getCellData(sheetName, row, 0);
+	     String password1 = registerPage.getCellData(sheetName, row, 1);
+	     String password2 = registerPage.getCellData(sheetName, row, 2);
+	    
 	    System.out.println("Username: " + (username.isBlank() ? "EMPTY" : username));
 	    System.out.println("Password1: " + (password1.isBlank() ? "EMPTY" : password1));
 	    System.out.println("Password2: " + (password2.isBlank() ? "EMPTY" : password2));

@@ -2,7 +2,8 @@ package pageObjects;
 
 import java.util.Objects;
 import java.util.Properties;
-
+import Utilities.ExcelReader;
+import java.io.IOException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,18 +13,26 @@ import org.openqa.selenium.support.PageFactory;
 import Utilities.configReader;
 import testRunner.CucumberTest;
 
+
 public class RegisterPage {
-	WebDriver driver;
-	Properties prop;
+    WebDriver driver;
+    Properties prop;
+    ExcelReader excelReader;
 
-	public RegisterPage() {
+    public RegisterPage() {
+        this.driver = CucumberTest.getDriver();
+        PageFactory.initElements(driver, this);
+        configReader reader = new configReader();
+        prop = reader.init_prop();
 
-		this.driver = CucumberTest.getDriver();
-		PageFactory.initElements(driver, this);
-		configReader reader = new configReader();
-		prop = reader.init_prop();
-
-	}
+        // Initialize ExcelReader
+        try {
+            String filePath = System.getProperty("user.dir") + "/" + prop.getProperty("excelFilePath");
+            excelReader = new ExcelReader(filePath);
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to load Excel file: " + e.getMessage(), e);
+        }
+    }
 
 	@FindBy(id = "id_username")
 	WebElement txt_username;
@@ -39,7 +48,6 @@ public class RegisterPage {
 	private WebElement alertMessage;
 
 	public void navigatetohomepage() {
-		//driver.get("https://dsportalapp.herokuapp.com/home");
 		driver.get(prop.getProperty("testurl") + "/home");
 	}
 
@@ -48,11 +56,6 @@ public class RegisterPage {
 	}
 
 	
-//	public void navigatetoregisterpage() {
-//		//driver.get("https://dsportalapp.herokuapp.com/register");
-//		driver.get(prop.getProperty("testurl") + "/register");
-//	}
-
 	public void enterUsername(String username) {
 		txt_username.sendKeys(username);
 	}
@@ -128,4 +131,7 @@ public class RegisterPage {
 		return !error.isBlank();
 
 	}
+	public String getCellData(String sheetName, int row, int col) {
+        return excelReader.getCellData(sheetName, row, col);
+    }
 }
