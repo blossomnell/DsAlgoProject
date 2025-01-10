@@ -1,34 +1,14 @@
 package stepDefinitions;
 
-import java.io.IOException;
 import org.testng.Assert;
-import Utilities.ExcelReader;
-import Utilities.configReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.LinkedListPage;
 
 public class LinkedListSteps {
-	
-	 ExcelReader excelReader;
-	    public LinkedListSteps() {
-	        try {
-	        	String filePath = System.getProperty("user.dir") + "/" + reader.init_prop().getProperty("excelFilePath");
-	            //String filePath = System.getProperty("user.dir") + "/src/test/resources/config/TestData.xlsx";
-	            excelReader = new ExcelReader(filePath);
-	        } catch (IOException e) {
-	            throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
-	        }
-	    }
-	    configReader reader = new configReader();
-	    LinkedListPage linkedListPage = new LinkedListPage();
-	
-//	@Given("the user is in Homepage")
-//	public void the_user_is_in_homepage() {
-//		linkedListPage.navigatetohomepage();
-//	}
-	
+    LinkedListPage linkedListPage = new LinkedListPage();
+		
 	@When("the user clicks the Get Started under Linked List")
 	public void the_user_clicks_the_get_started_under_linked_list() {
 		linkedListPage.clickgetstartedBtn();
@@ -83,31 +63,36 @@ public class LinkedListSteps {
 		linkedListPage.Tryhere();
 		//linkedListPage.navigatetotryeditorpage();
 	}
-	
 	@When("the user enters data from sheet {string} and row {int}")
-	public void the_user_enters_data_from_sheet_and_row(String sheetName, int row) {
-	    int column = 0; 
-	    
-	    String code = excelReader.getCellData(sheetName, row, column);
-	    if (code == null || code.isEmpty()) {
-	        throw new IllegalArgumentException("The code fetched from Excel is empty or null.");
-	    }
+    public void the_user_enters_data_from_sheet_and_row(String sheetName, int row) {
+        int column = 0;
+        
+        // Fetch the data from the LinkedListPage's method
+        String code = linkedListPage.getExcelData(sheetName, row, column);
+        if (code == null || code.isEmpty()) {
+            throw new IllegalArgumentException("The code fetched from Excel is empty or null.");
+        }
 
-	    System.out.println("Code entered in editor: " + code);	    
-	    linkedListPage.enterCode(code);
-	    linkedListPage.clicksrunBtn();
-	}
-	
-	@Then("the user gets the message {string}")
-	public void the_user_gets_the_message(String expectedOutcome) {		
-		
-		if(expectedOutcome.contains("SyntaxError"))
-			Assert.assertEquals(linkedListPage.getPopupAlertText(),expectedOutcome);
-
-		else
-			Assert.assertEquals(linkedListPage.getOutputTextFromTryEditorPage(), expectedOutcome);
-		
-	}
+        System.out.println("Code entered in editor: " + code);   
+        linkedListPage.enterCode(code);
+        linkedListPage.clicksrunBtn();
+    }
+	//from sheet "<sheetName>" and row <row>
+    @Then("the user gets the expectedOutcome from sheet {string} and row {int}")
+    public void the_user_gets_the_expectedOutcome_from_sheet_and_row(String sheetName, int row) {  
+    	
+    	String expectedOutcome = linkedListPage.getExcelData(sheetName, row, 1);
+    	if (expectedOutcome ==null|| expectedOutcome.isEmpty()) {
+    		throw new IllegalArgumentException("Expected outcome fetched from Excel is empty or null.");
+    	
+    	}
+    	
+    	System.out.println("Expected Outcome fetched from Excel: " + expectedOutcome);
+        if (expectedOutcome.contains("SyntaxError"))
+            Assert.assertEquals(linkedListPage.getPopupAlertText(), expectedOutcome);
+        else
+            Assert.assertEquals(linkedListPage.getOutputTextFromTryEditorPage(), expectedOutcome);
+    }
 	  
 	@Given("the user is in the Linked List page")
 	public void the_user_is_in_the_linked_list_page() {
