@@ -1,32 +1,18 @@
 package stepDefinitions;
 
 import static org.testng.Assert.assertEquals;
-import java.io.IOException;
 import org.testng.Assert;
-import Utilities.ExcelReader;
-import Utilities.configReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.LoginPage;
 
+
 public class LoginSteps {
 	
-	ExcelReader excelReader;
-    public LoginSteps() {
-        try {
-        	String filePath = System.getProperty("user.dir") + "/" + reader.init_prop().getProperty("excelFilePath");
-            //String filePath = System.getProperty("user.dir") + "/src/test/resources/config/TestData.xlsx";
-            excelReader = new ExcelReader(filePath);
-                      
-        } catch (IOException e) {
-            throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
-        }
-    }
+    LoginPage loginPage = new LoginPage();
+
     
-    configReader reader = new configReader();
-	LoginPage loginPage = new LoginPage();
-		
 	@Given("the user is in the homepage")
 	public void the_user_is_in_the_homepage() {
 		loginPage.navigatetohomepage();
@@ -51,12 +37,11 @@ public class LoginSteps {
 		loginPage.navigatetohomepage();
 		loginPage.signin();
 	}
-		
+	
 	@When("the user enters the data from sheet {string} and row {int}")
 	public void the_user_enters_the_data_from_sheet_and_row(String sheetName, int row) {
-		
-        String username = excelReader.getCellData(sheetName, row, 0);
-        String password = excelReader.getCellData(sheetName, row, 1);
+        String username = loginPage.getTestData(sheetName, row, 0);  // Get username from Excel
+        String password = loginPage.getTestData(sheetName, row, 1);  // Get password from Excel
         
         System.out.println("Username: " + username + ", Password: " + password);
         
@@ -69,7 +54,7 @@ public class LoginSteps {
        
         loginPage.clickloginBtn();
 	}
-
+	
 	@Then("the user gets login message {string}")
 	public void the_user_gets_login_message(String expectedMessage) {
 		assertEquals(loginPage.getAlertMessage(),expectedMessage, "loginMessage");
