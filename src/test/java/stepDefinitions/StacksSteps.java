@@ -19,13 +19,14 @@ public class StacksSteps{
         try {
 
         	
-            String filePath = System.getProperty("user.dir") + "/src/test/resources/config/TestData.xlsx";
-
+//            String filePath = System.getProperty("user.dir") + "/src/test/resources/config/TestData.xlsx";
+        	 String filePath = System.getProperty("user.dir") + "/" + reader.init_prop().getProperty("excelFilePath");
             excelReader = new ExcelReader(filePath);
         } catch (IOException e) {
             throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
         }
     }
+    configReader reader = new configReader();
 	@When("the user clicks on the Get started button under stack")
 	public void the_user_clicks_on_the_get_started_button_under_stack() {
 		stack.clickGetStarted();

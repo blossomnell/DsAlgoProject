@@ -21,17 +21,16 @@ Feature: user actions on queue pages
     When the user scroll down and clicks try here button
     Then the user navigates to try editor page
 
-  @tag
+ @tag
   Scenario Outline: Run code in the Python Editor
     Given the user is in the Python try editor page
-    When the user enters data from sheet "<sheetName>" and row <row>
-    Then the user sees "<expectedOutcome>"
+    When the user enters data from excel sheet "<sheetName>" and row <row>
+    Then the user sees the expected outcome from excel sheet "<sheetName>" and row <row>
 
     Examples: 
-      | sheetName | row | expectedOutcome                                   |
-      | python DS |   1 | popup error message containing SyntaxError        |
-      | python DS |   2 | the user is able to see the output in the console |
-
+      | sheetName | row |
+      | python DS |   1 |
+      | python DS |   2 |
   @tag
   Scenario: navigates to Implementation using collections.deque page
     Given the user in th queue page
@@ -44,16 +43,16 @@ Feature: user actions on queue pages
     When the user scroll down and clicks try here button
     Then the user navigates to try editor page
 
-  @tag
+ @tag
   Scenario Outline: Run code in the Python Editor
     Given the user is in the Python try editor page
-    When the user enters data from sheet "<sheetName>" and row <row>
-    Then the user sees "<expectedOutcome>"
+    When the user enters data from excel sheet "<sheetName>" and row <row>
+    Then the user sees the expected outcome from excel sheet "<sheetName>" and row <row>
 
     Examples: 
-      | sheetName | row | expectedOutcome                                   |
-      | python DS |   1 | popup error message containing SyntaxError        |
-      | python DS |   2 | the user is able to see the output in the console |
+      | sheetName | row |
+      | python DS |   1 |
+      | python DS |   2 |
 
   @tag
   Scenario: navigates to Implementation using array page
@@ -70,13 +69,13 @@ Feature: user actions on queue pages
   @tag
   Scenario Outline: Run code in the Python Editor
     Given the user is in the Python try editor page
-    When the user enters data from sheet "<sheetName>" and row <row>
-    Then the user sees "<expectedOutcome>"
+    When the user enters data from excel sheet "<sheetName>" and row <row>
+    Then the user sees the expected outcome from excel sheet "<sheetName>" and row <row>
 
     Examples: 
-      | sheetName | row | expectedOutcome                                   |
-      | python DS |   1 | popup error message containing SyntaxError        |
-      | python DS |   2 | the user is able to see the output in the console |
+      | sheetName | row |
+      | python DS |   1 |
+      | python DS |   2 |
 
   @tag
   Scenario: navigates to Queue Operations page
@@ -93,13 +92,13 @@ Feature: user actions on queue pages
   @tag
   Scenario Outline: Run code in the Python Editor
     Given the user is in the Python try editor page
-    When the user enters data from sheet "<sheetName>" and row <row>
-    Then the user sees "<expectedOutcome>"
+    When the user enters data from excel sheet "<sheetName>" and row <row>
+    Then the user sees the expected outcome from excel sheet "<sheetName>" and row <row>
 
     Examples: 
-      | sheetName | row | expectedOutcome                                   |
-      | python DS |   1 | popup error message containing SyntaxError        |
-      | python DS |   2 | the user is able to see the output in the console |
+      | sheetName | row |
+      | python DS |   1 |
+      | python DS |   2 |
 
   @tag
   Scenario: Navigate to Practice questions page

@@ -1,5 +1,6 @@
 package pageObjects;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
@@ -13,6 +14,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import Utilities.ExcelReader;
 import Utilities.configReader;
 import testRunner.CucumberTest;
 //import webdriver.DriverFactory;
@@ -20,7 +22,7 @@ import testRunner.CucumberTest;
 public class DataStructurePage {
 	WebDriver driver;
 	Properties prop;
-	
+	 ExcelReader excelReader;
 	
 	public DataStructurePage() {
 		this.driver = CucumberTest.getDriver();
@@ -28,12 +30,31 @@ public class DataStructurePage {
 		configReader reader = new configReader();
 		prop = reader.init_prop();
 		
+		 // Initialize the ExcelReader with the file path from the properties
+        String filePath = System.getProperty("user.dir") + "/" + prop.getProperty("excelFilePath");
+        try {
+            excelReader = new ExcelReader(filePath);
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
+        }
+    }
+	 // Method to fetch data from Excel
+    public String getExcelData(String sheetName, int row, int column) {
+        String data = excelReader.getCellData(sheetName, row, column);
+        if (data == null || data.isEmpty()) {
+            throw new IllegalArgumentException("Data fetched from Excel is empty or null.");
+        }
+        return data;
+    }
+
+//}
+		
 //		configReader reader = new configReader();
 //		prop = reader.init_prop();
 //		
 //		this.driver = DriverFactory.getDriver(prop.getProperty("browser"));
 //		PageFactory.initElements(driver, this);
-	}
+
 	
 	 @FindBy(xpath = "//a[@href='data-structures-introduction' and text()='Get Started']") 
 	 WebElement getStartedButton;
