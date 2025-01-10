@@ -8,11 +8,9 @@ import io.cucumber.java.en.When;
 import pageObjects.LoginPage;
 
 
-public class LoginSteps {
-	
+public class LoginSteps {	
     LoginPage loginPage = new LoginPage();
-
-    
+   
 	@Given("the user is in the homepage")
 	public void the_user_is_in_the_homepage() {
 		loginPage.navigatetohomepage();
@@ -80,4 +78,3 @@ public class LoginSteps {
 
 	}
 }
-

@@ -9,7 +9,6 @@ import pageObjects.RegisterPage;
 
 
 public class RegisterSteps {
-
     RegisterPage registerPage = new RegisterPage();
 	
 	@Given("the user is in homepage")
