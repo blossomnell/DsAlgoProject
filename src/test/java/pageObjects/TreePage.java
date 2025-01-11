@@ -2,33 +2,48 @@ package pageObjects;
 
 import java.util.Properties;
 
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import Utilities.ExcelReader;
 import Utilities.configReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import testRunner.CucumberTest;
 import webdriver.DriverFactory;
+
+import java.io.IOException;
+import java.util.Objects;
 
 public class TreePage {
 	
 	WebDriver driver;
 	Properties prop;
+	ExcelReader excelReader;
 	
 	public TreePage() {
 		
-	this.driver = DriverFactory.getDriver();
-	PageFactory.initElements(driver, this);
-	configReader reader = new configReader();
-     prop = reader.init_prop();
-	
-
+		this.driver = CucumberTest.getDriver();
+		PageFactory.initElements(driver, this);
+		configReader reader = new configReader();
+		prop = reader.init_prop();
+		
+		  String filePath = System.getProperty("user.dir") + "/" + prop.getProperty("excelFilePath");
+	        try {
+	            excelReader = new ExcelReader(filePath);
+	        } catch (IOException e) {
+	            throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
+	        }
+		
+		
 	}
 
-
+	
 // Home page
 	@FindBy(xpath = "//button[text()='Get Started']") WebElement getStarted;
 	@FindBy(xpath = "//a[@class='nav-link dropdown-toggle' and text() = 'Data Structures']")
@@ -88,18 +103,21 @@ public class TreePage {
 	WebElement tryhere_btn;	
 	@FindBy(xpath = "//button[text()='Run']")
     WebElement run_btn;		
-	@FindBy(xpath="//div[@class='CodeMirror-code']")
+	@FindBy(xpath="//form[@id='answer_form']/div/div/div/textarea")
 	 WebElement text_code;
 	@FindBy(xpath = "//pre[@id='output']")
 	WebElement output_text;
-		
+	@FindBy(xpath = "//a[@href='/logout' and text()='Sign out']")
+	WebElement signoutBtn;
+	 @FindBy(xpath="//div[@class='bs-example']")
+	 WebElement practiceQuestionsPageTitle;	
 	
 public void navigatetohomepage() {
 	
-	driver.get(configReader.gettestUrl());
-	System.out.println("testurl" + configReader.gettestUrl());
-//	driver.navigate().to("https://dsportalapp.herokuapp.com");
-//	driver.get("https://dsportalapp.herokuapp.com");
+	//driver.get(configReader.gettestUrl());
+	//System.out.println("testurl" + configReader.gettestUrl());
+	//driver.navigate().to("https://dsportalapp.herokuapp.com");
+	driver.get("https://dsportalapp.herokuapp.com");
 	getStarted.click();
 }
 
@@ -203,102 +221,78 @@ public boolean isterminologiesPageDisplayed() {
 	return terminologytitle.isDisplayed();
 	
 }
-
-
-public String treepage() {
-			
- String treeurl = driver.getCurrentUrl();
-// System.out.println("Page title is: " + driver.getTitle());
-//	   driver.get(prop.getProperty("testurl") + "/tree/");
-	return treeurl;
+public String isresultdisplayed() throws InterruptedException {
+	Thread.sleep(2000);
+	return output_text.getText();
 }
-//public String getTreePageTitle() {
-//	String title = driver.getCurrentUrl();
-//	return title;
-//	
-//}
-//
-//public void signIn(String username, String password) {
-//	txt_username.sendKeys("Ninjasquad");
-//	txt_password.sendKeys("abss@123");
-//}
-
-
-
-
-
-
-
-
-
-	// TODO Auto-generated method stub
+public void enterCode(String code) {
+	text_code.sendKeys(code);
 	
+}
 
 
+public void clicksrunBtn() {
+	run_btn.click();
+	
+}
 
-
-
-
-//public void signIn(String username, String password) {
-//	txt_username.sendKeys(username);
-//	txt_password.sendKeys(password);
-
-
-//By overviewOfTreesLink=By.xpath("//a[@href='overview-of-trees' and text() ='Overview of Trees']");
-//By tryhere_btn=By.xpath("//*[contains(@href,'Try here>>>')]");
-//By run_btn=By.xpath("//*[contains(@onclick, 'runit')]");
-//By text_code=By.xpath("//form[@id='answer_form']/div/div/div/textarea");
+//public void enterpythoncode (String sheetName, Integer row) {
+//	  int column = 0;    
+//		String code = excelReader.getCellData(sheetName , row, column);
+//	    if (code == null || code.isEmpty()) {
+//	        throw new IllegalArgumentException("The code fetched from Excel is empty or null.");
+//	    }
 //
-
-//
-//public void navigatetotryeditorpage() {
-//	driver.get("https://dsportalapp.herokuapp.com/tryEditor");
-//	
+//	    System.out.println("Code entered in editor: " + code);	    
+//	    
 //}
-//
-//public boolean isTryEditorPageDisplayed() {
-//	return Objects.requireNonNull(driver.getCurrentUrl()).endsWith("/tryEditor");
-//}
-//
-//public boolean isRunButtonDisplayed() {
-//	if(run_btn==null)
-//		return false;
-//	else 
-//		return true;
-//}
-//public void enterCode(String code) {
-//	// text_code.sendKeys(code);	
-//	text_code.sendKeys(code);
-//	 
-//}		
-//	
-//public void clicksrunBtn() {
-//	run_btn.click();
-//	
-//}
-//
+
+public String getExcelData(String sheetName, int row, int column) {
+    String data = excelReader.getCellData(sheetName, row, column);
+    if (data == null || data.isEmpty()) {
+        throw new IllegalArgumentException("Data fetched from Excel is empty or null.");
+    }
+    return data;
+}
+
 //public String getPopupAlertText() {
-//	Alert alert = driver.switchTo().alert();
-//    String alertText = alert.getText();
-//    alert.accept();
-//    return alertText;
-//}
-//
-//public String getOutputTextFromTryEditorPage() {
-//	return output_text.getText();
-//}
-//
-//}
-//public boolean isloginbuttonpresent() {
-//	return login.isDisplayed();
+//	 Alert alert = driver.switchTo().alert();
+//     String alertText = alert.getText();
+//     alert.accept();
+//     return alertText;
 //}
 
-//public String getPageTitle() {
-//	
-//	String title = driver.getTitle();
-//	return title;
 
+public String popupError() {
+    try {
+        Alert alert = driver.switchTo().alert();
+        String alertText = alert.getText(); // Get the alert text
+        System.out.println("Alert text: " + alertText);
+        alert.accept(); // Accept the alert
+        return alertText;
+    } catch (NoAlertPresentException e) {
+        return "";
+    }
+}
+public String getOutputText() {
+	
+	  return output_text.getText();
+	}
+	
+	
+public String getOutputTextFromTryEditorPage() {
+	
+	return output_text.getText();
+}
 
+public boolean isPQPageDisplayed() {
+	
+	return practiceQuestionsPageTitle.isDisplayed();
+}
+
+//public String getExcelData(String sheetName, int row, int column) {
+//    return excelReader.getCellData(sheetName, row, column);
+//}
 //public String treepage() {
 //			
 // String treeurl = driver.getCurrentUrl();
@@ -306,11 +300,13 @@ public String treepage() {
 ////	   driver.get(prop.getProperty("testurl") + "/tree/");
 //	return treeurl;
 //}
+//public String getTreePageTitle() {
+//	String title = driver.getCurrentUrl();
+//	return title;
+//	
+//}
+
 }
-
-
-		
-
 	
 
 	

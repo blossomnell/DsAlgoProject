@@ -10,6 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.configReader;
+import testRunner.CucumberTest;
 import webdriver.DriverFactory;
 
 public class HomePage {
@@ -22,12 +23,11 @@ public class HomePage {
 	String home;
      
 	public HomePage() {
-		this.driver = DriverFactory.getDriver();
+		this.driver = CucumberTest.getDriver();
 		PageFactory.initElements(driver, this);
 		configReader reader = new configReader();
 		prop = reader.init_prop();
-	}
-
+		}
 	@FindBy(xpath = "//button[text()='Get Started']") WebElement getStarted;
 	@FindBy (xpath = "//a[@href='data-structures-introduction']")WebElement getstarted_DS;
 	@FindBy (xpath="//a[@href='array']")WebElement getstarted_Array;

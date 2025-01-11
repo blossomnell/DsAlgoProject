@@ -55,10 +55,9 @@ public class HomePageSteps {
 	@Given("The user is on Home page")
 	public void the_user_is_on_home_page() {
 		home.homePg();
-		
-		
-	    
+		    
 	}
+	
 	@When("The user clicks on dropdown {string}")
 	public void the_user_clicks_on_dropdown(String option) {
 //		home.homePg();
@@ -96,7 +95,8 @@ public void the_user_redirected_to_login_page() {
 
 
 @When("The user clicks on register link")
-public void the_user_clicks_on_register_link() {
+public void the_user_clicks_on_register_link() throws InterruptedException {
+	Thread.sleep(1000);
 home.click_register();
 
 }

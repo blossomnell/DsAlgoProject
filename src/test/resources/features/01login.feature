@@ -1,13 +1,13 @@
 Feature: DsAlgo login functionality/validation
 Background: the user opens the homepage 
 
-@tag
+@wip
   Scenario: the user is in the homepage and navigates to the signin page
     Given the user is in the homepage    
     When the user clicks the signin button  
     Then the user is redirected to the login page
    
-@tag
+@wip
   Scenario Outline: the user tries to login with different credentials
    Given the user is in the login page
    When the user enters the data from sheet "<sheetName>" and row <row>
@@ -23,7 +23,7 @@ Background: the user opens the homepage
       | Login      |   6  | Invalid Username and Password |
       | Login      |   7  | You are logged in             |
      
- @tag 
+ @wip
    Scenario: the user tries signout function
      Given the user is logged in
      When the user clicks on Sign out button

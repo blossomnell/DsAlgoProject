@@ -3,6 +3,7 @@ package stepDefinitions;
 
 import static org.testng.Assert.assertTrue;
 
+import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
@@ -44,10 +45,18 @@ import pageObjects.TreePage;
 
 public class TreeSteps {
      
-	
-//	WebDriverWait wait;
-//	Properties prop;
-//	
+	ExcelReader excelReader;
+	String code;
+    public TreeSteps() {
+        try {
+        	String filePath = System.getProperty("user.dir") + "/" + reader.init_prop().getProperty("excelFilePath");
+            //String filePath = System.getProperty("user.dir") + "/src/test/resources/config/TestData.xlsx";
+            excelReader = new ExcelReader(filePath);
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
+        }
+    }
+    configReader reader = new configReader();	
 	
     TreePage tree = new TreePage();
 	HomePage homepage = new HomePage();;
@@ -84,7 +93,7 @@ public void the_user_clicks_on_the_overview_of_trees_link() {
 	
 }
 
-@Then("The user should be directed to the {string}  Page")
+@Then("The user should be directed to the {string}  Page") 
 public void the_user_should_be_directed_to_the_page(String string) throws InterruptedException {
 
 	Assert.assertTrue( tree.isOverviewoftreePageDisplayed(),"Overview of Tree page is not displayed");
@@ -107,12 +116,63 @@ public void the_user_clicks_button_in_a_page(String string, String string2) {
 public void the_user_should_be_redirected_to_a_page_having_try_editor_with_a_run_button_to_test() {
 Assert.assertTrue(tree.tryeditorpageisDisplayed(),"Try editor page is not displayed"); 
 }
+
 @Given("The user is in a page having an Editor with a Run button to test")
 public void the_user_is_in_a_page_having_an_editor_with_a_run_button_to_test() throws InterruptedException {
 	tree.navigatetotreepage();
 	tree.clickOnoverviewOfTreesPage();
 	tree.tryhere(); 
 }
+
+
+@When("The user enters valid python code from sheet {string} and {int} and clicks Run button")
+
+public void the_user_enters_valid_python_code_from_sheet_and_and_clicks_run_button(String sheetName , Integer row) throws InterruptedException {
+	  int column = 0; // Always fetch the first column
+	    String code = tree.getExcelData(sheetName, row, column);
+//	    String code = excelReader.getCellData(sheetName, row, column);
+	    if (code == null || code.isEmpty()) {
+	        throw new IllegalArgumentException("The code fetched from Excel is empty or null.");
+	    }
+	    System.out.println("Code entered in editor: " + code);	
+	  tree.enterCode(code);
+//    tree.enterpythoncode(sheetName, row);
+  tree.clicksrunBtn();
+}
+
+@Then("the user sees the expected outcome from excel sheet {string} and row {int}")
+public void the_user_sees_the_expected_outcome_from_excel_sheet_and_row(String sheetName, int row) {
+	String expectedOutcome = tree.getExcelData(sheetName, row, 1);
+
+    if (expectedOutcome == null || expectedOutcome.isEmpty()) {
+        throw new IllegalArgumentException("Expected outcome fetched from Excel is empty or null.");
+    }
+
+    System.out.println("Expected Outcome fetched from Excel: " + expectedOutcome);
+    // Validate the outcome
+    if (expectedOutcome.contains("popup error message")) {
+        String popupMessage = tree.popupError();
+        Assert.assertTrue(popupMessage.contains("SyntaxError"),
+            "Popup message did not match the expected error text. Actual: " + popupMessage);
+    } else if (expectedOutcome.contains("output in the console")) {
+        String consoleOutput = tree.getOutputText();
+        Assert.assertFalse(consoleOutput.isEmpty(),
+            "No output found in the console");
+    } else {
+        Assert.fail("Unexpected outcome specified in the test case: " + expectedOutcome);
+    }
+}
+	
+//	Thread.sleep(5000);
+//	if (expectedOutcome.contains("SyntaxError"))
+//    Assert.assertEquals(tree.getPopupAlertText(), expectedOutcome);
+//else
+//    Assert.assertEquals(tree.getOutputTextFromTryEditorPage(), expectedOutcome);
+//	
+
+ 
+	
+
 @When("The user clicks on the Terminologies button")
 public void the_user_clicks_on_the_terminologies_button() {
 	tree.clickOnTerminaLink();
@@ -202,16 +262,16 @@ public void the_user_clicks_on_the_implementation_of_bst_button() {
 	tree.click_implementationOfBST();
 }
     
-
-
 @When("The user clicks on the Practice Questions in Overview of Trees")
 public void the_user_clicks_on_the_practice_questions_in_overview_of_trees() {
     tree.click_practiceQuestion();
    
 }
 
-@Then("The user should be directed to Practice Questions of tree page Page")
-public void the_user_should_be_directed_to_practice_questions_of_tree_page_page() {
+@Then("The user should be directed to the Practice Questions of tree page")
+public void the_user_should_be_directed_to_the_practice_questions_of_tree_page() {
+	
+	Assert.assertTrue(tree.isPQPageDisplayed()," PracticeQuestions page is not displayed");
 	
 }
 
