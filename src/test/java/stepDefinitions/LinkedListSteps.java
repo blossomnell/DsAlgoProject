@@ -77,7 +77,7 @@ public class LinkedListSteps {
         linkedListPage.enterCode(code);
         linkedListPage.clicksrunBtn();
     }
-	//from sheet "<sheetName>" and row <row>
+	
     @Then("the user gets the expectedOutcome from sheet {string} and row {int}")
     public void the_user_gets_the_expectedOutcome_from_sheet_and_row(String sheetName, int row) {  
     	

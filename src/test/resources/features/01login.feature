@@ -23,7 +23,7 @@ Background: the user opens the homepage
       | Login      |   6  | Invalid Username and Password |
       | Login      |   7  | You are logged in             |
      
- @tag 
+ @tag
    Scenario: the user tries signout function
      Given the user is logged in
      When the user clicks on Sign out button
