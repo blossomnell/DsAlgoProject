@@ -67,8 +67,7 @@ public class LinkedListPage {
 	WebElement practicequestions_btn;
 	@FindBy(xpath = "//a[@href='/logout' and text()='Sign out']")
 	WebElement signoutBtn;
-			
-	
+
 	public void clickgetstartedBtn() {
 		getstarted_btn.click();	
 	}
@@ -175,7 +174,7 @@ public class LinkedListPage {
         return alertText;
 	}
 
-	
+
 	public String getExcelData(String sheetName, int row, int column) {
         return excelReader.getCellData(sheetName, row, column);
     }
