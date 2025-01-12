@@ -3,7 +3,7 @@
 <suite  name="CrossBrowserSuite" parallel="tests" thread-count="3">
     <test name="ChromeTest">
         <parameter name="browser" value="chrome" />
-        <parameter name="headless" value="false" />
+        <parameter name="headless" value="true" />
         <classes>
             <class name="testRunner.CucumberTest" />
         </classes>

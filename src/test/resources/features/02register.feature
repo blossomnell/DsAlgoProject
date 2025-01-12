@@ -1,13 +1,13 @@
 Feature: DsAlgo portal registration functionality
 Background: user is in the registration page
 
- @wip
+ @tag
   Scenario: the user is in the homepage and navigates to the registration page
     Given the user is in homepage    
     When the user clicks the Register  
     Then the user is redirected to the register page
     
- @wip
+ @tag
   Scenario Outline: the user tries enters various credential combinations
     Given the user is in the registration page
     When the user enters data from the sheet "<sheetName>" and row <row>

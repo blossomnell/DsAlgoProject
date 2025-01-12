@@ -140,8 +140,8 @@ public void the_user_enters_valid_python_code_from_sheet_and_and_clicks_run_butt
   tree.clicksrunBtn();
 }
 
-@Then("the user sees the expected outcome from excel sheet {string} and row {int}")
-public void the_user_sees_the_expected_outcome_from_excel_sheet_and_row(String sheetName, int row) {
+@Then("the user expects the expected outcome from excel sheet {string} and row {int}")
+public void the_user_expects_the_expected_outcome_from_excel_sheet_and_row(String sheetName, int row) {
 	String expectedOutcome = tree.getExcelData(sheetName, row, 1);
 
     if (expectedOutcome == null || expectedOutcome.isEmpty()) {
