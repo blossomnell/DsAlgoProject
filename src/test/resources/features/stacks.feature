@@ -44,7 +44,7 @@ Feature: user actions on stack pages
     When the user scroll down and clicks try here button
     Then the user navigates to try editor page
 
- @tag
+  @tag
   Scenario Outline: Run code in the Python Editor
     Given the user is in the Python try editor page
     When the user enters data from excel sheet "<sheetName>" and row <row>
@@ -67,7 +67,7 @@ Feature: user actions on stack pages
     When the user scroll down and clicks try here button
     Then the user navigates to try editor page
 
- @tag
+  @tag
   Scenario Outline: Run code in the Python Editor
     Given the user is in the Python try editor page
     When the user enters data from excel sheet "<sheetName>" and row <row>
@@ -77,6 +77,7 @@ Feature: user actions on stack pages
       | sheetName | row |
       | python DS |   1 |
       | python DS |   2 |
+
   @tag
   Scenario: Navigate to Practice questions page
     Given the user in operations in Stack page

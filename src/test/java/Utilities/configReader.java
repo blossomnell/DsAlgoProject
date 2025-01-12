@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class configReader {
-    Properties prop;
+    static Properties prop;
 
     public Properties init_prop() {
         prop = new Properties();
@@ -19,6 +19,19 @@ public class configReader {
         }
         return prop;
     }
+
+//	public static String gettestUrl() {
+//		String login=prop.getProperty("testurl");
+//		if(login!=null)
+//			return login;
+//		else
+//			throw new RuntimeException("Please specify  testuRL in the config.properties file.");
+//	
+//	
+//	}
+//
+//		
+	
 }
 //     FileInputStream ip = new FileInputStream("./src/test/resources/config/config.properties");				
 			//prop.load(ip);

@@ -31,6 +31,7 @@ Feature: User Actions in the Python Editor and Related Pages
       | sheetName | row |
       | python DS |   1 |
       | python DS |   2 |
+
   #@tag1
   #Scenario Outline: Run code in the Python Editor
   #Given the user is in the Python try editor page
