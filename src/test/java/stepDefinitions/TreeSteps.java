@@ -48,13 +48,7 @@ public class TreeSteps {
 	ExcelReader excelReader;
 	String code;
     public TreeSteps() {
-        try {
-        	String filePath = System.getProperty("user.dir") + "/" + reader.init_prop().getProperty("excelFilePath");
-            //String filePath = System.getProperty("user.dir") + "/src/test/resources/config/TestData.xlsx";
-            excelReader = new ExcelReader(filePath);
-        } catch (IOException e) {
-            throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
-        }
+        
     }
     configReader reader = new configReader();	
 	
@@ -123,7 +117,7 @@ public void the_user_is_in_a_page_having_an_editor_with_a_run_button_to_test() t
 	tree.clickOnoverviewOfTreesPage();
 	tree.tryhere(); 
 }
-
+ 
 
 @When("The user enters valid python code from sheet {string} and {int} and clicks Run button")
 

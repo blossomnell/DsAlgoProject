@@ -18,7 +18,7 @@ public class StacksSteps {
 	public StacksSteps() {
 
 	}
-
+ 
 	configReader reader = new configReader();
 
 	@When("the user clicks on the Get started button under stack")

@@ -15,7 +15,7 @@ public class LoginSteps {
 	@Given("the user is in the homepage")
 	public void the_user_is_in_the_homepage() {
 		loginPage.navigatetohomepage();
-	}
+	} 
 
 	@When("the user clicks the signin button")
 	public void the_user_clicks_the_signin_button() {

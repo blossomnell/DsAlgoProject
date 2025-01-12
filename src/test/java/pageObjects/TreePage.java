@@ -43,6 +43,16 @@ public class TreePage {
 		
 	}
 
+	// Method to fetch data from Excel
+	public String getExcelData(String sheetName, int row, int column) {
+		String data = excelReader.getCellData(sheetName, row, column);
+		if (data == null || data.isEmpty()) {
+			throw new IllegalArgumentException("Data fetched from Excel is empty or null.");
+		}
+		return data;
+	}
+
+
 	
 // Home page
 	@FindBy(xpath = "//button[text()='Get Started']") WebElement getStarted;
@@ -247,13 +257,6 @@ public void clicksrunBtn() {
 //	    
 //}
 
-public String getExcelData(String sheetName, int row, int column) {
-    String data = excelReader.getCellData(sheetName, row, column);
-    if (data == null || data.isEmpty()) {
-        throw new IllegalArgumentException("Data fetched from Excel is empty or null.");
-    }
-    return data;
-}
 
 //public String getPopupAlertText() {
 //	 Alert alert = driver.switchTo().alert();

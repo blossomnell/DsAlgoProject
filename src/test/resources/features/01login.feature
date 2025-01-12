@@ -1,4 +1,3 @@
-
 Feature: DsAlgo login functionality/validation
 Background: the user opens the homepage 
 

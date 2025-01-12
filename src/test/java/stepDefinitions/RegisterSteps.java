@@ -14,7 +14,7 @@ public class RegisterSteps {
 	public void the_user_is_in_homepage() {
 		registerPage.navigatetohomepage();
 	}
-
+ 
 	@When("the user clicks the Register")
 	public void the_user_clicks_the_Register() {
 		registerPage.register();
