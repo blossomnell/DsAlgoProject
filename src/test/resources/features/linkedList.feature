@@ -3,34 +3,34 @@ Feature: Linked List functionality
 Background: 
     Given the user is logged in
 
-@tag
+@lin
  Scenario: exploring the LinkedList page
     Given the user is logged in
     When the user clicks the Get Started under Linked List
     Then the user is navigated to Linked List page
     
- @tag
+ @lin
   Scenario: exploring the Introduction page
     Given the user is in Linked List page
     When the user clicks the Introduction 
     Then the user should be in the Introduction page
     
- @tag
+ @lin
   Scenario: exploring the python editor of Introduction page
     Given the user is in the Introduction page
     When the user clicks the Try here button
     Then the user should be in the python editor page
           
- @tag
+ @wip
   Scenario Outline: validating Run function with invalid code and valid code
     Given the user is in the python editor of Introduction page
     When the user enters data from sheet "<sheetName>" and row <row>
     Then the user gets the expectedOutcome from sheet "<sheetName>" and row <row>
 
     Examples: 
-      | sheetName  | row |   
-      | LinkedList |   1 | 
-      | LinkedList |   2 |        
+      | sheetName   | row |   
+      | LinkedList  |   1 | 
+      | LinkedList  |   2 |        
           
  @tag
   Scenario: exploring the Creating Linked List page
@@ -44,7 +44,7 @@ Background:
     When the user clicks Try here button
     Then the user should be in the python editor page
 
- @tag
+ @lin
   Scenario Outline: validating Run function with invalid code and valid code
     Given the user is in the python editor of Creating Linked List page
     When the user enters data from sheet "<sheetName>" and row <row>
@@ -67,7 +67,7 @@ Background:
     When the user clicks the Try here button
     Then the user should be in the python editor page
    
- @tag
+ @lin
   Scenario Outline: validating Run function with invalid code and valid code
     Given the user is in the python editor of Types of Linked List page
     When the user enters data from sheet "<sheetName>" and row <row>
@@ -90,7 +90,7 @@ Background:
     When the user clicks the Try here button
     Then the user should be in the python editor page
 
- @tag
+ @lin
   Scenario Outline: validating Run function with invalid code and valid code
     Given the user is in the python editor of the Implement Linked List in Python page
     When the user enters data from sheet "<sheetName>" and row <row>
@@ -113,7 +113,7 @@ Background:
     When the user clicks the Try here button
     Then the user should be in the python editor page
     
- @tag
+ @lin
   Scenario Outline: validating Run function with invalid code and valid code
     Given the user is in the python editor of the Traversal page
      When the user enters data from sheet "<sheetName>" and row <row>
@@ -136,7 +136,7 @@ Background:
     When the user clicks Try here button
     Then the user should be in the python editor page
    
- @tag
+ @lin
   Scenario Outline: validating Run function with invalid code and valid code
     Given the user is in the python editor of the Insertion page
      When the user enters data from sheet "<sheetName>" and row <row>
@@ -159,7 +159,7 @@ Background:
     When the user clicks Try here button
     Then the user should be in the python editor page
     
- @tag
+ @lin
   Scenario Outline: validating Run function with invalid code and valid code
     Given the user is in the python editor of the Deletion page
      When the user enters data from sheet "<sheetName>" and row <row>

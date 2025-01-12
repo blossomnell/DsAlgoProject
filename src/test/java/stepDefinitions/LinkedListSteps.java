@@ -1,3 +1,4 @@
+
 package stepDefinitions;
 
 import org.testng.Assert;
@@ -18,7 +19,7 @@ public class LinkedListSteps {
 	public void the_user_is_navigated_to_linked_list_page() {
 		//linkedListPage.navigatetolinkedlistpage();
 		Assert.assertTrue(linkedListPage.isLinkedListPageDisplayed(), "LinkedList page is not displayed");
-	}
+	} 
 		
 	@Given("the user is in Linked List page")
 	public void the_user_is_in_linked_list_page() {

@@ -20,7 +20,7 @@ import webdriver.DriverFactory;
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
-        tags="@tag"
+        tags="@tree"
 )
 public class CucumberTest extends AbstractTestNGCucumberTests {
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();

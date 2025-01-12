@@ -1,4 +1,3 @@
-
 package pageObjects;
 
 import java.util.Properties;
