@@ -1,47 +1,18 @@
 package stepDefinitions;
 
-
-import static org.testng.Assert.assertTrue;
-
-import java.io.IOException;
-import java.util.Properties;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import Utilities.ExcelReader;
 import Utilities.configReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.HomePage;
-import pageObjects.LoginPage;
+
 import pageObjects.TreePage;
-import webdriver.DriverFactory;
-import static org.testng.Assert.assertEquals;
+
 
 import org.testng.Assert;
 
-import Utilities.configReader;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import pageObjects.HomePage;
-import pageObjects.TreePage;
-import static org.testng.Assert.assertEquals;
 
-import org.testng.Assert;
-
-import Utilities.configReader;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import pageObjects.HomePage;
-import pageObjects.TreePage;
 
 public class TreeSteps {
      
