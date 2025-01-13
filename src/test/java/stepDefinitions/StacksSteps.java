@@ -145,5 +145,6 @@ public class StacksSteps {
 		Assert.assertTrue(stack.isPracticePageDisplayed(), "Practice page is not Displayed");
 
 	}
-
 }
+
+
