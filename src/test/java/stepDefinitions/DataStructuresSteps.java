@@ -1,10 +1,8 @@
 package stepDefinitions;
 
-import java.io.IOException;
 
 import org.testng.Assert;
 
-import Utilities.ExcelReader;
 
 import Utilities.configReader;
 
