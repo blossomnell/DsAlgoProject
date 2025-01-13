@@ -1,4 +1,4 @@
-Feature: Linked List functionality
+Feature: Tree functionality
 
  Background: 
     Given the user is logged in
