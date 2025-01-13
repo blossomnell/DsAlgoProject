@@ -110,4 +110,3 @@ Assert.assertTrue(home.isRegistrationPagedisplayed());
 }
 
 }
-
