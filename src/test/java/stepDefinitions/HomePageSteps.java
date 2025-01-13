@@ -11,7 +11,7 @@ import io.cucumber.java.en.When;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
 import pageObjects.RegisterPage;
-import webdriver.DriverFactory;
+
 
 public class HomePageSteps {
 	
@@ -110,4 +110,3 @@ Assert.assertTrue(home.isRegistrationPagedisplayed());
 }
 
 }
-

@@ -28,9 +28,9 @@ Background:
     Then the user gets the expectedOutcome from sheet "<sheetName>" and row <row>
 
     Examples: 
-      | sheetName  | row |   
-      | LinkedList |   1 | 
-      | LinkedList |   2 |        
+      | sheetName   | row |   
+      | LinkedList  |   1 | 
+      | LinkedList  |   2 |        
           
  @tag
   Scenario: exploring the Creating Linked List page

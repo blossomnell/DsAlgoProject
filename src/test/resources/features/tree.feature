@@ -1,4 +1,4 @@
-Feature: Linked List functionality
+Feature: Tree functionality
 
  Background: 
     Given the user is logged in
@@ -10,7 +10,7 @@ Feature: Linked List functionality
     When The user selects Tree item from the drop down menu
     Then The user should be directed to the Tree Page
 
-  @tag
+ @tag
   Scenario: The user is able to navigate to "Overview of Trees" page
     Given The user is on the Tree page after logged in
     When The user clicks on the Overview of Trees link
