@@ -543,5 +543,3 @@ public void user_will_get_the_expected_outcome_of_max_consecutive_ones_page_from
 	
 	
 }
-
-

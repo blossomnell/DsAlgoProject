@@ -125,7 +125,8 @@ public void navigatetohomepage() {
 	//driver.get(configReader.gettestUrl());
 	//System.out.println("testurl" + configReader.gettestUrl());
 	//driver.navigate().to("https://dsportalapp.herokuapp.com");
-	driver.get("https://dsportalapp.herokuapp.com");
+//	driver.get("https://dsportalapp.herokuapp.com");
+	driver.get(prop.getProperty("testurl"));
 	getStarted.click();
 }
 

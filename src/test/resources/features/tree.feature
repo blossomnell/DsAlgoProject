@@ -1,41 +1,37 @@
 Feature: Tree functionality
 
- Background: 
+  Background: 
     Given the user is logged in
- 
-  
+
   @tag
   Scenario: exploring the tree page
     Given The user is on the home page after logged in
     When The user selects Tree item from the drop down menu
     Then The user should be directed to the Tree Page
 
- @tag
+  @tag
   Scenario: The user is able to navigate to "Overview of Trees" page
     Given The user is on the Tree page after logged in
     When The user clicks on the Overview of Trees link
-    Then The user should be directed to the "Overview of Trees"  Page 
+    Then The user should be directed to the "Overview of Trees"  Page
 
   @tag
   Scenario: The user is able to navigate to a page having an tryEditor from Overview of Trees page
-    Given The user is on the Overview of trees page after logged in 
+    Given The user is on the Overview of trees page after logged in
     When The user clicks "Try Here" button in a "tree" page
     Then The user should be redirected to a page having tryEditor with a Run button to test
 
   @tag
   Scenario Outline: The user is presented with valid & invalid code in Editor for tree page
     Given The user is in a page having an Editor with a Run button to test
-     When The user enters valid python code from sheet "<sheetName>" and <row> and clicks Run button
-     Then the user expects the expected outcome from excel sheet "<sheetName>" and row <row>
+    When The user enters valid python code from sheet "<sheetName>" and <row> and clicks Run button
+    Then the user expects the expected outcome from excel sheet "<sheetName>" and row <row>
 
-
-   Examples: 
-      | sheetName | row |            
-      | python DS |   1 | 
+    Examples: 
+      | sheetName | row |
+      | python DS |   1 |
       | python DS |   2 |
-      
-      
-  
+
   @tag
   Scenario: The user is able to navigate to "Terminologies" Page
     Given The user is on the Tree page after logged in
@@ -52,15 +48,13 @@ Feature: Tree functionality
   Scenario Outline: The user is presented with valid & invalid code in Editor for tree page
     Given The user is in a page having an Editor with a Run button to test
     When The user enters valid python code from sheet "<sheetName>" and <row> and clicks Run button
-   Then the user expects the expected outcome from excel sheet "<sheetName>" and row <row>
+    Then the user expects the expected outcome from excel sheet "<sheetName>" and row <row>
 
-
-   Examples: 
-      | sheetName | row |            
-      | python DS |   1 | 
+    Examples: 
+      | sheetName | row |
+      | python DS |   1 |
       | python DS |   2 |
-         
-  
+
   @tag
   Scenario: The user is able to navigate to "Types of Trees" Page
     Given The user is on the Tree page after logged in
@@ -73,19 +67,17 @@ Feature: Tree functionality
     When The user clicks "Try Here" button in a "types of tree" page
     Then The user should be redirected to a page having an tryEditor with a Run button to test
 
-   @tag
+  @tag
   Scenario Outline: The user is presented with valid & invalid code in Editor for tree page
     Given The user is in a page having an Editor with a Run button to test
     When The user enters valid python code from sheet "<sheetName>" and <row> and clicks Run button
-   Then the user expects the expected outcome from excel sheet "<sheetName>" and row <row>
+    Then the user expects the expected outcome from excel sheet "<sheetName>" and row <row>
 
-
-   Examples: 
-      | sheetName | row |            
-      | python DS |   1 | 
+    Examples: 
+      | sheetName | row |
+      | python DS |   1 |
       | python DS |   2 |
-      
-      
+
   @tag
   Scenario: The user is able to navigate to "Tree Traversals" Page
     Given The user is on the Tree page after logged in
@@ -104,7 +96,7 @@ Feature: Tree functionality
     When The user clicks on the binary trees button
     Then The user should be directed to the "Binary Trees" of tree Page
 
-@tag
+  @tag
   Scenario: The user is able to navigate to "Types of Binary trees" Page
     Given The user is on the Tree page after logged in
     When The user clicks on the types of binary trees button
@@ -133,7 +125,6 @@ Feature: Tree functionality
     Given The user is on the Tree page after logged in
     When The user clicks on the Applications of Binary Trees button
     Then The user should be directed to the "Applications of Binary trees" of tree Page
-    
 
   @tag
   Scenario: The user is able to navigate to a page having an tryEditor from Binary Search Trees Page
@@ -151,6 +142,5 @@ Feature: Tree functionality
   Scenario: The user validating "Practice Questions" page
     Given The user is on the Tree page after logged in
     When The user clicks on the Overview of Trees link
-    When The user clicks on the Practice Questions in Overview of Trees 
+    When The user clicks on the Practice Questions in Overview of Trees
     Then The user should be directed to the Practice Questions of tree page
-    

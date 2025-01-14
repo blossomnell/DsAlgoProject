@@ -21,6 +21,8 @@ import webdriver.DriverFactory;
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
         tags="@tag"
+        		
+        		
 )
 public class CucumberTest extends AbstractTestNGCucumberTests {
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
