@@ -1,14 +1,11 @@
-
 Feature: User launch dsalgo application and test Home page
 
-  
-    @tag
-    Scenario: User launches home page of an dsalgo project
-    Given The user opens DS Algo portal link 
+  @tag
+  Scenario: User launches home page of an dsalgo project
+    Given The user opens DS Algo portal link
     When The user clicks the Get Started button
-    Then The user should be redirected to homepage 
-     
-      
+    Then The user should be redirected to homepage
+
   @tag
   Scenario Outline: User is on Home page and click on dropdown "<option>" without sign in
     Given The user is on Home page
@@ -16,7 +13,7 @@ Feature: User launch dsalgo application and test Home page
     Then The user get warning message "You are not logged in"
 
     Examples: 
-      | option     |  
+      | option     |
       | Arrays     |
       | Linkedlist |
       | Stack      |
@@ -24,12 +21,12 @@ Feature: User launch dsalgo application and test Home page
       | Tree       |
       | Graph      |
 
-   @tag
-    Scenario Outline: User is on Home page and click getstarted link on home page without sign in
+  @tag
+  Scenario Outline: User is on Home page and click getstarted link on home page without sign in
     Given The user is on Home page
     When The user clicks on Get Started link on homepage without login "<option>"
-    Then The user get warning message "You are not logged in" 
-    
+    Then The user get warning message "You are not logged in"
+
     Examples: 
       | option         |
       | Datastructures |
@@ -39,6 +36,7 @@ Feature: User launch dsalgo application and test Home page
       | Queue          |
       | Tree           |
       | Graph          |
+
   @tag
   Scenario: User is on Home page and click on sign in
     Given The user is on Home page
@@ -49,4 +47,4 @@ Feature: User launch dsalgo application and test Home page
   Scenario: User is on Home page and click on Register
     Given The user is on Home page
     When The user clicks on register link
-    Then The user redirected to Registration page    
+    Then The user redirected to Registration page

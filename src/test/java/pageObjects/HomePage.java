@@ -56,8 +56,8 @@ public class HomePage {
 	
 	
 	public void dsalgopage() {
-
-		driver.get("https://dsportalapp.herokuapp.com/");
+		driver.get(prop.getProperty("testurl"));
+//		driver.get("https://dsportalapp.herokuapp.com/");
 
 	}
 
@@ -83,7 +83,8 @@ public class HomePage {
 	}
 
 	public void homePg() {
-		driver.get("https://dsportalapp.herokuapp.com/");
+		 dsalgopage();
+//		driver.get("https://dsportalapp.herokuapp.com/");
 		getStarted.click();
 	}
 
@@ -169,35 +170,25 @@ public class HomePage {
 		}
 	
 	
-	
-	
 	//register page
 	public void click_register() {
 		register.click();
 	}
 	
-//	public String reg_url() {
-//		String regurl=driver.getCurrentUrl();
-//		return regurl;
-//		
-//	}
-	//login page
+
 	public void click_login() {
 		login.click();
 	}
 	
-//	public String login_url() {
-//		String loginurl=driver.getCurrentUrl();
-//		return loginurl;
-//		
-//	}
+
 	public boolean isloginbuttonpresent() {
 		return login.isDisplayed();
 	}
 	public void navigatetohomepage() {
-		driver.get("https://dsportalapp.herokuapp.com/home");
-		
-	}
+//		driver.get("https://dsportalapp.herokuapp.com/home");
+		dsalgopage();
+		getStarted();
+		}
 
 	public boolean isRegistrationPagedisplayed() {
 		return register.isDisplayed();
@@ -207,4 +198,14 @@ public class HomePage {
 
 }
 
-
+//public String reg_url() {
+//String regurl=driver.getCurrentUrl();
+//return regurl;
+//
+//}
+//login page
+//public String login_url() {
+//String loginurl=driver.getCurrentUrl();
+//return loginurl;
+//
+//}
