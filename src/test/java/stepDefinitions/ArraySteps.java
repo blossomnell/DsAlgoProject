@@ -14,13 +14,7 @@ public class ArraySteps {
      
 	ExcelReader excelReader;
     public ArraySteps() {
-        try {
-        	//String filePath = System.getProperty("user.dir") + "/" + reader.init_prop().getProperty("excelFilePath");
-            excelReader = new ExcelReader("src/test/resources/config/TestData.xlsx");
-            //excelReader = new ExcelReader(filePath);
-        } catch (IOException e) {
-        	throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
-        }
+          
     }
     configReader reader = new configReader();
     ArrayPage arrayPage = new ArrayPage();
@@ -33,8 +27,11 @@ public class ArraySteps {
 
 	@Then("user is navigated to array page")
 public void user_is_navigated_to_array_page() {
-		arrayPage.navigatetoarraypage();
+		//arrayPage.navigatetoarraypage();                              //changed
+		Assert.assertTrue(arrayPage.ArraypageDisplayed(), " Array page is not displayed");
 }
+	
+	
 
 	@Given("user is in the Array page")
 	public void user_is_in_the_array_page() {
@@ -158,7 +155,7 @@ public void user_should_be_in_the_python_editor_page() {
 		   	if (expectedOutcome ==null|| expectedOutcome.isEmpty()) {
 		   		throw new IllegalArgumentException("Expected outcome fetched from Excel is empty or null.");
 		   	
-		   	}
+		   }
 		   	
 		   	System.out.println("Expected Outcome fetched from Excel: " + expectedOutcome);
 		       if (expectedOutcome.contains("SyntaxError"))

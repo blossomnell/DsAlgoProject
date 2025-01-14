@@ -36,9 +36,8 @@ public class ArrayPage {
 		prop = reader.init_prop();
        
 		try {
-        	//String filePath = System.getProperty("user.dir") + "/" + reader.init_prop().getProperty("excelFilePath");
-            excelReader = new ExcelReader("src/test/resources/config/TestData.xlsx");
-            //excelReader = new ExcelReader(filePath);
+        	String filePath = System.getProperty("user.dir") + "/" + reader.init_prop().getProperty("excelFilePath");
+            excelReader = new ExcelReader(filePath);
         } catch (IOException e) {
         	throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
         }
@@ -92,57 +91,34 @@ public class ArrayPage {
 	WebElement squaresofsortedarraylink;
 	
 	
-	
-	
-	public void navigatetohomepage() {
-		driver.get(prop.getProperty("testurl") + "/home");
-		
-		
-	}
 
 	public void clickgetstartedBtn() {
 		getstarted_btn.click();
 		
 	}
 
-	public void navigatetoarraypage() {
-		driver.get(prop.getProperty("testurl") + "/array/");
-		
+		public boolean ArraypageDisplayed() {
+		return Objects.requireNonNull(driver.getCurrentUrl()).endsWith("/array/");              //added
 	}
-
+	
+	
 	public void ArraysInPythonButton() {
 		 arraysinpythonlink.click();
 		
-	}
-
-	public void navigatetoarraysinpythonpage() {
-		System.out.println(prop.getProperty("testurl") + "/array/arrays-in-python/");
-		driver.get(prop.getProperty("testurl") + "/array/arrays-in-python/");
-		
-	}
-
-
+    }
 	
 	public boolean ArraysInPythonButtonisDisplayed() {
 		return Objects.requireNonNull(driver.getCurrentUrl()).endsWith("/array/arrays-in-python/");
 		
 	}
 
-	public void navigatetoarrayinpythonpage() {
-		driver.get(prop.getProperty("testurl") + "/array/arrays-in-python/");           
-		
-	}
-
+	
 	public void Tryhere() {
 		tryhere_btn.click();                 
 		
 	}
 
-	public void navigatetotryeditorpage() {
-		driver.get(prop.getProperty("testurl") + "/tryEditor");
-		
-	}
-     
+	     
 	public void handleAlert() {
 	    try {
 	        Alert alert = driver.switchTo().alert();
@@ -192,11 +168,7 @@ public class ArrayPage {
 		
 	}
 
-	public void navigatetoarrayusinglistpage() {
-		System.out.println(prop.getProperty("testurl") + "/array/arrays-in-python/");
-		driver.get(prop.getProperty("testurl") + "/array/arrays-using-list/");
-	}
-	
+		
 	public boolean ArraysUsingListButtonisDisplayed() {
 			return Objects.requireNonNull(driver.getCurrentUrl()).endsWith("/array/arrays-using-list/");
 		
@@ -213,11 +185,7 @@ public class ArrayPage {
 		
 	}
 
-	public void navigatetobasicoperationsinlistpage() {
-		driver.get(prop.getProperty("testurl") + "/array/basic-operations-in-lists/");
 		
-	}
-	
     public boolean BasicOperationsInListsButtonisDisplayed() {
     	return Objects.requireNonNull(driver.getCurrentUrl()).endsWith("/array/basic-operations-in-lists/");
 		
@@ -232,11 +200,7 @@ public class ArrayPage {
 		applicationofarraylink.click();         
 		}
 
-	public void navigatetoapplicationofarraypage() {
-		driver.get(prop.getProperty("testurl") + "/array/applications-of-array/");
-		
-	}
-
+	
 	public boolean ApplicationOfArrayButtonisDisplayed() {
 		return Objects.requireNonNull(driver.getCurrentUrl()).endsWith("/array/applications-of-array/");
 	}
@@ -250,11 +214,7 @@ public class ArrayPage {
 		
 	}
 
-	public void navigatetopracticequestionspage() {
-		driver.get(prop.getProperty("testurl") + "/array/practice");
-		
-	}
-     
+	     
 	public boolean PracticeQuestionsPageisDisplayed() {
 		return Objects.requireNonNull(driver.getCurrentUrl()).endsWith("/array/practice");
 	}
@@ -290,12 +250,6 @@ public class ArrayPage {
 		squaresofsortedarraylink.click();
 		
 	}
-
-	public void navigatetosquaresofasortedarraypage() {
-		driver.get(prop.getProperty("testurl") + "/tryEditor");
-		
-	}
-    
 	
 	
 	public void enterPythonCode(String sheetName, Integer row) {
@@ -306,7 +260,6 @@ public class ArrayPage {
 	    	throw  new IllegalArgumentException("The code fetched fromExcel is empty or null.");
 	    }
 	    
-	    //System.out.println("Code entered in editor:" + code);
 	    
 		enterPythonCodeForPractice(code, txt_code);
 	    
@@ -336,11 +289,7 @@ public class ArrayPage {
 		
 	}
 
-	public void navigatetopracticeqaeditorpage() {
-		driver.get(prop.getProperty("testurl") + "/question/1");
-		
-	}
-
+	
 	public boolean isTryEditorPageDisplayed() {
 		return Objects.requireNonNull(driver.getCurrentUrl()).endsWith("/tryEditor");
 	}
@@ -369,6 +318,8 @@ public class ArrayPage {
 	public String getExcelData(String sheetName, Integer row, int column) {
 		return excelReader.getCellData(sheetName, row, column);
 	}
+
+	
 	
 	
 	}
