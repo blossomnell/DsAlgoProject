@@ -1,12 +1,11 @@
 Feature: Graph functionality
 
   Background: 
-  
-  Given the user is logged in
-  
-   @tag
-   Scenario: validating the Graph page
-    Given the user is logged in 
+    Given the user is logged in
+
+  @tag
+  Scenario: validating the Graph page
+    Given the user is logged in
     When the user clicks the Get Started under Graph
     Then the user is navigated to Graph page
 
@@ -19,7 +18,7 @@ Feature: Graph functionality
   @tag
   Scenario: validating the python editor of Main Graph page
     Given the user is in the Main Graph page
-    When the user clicks the Try here button of  Main Graph page 
+    When the user clicks the Try here button of  Main Graph page
     Then the user should be in the python editor page of  Main Graph page
 
   @tag
@@ -27,12 +26,11 @@ Feature: Graph functionality
     Given the user is in the python editor of Main Graph page
     When The user enters python code of Main Graph page in Editor from Excel sheet "<sheetName>" and row <row> and clicks Run
     Then user will get the expectedOutcome from sheet "<sheetName>" and row <row>
- 
 
     Examples: 
-      | sheetName  |    row        |
-      | python PQ  |             1 | 
-      | python PQ  |             2 | 
+      | sheetName | row |
+      | python PQ |   1 |
+      | python PQ |   2 |
 
   @tag
   Scenario: validating the Graph Representations page
@@ -53,9 +51,10 @@ Feature: Graph functionality
     Then the user will get the expectedOutcome from sheet "<sheetName>" and row <row>
 
     Examples: 
-      | sheetName  |    row        | 
-      | python PQ  |             1 | 
-      | python PQ  |             2 | 
+      | sheetName | row |
+      | python PQ |   1 |
+      | python PQ |   2 |
+
   @tag
   Scenario: validating the Graph practice questions page
     Given user is in Graph page
