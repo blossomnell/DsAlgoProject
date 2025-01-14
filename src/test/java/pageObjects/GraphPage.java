@@ -33,14 +33,16 @@ public class GraphPage {
 		configReader reader = new configReader();
 		prop = reader.init_prop();
 		
-		try {
-        	//String filePath = System.getProperty("user.dir") + "/" + reader.init_prop().getProperty("excelFilePath");
-            excelReader = new ExcelReader("src/test/resources/config/TestData.xlsx");
-            //excelReader = new ExcelReader(filePath);
+          try {
+        	
+			String filePath = System.getProperty("user.dir") + "/" + reader.init_prop().getProperty("excelFilePath");
+        	//String filePath = System.getProperty("user.dir") + "/src/test/resources/config/TestData.xlsx";
+            excelReader = new ExcelReader(filePath);
         } catch (IOException e) {
         	throw new RuntimeException("Failed to load TestData.xlsx file: " + e.getMessage(), e);
         }
-
+		
+		
 	}
 	
 	@FindBy(id = "id_username")

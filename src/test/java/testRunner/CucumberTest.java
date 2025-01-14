@@ -12,7 +12,7 @@ import webdriver.DriverFactory;
 
 @CucumberOptions(
         features = "src/test/resources/features", // Path to feature files
-        glue = { "stepDefinitions", "appHooks" }, // Package for step definitions and hooks
+        glue = { "stepDefinitions","appHooks" }, // Package for step definitions and hooks
         plugin = {
                 "pretty",
                 "html:target/cucumber-reports.html",
@@ -57,4 +57,3 @@ public class CucumberTest extends AbstractTestNGCucumberTests {
 }
 
  
-
